@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>管理中心 - 添加分类</title>
+        <meta charset="utf-8">
+        <import type="css" file="Admin.Css.main"/>
+        <import type="css" file="Admin.Css.general"/>
+    </head>
+    <body style="background: #DDEEF2;">
+        <h1>
+            <span class="action-span1">
+              <a href="#">管理中心</a>
+            </span>
+            <span id="search_id" class="action-span1">- 正在添加新分类</span>
+            <div style="clear:both"></div>
+        </h1>
+        <div>
+
+            <form action="" method="POST" id="form">
+            <table style="margin: 0px auto;">
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    分类名称：
+                </td>
+                <td>
+                    <input type="text" name="cat_name" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <span style="color:red;font-size: 10px;">必填：1 - 6 个字符之间</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    分类描述：
+                </td>
+                <td>
+                    <textarea name="cat_desc"></textarea>
+                <td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><span style="color:#666;font-size: 10px;">选填：1 - 30 个字符之间</span></td></tr>
+            </tr>
+            
+            <tr>
+                <td>
+                显示排名：
+                </td>
+                <td>
+                <input type="text" name="grade" id="" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                <span style="color:#666;font-size: 10px;">选填：一个有效的整数，数值越大，排名越靠前</span>
+                </td>
+            </tr>
+            <tr>
+
+                <td>
+                    <span style="color:red;">*</span>
+                    是否显示：
+                </td>
+                <td>
+                    <input type="radio" name="is_show" value="1" checked="checked">
+                    <span style="margin-right: 20px;">显示</span>
+                    <input type="radio" name="is_show" value="0">
+                    <span>不显示</span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="提交" style="margin-right: 20px;" onclick="javascript:if(confirm('确定保存修改吗？')){$.post('__CONTROLLER__/add', $('#form').serialize(), function (msg) {alert(msg.info);if (msg.status !== 2) {location.href=' __CONTROLLER__/getList';}})}" />
+                    <input type="button" value="返回" onclick="javascript:history.back();" />
+                </td>
+            </tr>
+
+            </table>
+        </form>
+        </div>
+    </body>
+</html>
+
+<import file="Admin/Js/jquery" />

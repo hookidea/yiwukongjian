@@ -1,0 +1,88 @@
+
+    <div id="back" class="back"></div>
+    <div class="msg"></div>
+    <div class="form"></div>
+
+      <div class="top">
+        <h1><a href="/"><img src="/Public/Wap/Img/logo.png" /></h1></a>
+          <form method="get" action="/Good/getList">
+              <input type="submit" value="" class="keyword-submit">
+              <span class="search-btn"></span>
+              <input type="text" name="keyword" placeholder="搜索商品" value="{$Think.get.keyword}">
+          </form>
+      </div>
+      <div class="wrap">
+          <!-- <div class="ul-wrap">
+            <ul class="first_row">
+              <a href="/Good/issue"><li><img src="/Public/Wap/Img/1.png" alt="">发布商品</li></a>
+              <a href="/Collect/showCollect"><li><img src="/Public/Wap/Img/2.png" alt="">我的关注</li></a>
+              <li><img src="/Public/Wap/Img/3.png" alt="">失物招领</li>
+              <li><img src="/Public/Wap/Img/2.png" alt="">我的二手</li>
+            </ul>
+          </div>
+          <div class="clear"></div> -->
+          <!-- http://14web.cn/Good/getList/cat_id/9/sort/sales_num/order/desc -->
+          <div class="recommend">
+                <div class="index-more"><h3>最新更新<a href="/Good/getList/sort/add_time/order/desc" class="right">更多>></a></h3></div>
+                <ul class="good-list">
+                  <foreach name="timeList" item="to">
+
+                        <li>
+                          <a href="/{$to.good_id}.html"><div class="index_img"><img src="{$to.thumb_img}" alt="{$to.good_name}" /></div></a>
+                          <div class="name_wrap">
+                            <p>
+                              {$to.good_name}
+                            </p>
+                          </div>
+                          <div class="love-item-bottom">
+                            <eq name="to.is_promote" value="1">
+                                <span class="shop_price">￥{$to.promote_price}</span>
+                              <else />
+                                <span class="shop_price">￥{$to.shop_price}</span>
+                            </eq>
+                            <a href="/User/showUser/user_id/{$to.user_id}"><span class="right user_name">{$to.user_name}</span></a>
+                          </div>
+                        </li>
+
+                  </foreach>
+
+                  <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+          </div>
+          <div class="recommend">
+                <div class="index-more"><h3>最高销量<a href="/Good/getList/sort/sales_num/order/desc" class="right">更多>></a></h3></div>
+                <ul class="good-list">
+                  <foreach name="salesList" item="to">
+
+                    <li>
+                      <a href="/{$to.good_id}.html">
+                      <div class="index_img"><img src="{$to.thumb_img}" alt="{$to.good_name}" /></div></a>
+                      <div class="name_wrap">
+                        <p>
+                          {$to.good_name}
+                        </p>
+                      </div>
+                      <div class="love-item-bottom">
+                        <eq name="to.is_promote" value="1">
+                            <span class="shop_price">￥{$to.promote_price}</span>
+                          <else />
+                            <span class="shop_price">￥{$to.shop_price}</span>
+                        </eq>
+                        <a href="/User/showUser/user_id/{$to.user_id}"><span class="right user_name">{$to.user_name}</span></a>
+                      </div>
+                    </li>
+                  </foreach>
+
+                  <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+          </div>
+      </div>
+    <div class="bottom">
+        <ul>
+          <li><a href="/"><img src="/Public/Wap/Img/bmu.png"/></a></li>
+          <li><a href="/Category/getList"><img src="/Public/Wap/Img/bmp.png"/></a></li>
+          <li><a href="/User/index"><img src="/Public/Wap/Img/bmv.png"/></a></li>
+        </ul>
+    </div>

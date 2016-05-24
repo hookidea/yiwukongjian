@@ -1,0 +1,54 @@
+
+      <div class="wrap">
+          <p id="top"><a><img src="/Public/Wap/Img/bg.png" alt=""></a><span id="more"><img src="/Public/Wap/Img/more.png" alt=""/></span>
+              我的收藏
+              <ul id="more_in">
+                  <li onclick="location.href='/User/index'">个人中心</li>
+                  <li onclick="location.href='/'">返回首页</li>
+              </ul>
+          </p>
+          <div class="recommend">
+                <notempty name="list">
+                  <ul class="good-list">
+                    <foreach name="list" item="to">
+
+                          <li>
+                            <a href="/{$to.good_id}.html">
+                            <div class="index_img"><img src="{$to.data.thumb_img}" alt="{$to.data.good_name}" /></div>
+                            </a>
+                            <p>
+                            {$to.data.good_name}
+                            </p>
+                            <div class="love-item-bottom">
+                                <span class="shop_price">￥{$to.shop_price}</span>
+                            </div>
+                          </li>
+                    </foreach>
+
+                    <div class="clear"></div>
+                  </ul>
+
+                <else />
+                      <p class="empty-p">您还没有关注过任何商品，正在返回上一页...</p>
+                      <script type="text/javascript">setTimeout(function(){history.go(-1);}, 1000);</script>
+              </notempty>
+
+                <div class="clear"></div>
+          </div>
+      </div>
+
+    <div class="mt20">
+        <div class="pagin fr">
+            <div>{$page}</div>
+
+        </div>
+        <div class="clr"></div>
+    </div>
+
+    <div class="bottom">
+        <ul>
+          <li><a href="/Index/index"><img src="/Public/Wap/Img/bmt.png"/></a></li>
+          <li><a href="/Category/getList"><img src="/Public/Wap/Img/bmp.png"/></a></li>
+          <li><a href="/User/index"><img src="/Public/Wap/Img/bmv.png"/></a></li>
+        </ul>
+    </div>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>管理中心 - 添加用户</title>
+        <meta charset="utf-8">
+        <import type="css" file="Admin.Css.main"/>
+        <import type="css" file="Admin.Css.general"/>
+        <style type="text/css">
+            table tr td:first-child{text-align: right;}
+        </style>
+    </head>
+    <body style="background: #DDEEF2;">
+        <h1>
+            <span class="action-span1">
+              <a href="#">管理中心</a>
+            </span>
+            <span id="search_id" class="action-span1">- 正在添加新用户</span>
+            <div style="clear:both"></div>
+        </h1>
+
+        <form action="" method="POST" id="form">
+        <table style="margin: 0 auto;">
+            <tr>
+                <td><span style="color:red;">*</span>用户名：</td>
+                <td><input type="text" name="user_name" value="" /></td>
+                <td></td><td><span style="color:red;font-size: 10px;">必填：1 - 20 个字符之间</span></td></tr>
+            <tr>
+                <td><span style="color:red;">*</span>密码：</td>
+                <td><input type="password" name="password" value="" /></td>
+                <td></td><td><span style="color:red;font-size: 12px;">必填：1 - 20 个字符之间</span></td></tr>
+            <tr>
+                <td><span style="color:red;">*</span>确认密码：</td>
+                <td><input type="password" name="repassword" value="" /></td>
+                <td></td><td><span style="color:red;font-size: 10px;">必填：1 - 20 个字符之间</span></td></tr>
+            <tr>
+                <td>邮箱：</td>
+                <td><input type="text" name="email" value="" /></td>
+                <td></td><td><span style="color:#666;font-size: 10px;">选填：有效的邮箱格式</span></td></tr>
+            <tr>
+                <td>昵称：</td>
+                <td><input type="text" name="nickname" value="" /></td>
+                <td></td><td><span style="color:#666;font-size: 10px;">选填：1 - 20 个字符之间</span></td></tr>
+            <tr>
+                <td>手机：</td>
+                <td><input type="phone" name="phone" value="" /></td>
+                <td></td><td><span style="color:#666;font-size: 10px;">选填：有效的手机格式</span></td></tr>
+            <tr>
+                <td>QQ：</td>
+                <td><input type="qq" name="qq" value="" /></td>
+                <td></td><td><span style="color:#666;font-size: 10px;">选填：有效的QQ格式</span></td></tr>
+            <tr>
+                <td>简介：</td>
+                <td><textarea name="intro"></textarea></td>
+                <td></td><td><span style="color:#666;font-size: 10px;">选填：1 - 50 个字符之间</span></td></tr>
+
+            <php>if (session('user.is_root')) {</php>
+                <tr>
+                    <td><span style="color:red;">*</span>用户角色：</td>
+                    <td>
+                        <select>
+                            <foreach name="roleList" item="vo">
+                                <option value="{$vo.role_id}" <eq name="row.role_id" value="$vo.role_id">selected</eq> >{$vo.role_name}</option>
+                            </foreach>
+                        </select>
+                    </td>
+                </tr>
+            <php>}</php>
+
+            <td><span style="color:red;">*</span>封号状态：</td>
+                <td>
+                    <input type="radio" name="is_seal" value="1">
+                    <span style="margin-right: 20px;">封号</span>
+                    <input type="radio" name="is_seal" value="0" checked="checked">
+                    <span>不封号</span>
+                </td>
+                <td></td><td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+
+            <tr>
+                <td><span style="color:red;">*</span>审核状态：</td>
+                <td>
+                    <input type="radio" name="is_check" value="1" checked="checked">
+                    <span style="margin-right: 20px;">已审核</span>
+                    <input type="radio" name="is_check" value="0">
+                    <span>未审核</span>
+                </td>
+                <td></td><td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+
+            <tr>
+                <td><span style="color:red;">*</span>删除状态：</td>
+                <td>
+                    <input type="radio" name="is_delete" value="1">
+                    <span style="margin-right: 20px;">删除</span>
+                    <input type="radio" name="is_delete" value="0" checked="checked">
+                    <span>不删除</span>
+                </td>
+                <td></td><td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+
+            <tr>
+                <td><span style="color:red;">*</span>实名状态：</td>
+                <td>
+                    <input type="radio" name="is_real" value="1">
+                    <span style="margin-right: 20px;">已实名</span>
+                    <input type="radio" name="is_real" value="0" checked="checked">
+                    <span>不实名</span>
+                </td>
+                <td></td><td><span style="color:red;font-size: 10px;">必选：如果选择实名，则下面三项为必填</span></td></tr>
+            </tr>
+            
+
+            <tr>
+                <td>实名名称：</td>
+                <td><input type="text" name="real_name" value="" /></td>
+                <td></td><td><span style="color:#666;font-size: 10px;">选填：1 - 20 个字符之间</span></td>
+            </tr>
+            <tr>
+                <td>实名号码：</td>
+                <td><input type="text" name="real_number" value="" /></td>
+                <td></td><td><span style="color:#666;font-size: 10px;">选填：一个18位有效的整数</span></td></tr>
+            <tr>
+                <td>实名地址：</td>
+                <td><input type="text" name="real_location" value="" /></td>
+                <td></td><td><span style="color:#666;font-size: 10px;">选填：1 - 50 个字符之间</span></td></tr>
+            <tr>
+                <td></td>
+                <td>
+                <input type="button" value="提交" style="margin-right: 20px;" onclick="javascript:if(confirm('确定添加？')){$.post('__CONTROLLER__/add', $('#form').serialize(), function (msg) {alert(msg.info);if (msg.status !== 2) {location.href='__CONTROLLER__/getList';}})}" />
+                <input type="button" value="返回" onclick="javascript:history.back();" />
+                </td>
+            </tr>
+
+        </table>
+        </form>
+    </body>
+</html>
+
+<import file="Admin/Js/jquery" />

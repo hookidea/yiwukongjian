@@ -1,0 +1,69 @@
+
+<div id="back" class="back"></div>
+<div class="msg"></div>
+<div class="form"></div>
+
+<div class="sou-wrap order-sou-wrap">
+    <p id="top"><a><img src="/Public/Wap/Img/bg.png" alt=""></a><span class="menu-btn"><img src="/Public/Wap/Img/more.png" alt=""></span>
+        我的订单
+    </p>
+    <div>
+        <form action="/Order/showOrder" method="GET">
+            <input type="text" id="sousuo" name="keyword" placeholder="请输入商品名称/用户名/订单号">
+            <input type="submit" id="btn" value="">
+        </form>
+    </div>
+</div>
+<ul id="banner">
+    <empty name="Think.get.keyword">
+        <li onclick="location.href='/Order/showOrder/type/0';" class="<neq name="Think.get.type" value="1">co</neq>">买家订单</li>
+        <li onclick="location.href='/Order/showOrder/type/1';" class="<eq name="Think.get.type" value="1">co</eq>">卖家订单</li>
+    <else />
+        <li class="co">搜索：{$Think.get.keyword}，<a style="color: #999;" href="/Order/showOrder">返回查看全部</a></li>
+    </empty>
+</ul>
+<div id="wrap">
+    <notempty name="orderList">
+        <ul id="news">
+            <foreach name="orderList" item="order" key="key">
+                <li class="style_2">
+                    <p class="news_top">订单编号：<span class="num">{$order.order_sn}</span>
+                        <span class="zhuangtai">
+                            <eq name="order.status" value="1">已完成<else />未完成<span>  <b onclick="fullOrder({$order.order_id});">确认完成</b></span></eq>
+                        </span>
+                    </p>
+                    <foreach name="goodList[$key]" item="good" key="key2">
+                        <div class="con">
+                            <span class="con_img"><img src="{$good.thumb_img}" alt=""></span>
+                            <p class="con_c">{$good.good_name}</p>
+                            <p class="con_n">x{$good.num}</p>
+                            <div class="clear"></div>
+                        </div>
+                    </foreach>
+                    <p class="lianxi price">￥{$order.total_price}</p>
+                    <eq name="Think.get.type" value="1">
+                        <!-- 卖家订单 -->
+                        <p class="maijia">买家：{$order.user_name}<a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd right" onclick="addLetter({$order.user_id}, '{$row.user_name}', {$Think.session.shop.user|is_array=###});"></a></p>
+                    <else />
+                        <!-- 买家订单 -->
+                        <p class="maijia">卖家：{$order.seller_name}<a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd right" onclick="addLetter({$order.seller_id}, '{$row.user_name}', {$Think.session.shop.user|is_array=###});"></a></p>
+                    </eq>
+
+                    <p class="lianxi"><notempty name="order.phone">手机：{$order.phone}</notempty>&nbsp;&nbsp;<notempty name="order.qq">QQ：{$order.qq}</notempty></p>
+                    <div class="clear"></div>
+                </li>
+            </foreach>
+        </ul>
+    <else />
+        <p style="text-align: center;padding-top:20px; font-size: 14px; color: #999;">暂无</p>
+    </notempty>
+</div>
+
+<div class="mt20">
+    <div class="pagin fr">
+        <div>{$page}</div>
+    </div>
+    <div class="clr"></div>
+</div>
+
+

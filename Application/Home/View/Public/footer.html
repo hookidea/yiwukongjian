@@ -1,0 +1,70 @@
+    <div class="clear"></div>
+
+
+    <div class="footer">
+        <div class="links">
+            <a href="/">首页</a><span>/</span>
+            <a href="__SELF__?wap=1" target="_blank">手机版</a>
+            <span>/</span><a href="javascript:return false;" onclick="addBug(1);">反馈建议</a>
+            <span>/</span><a href="/Index/article" target="_blank">服务条款</a>
+            <php>
+                if (session('user.login_bg')) {
+                    echo '<span>/</span><a href="/admin.php/Index/index" target="_blank">后台管理</a>';
+                }
+            </php>
+        </div>
+        <div class="links-end">Copyright © 2016 YW.GZITTC.COM. All rights reserved.</div>
+    </div>
+
+
+    <div id="window-btn">
+        <ul>
+            <a href="/Cart/showCart">
+                <li title="我的购物车">
+                    <img src="/Public/Home/Img/cart-icon.gif"><b class="cart">{$Think.get.cartNum}</b>
+                </li>
+            </a>
+            <a href="/Message/showMessage" class="href">
+                <li title="查看未读消息">
+                    <img src="/Public/Home/Img/mess.gif"><b>{$Think.get.totalNotReal}</b>
+                </li>
+            </a>
+            <a href="/User/showCollect" class="href">
+                <li title="查看收藏">
+                    <img src="/Public/Home/Img/collect-icon.gif"><b></b>
+                </li>
+            </a>
+            <a href="/Switch/match">
+                <li title="商品匹配">
+                    <img src="/Public/Home/Img/match.gif" class="href">
+                </li>
+            </a>
+            <li title="返回首页" onclick="location.href = '/Index/index';">
+                <img src="/Public/Home/Img/home.gif" class="href">
+            </li>
+            <li title="返回顶部" onclick="goTop();">
+                <img src="/Public/Home/Img/gotop.gif" class="href">
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+<import file="Home.Js.script"/>
+
+<import file="Home.Js.validate" />
+<import file="Home.Js.upload" />
+
+
+<script>
+    $('#window-btn a.href').click(function () {
+        if ({$Think.session.shop.user|default=-1} == -1) {
+            backAppend({status: 2, info: '请先登陆', href: false});
+            return false;
+        }
+
+    });
+</script>

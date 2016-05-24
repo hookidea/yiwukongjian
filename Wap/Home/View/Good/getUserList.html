@@ -1,0 +1,61 @@
+
+<div class="sou-wrap">
+    <p id="top"><a><img src="/Public/Wap/Img/bg.png" alt=""></a><span class="menu-btn"><img src="/Public/Wap/Img/more.png" alt=""></span>
+        <eq name="flag" value="1">
+            我的商品
+        <else />
+            {$Think.get.user_name} 的商品
+        </eq>
+    </p>
+    <div>
+        <form action="/Good/getUserList/user_id/{$Think.get.user_id}/user_name/{$Think.get.user_name}" method="GET">
+            <input type="text" id="sousuo" name="keyword" placeholder="请输入您要搜索的关键字">
+            <input type="submit" id="btn" value="">
+        </form>
+    </div>
+</div>
+      <div class="wrap">
+          <div class="recommend">
+                <notempty name="list">
+                  <ul class="good-list">
+                    <foreach name="list" item="to">
+
+                          <li>
+                            <a href="/{$to.good_id}.html">
+                            <div class="index_img"><img src="{$to.thumb_img}" alt="{$to.good_name}" /></div>
+                            </a>
+                            <div class="name_wrap">
+                              <p>
+                                {$to.good_name}
+                              </p>
+                            </div>
+                            <div class="love-item-bottom">
+                                <eq name="to.is_promote" value="1">
+                                    <span class="shop_price">￥{$to.promote_price}</span>
+                                  <else />
+                                    <span class="shop_price">￥{$to.shop_price}</span>
+                                </eq>
+                                <a href="/User/showUser/user_id/{$to.user_id}"><span class="right user_name">{$to.user_name}</span></a>
+                            </div>
+                          </li>
+                    </foreach>
+
+                    <div class="clear"></div>
+                  </ul>
+
+                <else />
+                      <p class="empty-p">您还没有关注过任何商品，正在返回上一页...</p>
+                      <script type="text/javascript">setTimeout(function(){history.go(-1);}, 1000);</script>
+              </notempty>
+
+                <div class="clear"></div>
+          </div>
+      </div>
+
+    <div class="mt20">
+        <div class="pagin fr">
+            <div>{$page}</div>
+
+        </div>
+        <div class="clr"></div>
+    </div>

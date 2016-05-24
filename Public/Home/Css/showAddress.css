@@ -1,0 +1,213 @@
+/*
+* @Author: hookidea
+* @Date:   2016-04-10 12:50:23
+* @Last Modified by:   拓少
+* @Last Modified time: 2016-04-11 15:16:54
+*/
+#main-address {
+  width: 100%;
+  color: #666;
+  font: 12px/150% Arial,Verdana,"宋体";
+  float: left;
+  overflow: hidden;
+}
+.mod-comm {
+  padding: 10px 20px 20px;
+}
+.mod-main {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.easebuy-m .smc {
+  line-height: 22px;
+  padding: 10px;
+}
+.easebuy-m {
+  border: 2px solid #e6e6e6;
+  margin: 0 0 10px;
+}
+.m, .mb, .mc, .mt, .sm, .smb, .smc, .smt {
+  overflow: hidden;
+}
+.easebuy-m .smt::after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.easebuy-m .smt {
+  display: block;
+  height: 40px;
+  line-height: 35px;
+  overflow: visible;
+  padding-left: 10px;
+  position: relative;
+}
+.easebuy-m .smt h3 {
+  color: #666;
+  float: left;
+}
+.mt h2, .smt h3 {
+  font-family: "microsoft yahei";
+}
+.easebuy-m .smt .alias-edit {
+  background-position: -51px 0;
+  height: 12px;
+  margin: 0 10px;
+  width: 12px;
+}
+.easebuy-m .smt .alias-edit {
+  background-image: url("http://misc.360buyimg.com/user/myjd-2015/css/i/sprite-t-icon.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+.easebuy-m .smt h3 .ftx-04 {
+  background: #ffaa45 none repeat scroll 0 0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0 0 0 10px;
+  padding: 2px;
+}
+.easebuy-m .smt .extra {
+  float: right;
+  margin: 0 10px 0 0;
+}
+.easebuy-m .smt .extra .del-btn {
+  background: rgba(0, 0, 0, 0) url("http://misc.360buyimg.com/user/myjd-2015/css/i/close.png") no-repeat scroll 0 0;
+  display: inline-block;
+  height: 13px;
+  margin-top: 10px;
+  overflow: hidden;
+  text-indent: 99em;
+  vertical-align: middle;
+  width: 13px;
+}
+.easebuy-m .smt .extra .del-btn {
+  background: rgba(0, 0, 0, 0) url("http://misc.360buyimg.com/user/myjd-2015/css/i/close.png") no-repeat scroll 0 0;
+  display: inline-block;
+  height: 13px;
+  margin-top: 10px;
+  overflow: hidden;
+  text-indent: 99em;
+  vertical-align: middle;
+  width: 13px;
+}
+
+.easebuy-m .smc .new-items {
+  position: relative;
+}
+.easebuy-m .smc .item-lcol {
+  float: left;
+}
+.easebuy-m .smc .item span {
+  color: #999;
+  float: left;
+  text-align: right;
+  width: 70px;
+}
+.easebuy-m .smc .item-lcol .fl {
+  width: 360px;
+}
+.fl {
+  float: left;
+}
+.clear, .clr {
+  clear: both;
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+.easebuy-m .smc .item-rcol {
+  float: right;
+  height: 100%;
+  padding-left: 10px;
+  width: 115px;
+}
+.easebuy-m .smc .item-rcol .extra {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.ftx-05, .ftx05 {
+  color: #005ea7;
+}
+.ftx-05, .ftx05 {
+  color: #005ea7;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.clear, .clr {
+  clear: both;
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+.mod-main .mt::after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.mod-comm .mt {
+  padding: 10px 0;
+}
+.mod-main .mt {
+  display: block;
+}
+.m, .mb, .mc, .mt, .sm, .smb, .smc, .smt {
+  overflow: hidden;
+}
+a.add-btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  height: 28px;
+  line-height: 28px;
+  margin: 0 10px 0 0;
+  padding: 0 14px;
+  vertical-align: middle;
+}
+.ftx-03, .ftx03 {
+  color: #999;
+}
+.ftx-02, .ftx02 {
+  color: #71b247;
+}
+.ftx-02, .ftx02 {
+  color: #71b247;
+}
+a.e-btn:active, a.e-btn:hover, a.e-btn:link, a.e-btn:visited {
+  color: #333;
+  text-decoration: none;
+}
+.btn-5:link, .btn-5:visited, .btn-6:link, .btn-6:visited, .btn-7:link, .btn-7:visited, .btn-8:link, .btn-8:visited {
+  color: #323333;
+  text-decoration: none;
+}
+.btn-5, .btn-6, .btn-7, .btn-8 {
+  background-color: #f5fbef;
+  background-image: linear-gradient(to bottom, #f5fbef 0px, #eaf6e2 100%);
+  border: 1px solid #bfd6af;
+  border-radius: 2px;
+  color: #323333;
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  padding: 2px 14px 3px;
+}

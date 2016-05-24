@@ -1,0 +1,70 @@
+    <div class="container">
+
+        <div class="suibian">
+          <ul class="middle_nav">
+            <li><a href="/User/showUser">我的资料</a></li>
+            <li class="personalhover"><a href="/Good/getUserList">商品管理</a></li>
+            <li><a href="/Beg/getUserList">求购管理</a></li>
+            <li><a href="/Lost/getUserList">招领管理</a></li>
+            <li><a href="/User/showCollect">收藏管理</a></li>
+            <li><a href="/User/showAddress">地址管理</a></li>
+            <li><a href="/Order/showOrder">订单管理</a></li>
+            <li><a href="/Switch/showSwitch">换购管理</a></li>
+            <li><a href="/Message/showMessage">消息管理</a></li>
+            <li><a href="/User/showReal">认证管理</a></li>
+          </ul>
+          <div class="clear">
+          </div>
+       </div>
+       <div class="qq">
+         <div class="sc">
+
+          <foreach name="list" item="vo">
+
+             <div class="enshr_each">
+                 <img src="{$vo.thumb_img}" alt="">
+                 <h2><a href="/{$vo.good_id}.html">{$vo.good_name}</a></h2>
+                 <p>
+                   <span class="price-left">销售价：</span><span class="shop-price"><em>￥</em>{$vo.shop_price}</span>
+                   <eq name="vo.is_promote" value="1">
+                      <span class="price-left">促销价：</span><span class="shop-price"><em>￥</em>{$vo.shop_price}</span>
+                   </eq>
+                   <span class="time">发布时间：{$vo.add_time|date="Y年m月d日",###}</span>
+                 </p>
+                 <div class="enshr_state">
+                    <eq name="vo.is_check" value="0">
+                      <span class="onsaling">审核已通过</span>
+                      <else />
+                      <span class="onsaling">审核未通过</span>
+                    </eq>
+                    <eq name="vo.is_on_sale" value="0">
+                      <span class="onsaling">下架中</span>
+                      <else />
+                      <span class="onsaling">上架中</span>
+                    </eq>
+                    <span class="onsaling">销量：<b>{$vo.sales_num}</b></span>
+                    <span class="onsaling">库存：<b>{$vo.good_number}</b></span>
+                    <span class="onsaling">收藏：<b>{$vo.collect_num}</b></span>
+
+                    <a href="javascript: onSale({$vo.good_id}, {$vo.is_on_sale});">
+                      <eq name="vo.is_on_sale" value="0">
+                          <span class="good_btn on_sale_btn">上架</span>
+                        <else />
+                          <span class="good_btn on_sale_btn">下架</span>
+                      </eq>
+                    </a>
+                    <!-- <span class="good_btn">编辑</span> -->
+
+                 </div>
+             </div>
+          </foreach>
+         </div>
+        </div>
+    </div>
+
+<div class="mt20">
+    <div class="pagin fr">
+        <div>{$page}</div>
+    </div>
+    <div class="clr"></div>
+</div>

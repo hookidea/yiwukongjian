@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>管理中心 - 编辑用户</title>
+        <meta charset="utf-8">
+        <import type="css" file="Admin.Css.main"/>
+        <import type="css" file="Admin.Css.general"/>
+    </head>
+    <body style="background: #DDEEF2;">
+        <h1>
+            <span class="action-span1">
+              <a href="#">管理中心</a>
+            </span>
+            <span id="search_id" class="action-span1">- 正在编辑用户： <span style="color:red;">{$row.user_name}</span></span>
+            <div style="clear:both"></div>
+        </h1>
+
+            <form action="" method="POST" id="form">
+            <table style="margin: 0px auto;">
+            <tr><td>
+            用户名：</td><td>
+            <input type="text" name="user_name" value="{$row.user_name}" />
+            </td></tr>
+    
+            <tr><td>
+            邮箱</td><td>
+            <input type="text" name="email" value="{$row.email}" />
+            </td></tr>
+
+            <tr><td>
+            昵称：</td><td>
+            <input type="text" name="nickname" value="{$row.nickname}" />
+            </td></tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="password" name="password" value="" /></td>
+            </tr>
+
+            <tr>
+                <td>确认密码：</td>
+                <td><input type="password" name="repassword" value="" /></td>
+            </tr>
+
+            <php>if (session('user.is_root')) {</php>
+                <tr>
+                    <td>用户角色：</td><td>
+                    <select name="role_id">
+                        <foreach name="roleList" item="vo">
+                            <option value="{$vo.role_id}" <eq name="row.role_id" value="$vo.role_id">selected</eq> >{$vo.role_name}</option>
+                        </foreach>
+                    </select>
+                </tr>
+            <php>}</php>
+
+            <tr><td>
+            积分：</td><td>
+            <input type="text" name="integral" value="{$row.integral}" />
+            </td></tr>
+
+            <tr><td>
+            封号状态：</td><td>
+            <input type="radio" name="is_seal" value="1" <eq name="row.is_seal" value="1">checked</eq>><span style="margin-right: 20px;">封号</span><input type="radio" name="is_seal" value="0" <eq name="row.is_seal" value="0">checked</eq>><span>不封号</span>
+            </td></tr>
+
+            <tr><td>
+            审核状态：</td><td>
+            <input type="radio" name="is_check" value="1" <eq name="row.is_check" value="1">checked</eq>><span style="margin-right: 20px;">已审核</span><input type="radio" name="is_check" value="0" <eq name="row.is_check" value="0">checked</eq>><span>未审核</span>
+            </td></tr>
+
+            <tr><td>
+            删除状态：</td><td>
+            <input type="radio" name="is_delete" value="1" <eq name="row.is_delete" value="1">checked</eq>><span style="margin-right: 20px;">删除</span><input type="radio" name="is_delete" value="0" <eq name="row.is_delete" value="0">checked</eq>><span>不删除</span>
+            </td></tr>
+
+            <tr><td>
+            实名状态：</td><td>
+                <input type="radio" name="is_real" value="1" <eq name="row.is_real" value="1">checked</eq>>
+                <span style="margin-right: 20px;">已实名</span>
+                <input type="radio" name="is_real" value="0" <eq name="row.is_real" value="0">checked</eq>>
+                <span>不实名</span>
+            </td></tr>
+            
+            <div style="margin-left: 20px">
+                <tr><td>
+                    实名名称：</td><td>
+                    <input type="text" name="real_name" value="{$row.data.real_name}" />
+                </td>
+            </tr>
+                <tr><td>
+                    实名号码：</td><td>
+                    <input type="text" name="real_number" value="{$row.data.real_number}" />
+                </td>
+            </tr>
+                <tr><td>实名地址：</td>
+                    <td><input type="text" name="real_location" value="{$row.data.real_location}" />
+                </td>
+            </tr>
+            </div>
+    
+            <tr><td></td><td>
+            <input type="button" value="提交" style="margin-right: 20px;" onclick="javascript:if(confirm('确定保存修改吗？')){var user_id={$Think.get.user_id}; $.post('__CONTROLLER__/edit/user_id/' + user_id, $('#form').serialize(), function (msg) {alert(msg.info);if (msg.status !== 2) {location.href='__CONTROLLER__/getList';}})}" /><input type="button" value="返回" onclick="javascript:history.back();" /></td></tr>
+        </table>
+        </form>
+
+    </body>
+</html>
+
+<import file="Admin/Js/jquery" />

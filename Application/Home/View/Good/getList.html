@@ -1,0 +1,93 @@
+<notempty name="list">
+	<div class="wrap">
+		<empty name="Think.get.keyword">
+			<div class="nav">
+				<div>
+				<a class="rank" href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='/Good/getList/cat_id/{$Think.get.cat_id}/sort/sales_num/order/'+order;location.href=url;">
+					销量
+					<present name="Think.get.sort">
+							<if condition="$Think.get.sort eq 'sales_num'">
+								    <if condition="$Think.get.order eq 'asc'">
+								      	<span class="icon search_sort_asc"></span>
+								      <else />
+								        <span class="icon search_sort_desc"></span>
+								    </if>
+							    <else />
+									<span class="icon"></span>
+							</if>
+					<else />
+							<span class="icon search_sort_desc"></span>
+					</present>
+
+				</a>
+				<a class="rank" href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='/Good/getList/cat_id/{$Think.get.cat_id}/sort/shop_price/order/'+order;location.href=url;">
+				价格
+					<if condition="$Think.get.sort eq 'shop_price'">
+						    <if condition="$Think.get.order eq 'asc'">
+						      	<span class="icon search_sort_asc"></span>
+						      <else />
+						        <span class="icon search_sort_desc"></span>
+						    </if>
+					    <else />
+							<span class="icon"></span>
+					</if>
+				</a>
+				<a class="rank last" href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='/Good/getList/cat_id/{$Think.get.cat_id}/sort/add_time/order/'+order;location.href=url;">
+				时间
+					<if condition="$Think.get.sort eq 'add_time'">
+						    <if condition="$Think.get.order eq 'asc'">
+						      	<span class="icon search_sort_asc"></span>
+						      <else />
+						        <span class="icon search_sort_desc"></span>
+						    </if>
+					    <else />
+							<span class="icon"></span>
+					</if>
+				</a>
+				</div>
+			</div>
+
+		</empty>
+
+		<notempty name="Think.get.keyword">
+			<notempty name="Think.get.keyword"><p class="keyword-info">提示：搜索结果可能存在延时！</p></notempty>
+		</notempty>
+
+
+		<ul class="com" style="width: 100%;">
+			<foreach name="list" item="good">
+					<li class="single">
+						<a href="/{$good.good_id}.html" class="img" title="{$good.good_name}"><img src="{$good.thumb_img}" alt=""></a>
+						<div class="money"><a><em>￥</em><eq name="good.promote_price" value="0">{$good.shop_price}<else />{$good.promote_price}</eq></a></div>
+						<div class="Writing">{$good.good_name}</div>
+						<div class="name"><a href="/User/showUser/user_id/{$good.user_id}">{$good.user_name}</a></div>
+					</li>
+			</foreach>
+		</ul>
+	</div>
+
+	<div class="clear"></div>
+
+<div class="mt20">
+    <div class="pagin fr">
+        <div>{$page}</div>
+    </div>
+    <div class="clr"></div>
+</div>
+
+<else />
+
+	<notempty name="Think.get.cat_id">
+			<p class="info-p">抱歉，该分类下暂无商品，正在返回上一页...</p>
+		<else />
+			<p class="info-p">抱歉，没有找到“<span style="color: #333;font-weight:700;">{$Think.get.keyword}</span>”的搜索结果，，正在返回上一页...</p>
+	</notempty>
+
+	<script type="text/javascript">
+		setTimeout(function () {
+			history.go(-1);
+		}, 1000);
+
+	</script>
+
+</notempty>

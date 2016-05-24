@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>管理中心 - 反馈列表</title>
+  <meta name="robots">
+  <meta charset="UTF-8" />
+  <import type="css" file="Admin.Css.main"/>
+  <import type="css" file="Admin.Css.general"/>
+</head>
+<body>
+            <h1>
+            <span class="action-span1">
+              <a href="#">管理中心</a>
+            </span>
+            <span id="search_id" class="action-span1">- 反馈列表</span>
+            <div style="clear:both"></div>
+          </h1>
+          <form action="__CONTROLLER__/getList" name="searchForm" method="GET" style="width: 400px; margin: 0 auto;">
+              <input type="text" name="keyword" size="15" placeholder="反馈者/反馈内容" style="width: 220px; text-align: center;" value="<present name="Think.get.keyword">{$Think.get.keyword}</present>"/>
+              <input type="submit" value=" 搜索 " class="button" />
+
+              <if condition="($Think.get.user_id neq '') OR ($list eq '')">
+                  <a href="__CONTROLLER__/getList"><input type="button" value=" 返回查看全部 " class="button" /></a>
+              </if>
+
+            </form>
+
+  <present name="list">
+
+          <form method="post" action="" name="listForm" id="listForm">
+
+            <div class="list-div" id="listDiv">
+              <table cellpadding="3" cellspacing="1">
+                <tr>
+                  <th>
+                    反馈者
+                  </th>
+                  <th>
+                    反馈内容
+                  </th>
+                  <th>
+                    处理状态
+                  </th>
+                  <th>
+                    <a href="javascript:var order='{$Think.get.order}'=='asc'?'desc':'asc',url='__CONTROLLER__/getList/sort/add_time/order/'+order;location.href=url;">提交时间</a>
+                    <if condition="$Think.get.sort eq 'add_time'">
+                      <img src="/Public/Admin/Img/sort_<if condition='$Think.get.order eq desc'>desc<else />asc</if>.gif"/>
+                      <else />
+                        <span class="icon_sort">
+                          <img src="/Public/Admin/Img/sort_asc.gif"/>
+                          <img src="/Public/Admin/Img/sort_desc.gif"/>
+                        </span>
+                    </if>
+                  </th>
+                  <th>操作</th>
+                </tr>
+
+                <foreach name="list" item="vo">
+                <tr>
+                  <td align="center">
+                    <input type="checkbox" name="bug_id[]" value="{$vo.bug_id}" />
+                    {$vo.user_name}
+                  </td>
+                  <td align="center">
+                    {$vo.content}
+                  </td>
+                  <td align="center">
+                    <img src="/Public/Admin/Img/<eq name='vo.is_full' value='1'>yes<else />no</eq>.gif" />
+                  </td>
+                  <td align="center">
+                    {$vo.add_time|date='Y-m-d H:i:s', ###}
+                  </td>
+
+                  <td align="center">
+                    <notempty name="vo.user_id">
+                        <a href="/admin.php/Bug/getList/user_id/{$vo.user_id}" title="查看该用户的所有反馈">
+                          看
+                        </a>
+                    </notempty>
+
+                    <a href="javascript:if(confirm('确定把状态设为已处理？')){var bug_id = {$vo.bug_id}; $.get('__CONTROLLER__/setFull/bug_id/' + bug_id, function (msg) {alert(msg.info); location.reload();})}"  title="设为已处理">
+                      阅
+                    </a>
+                  </td>
+                </tr>
+                </foreach>
+                </table>
+
+
+            </table>
+          </div>
+
+          <div id="full_action" style="float: left;">
+            <input type="button" value="全选" onclick="full_select();">
+            <input type="button" value="不全选" onclick="del_select();">
+            <input type="button" value="全部删除" onclick="multiBug('delete');">
+            <input type="button" value="全部设为已处理" onclick="multiBug('setFull');">
+          </div>
+          <div id="pager">{$page}</div>
+        </form>
+
+    <else />
+
+        <p style="color:red; text-align: center;">没有匹配结果！正在返回上一页...</p>
+        <script>
+            setTimeout(function () {
+              history.go(-1);
+            }, 800);
+        </script>
+
+  </present>
+
+</body>
+</html>
+
+<script src="/Public/Admin/Js/jquery.js"></script>
+<script src="/Public/Admin/Js/good.js"></script>

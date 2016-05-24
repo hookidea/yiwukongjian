@@ -1,0 +1,322 @@
+<link rel="stylesheet" type="text/css" href="/Public/Home/Css/showOrder.css?v=2.1">
+<div class="container">
+  <div class="suibian">
+    <ul class="middle_nav">
+      <li><a href="/User/showUser">我的资料</a></li>
+      <li><a href="/Good/getUserList">商品管理</a></li>
+      <li><a href="/Beg/getUserList">求购管理</a></li>
+      <li><a href="/Lost/getUserList">招领管理</a></li>
+      <li><a href="/User/showCollect">收藏管理</a></li>
+      <li><a href="/User/showAddress">地址管理</a></li>
+      <li class="personalhover"><a href="/Order/showOrder">订单管理</a></li>
+      <li><a href="/Switch/showSwitch">换购管理</a></li>
+      <li><a href="/Message/showMessage">消息管理</a></li>
+      <li><a href="/User/showReal">认证管理</a></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+
+  <div id="container">
+    <div class="w">
+      <div id="content">
+        <div id="main">
+          <div id="order01" class="mod-main mod-comm mod-order">
+              <div class="mt">
+                  <h3 onclick="showOrderType(0);" class="<neq name="Think.get.type" value="1">curr</neq>">买家订单</h3>
+                  <h3 onclick="showOrderType(1);" class="<eq name="Think.get.type" value="1">curr</eq>">卖家订单</h3>
+                  <div class="extra-r"></div>
+              </div>
+          </div>
+          <div id="order02" class="mod-main mod-comm lefta-box">
+            <div class="mt">
+              <ul class="extra-l">
+                <li class="fore1"><a class="txt <neq name="Think.get.status" value="0">curr</neq>"  onclick="showNotFull(0);">全部订单</a></li>
+                <!-- <li>
+                  <a class="txt" clstag="click|keycount|orderinfo|waitPay" id="ordertoPay" href="//order.jd.com/center/list.action?s=1">待付款</a>
+                </li> -->
+                <li>
+                  <a class="txt <eq name="Think.get.status" value="0">curr</eq>" clstag="" id="ordertoReceive" href="#" onclick="showNotFull(1);">待完成<em>{$notFull}</em></a>
+                </li>
+                <li>
+                  <!-- <a clstag="click|keycount|orderinfo|daipingjia" class="txt" target="_blank" id="ordertoComment" href="//club.jd.com/mycomments.aspx">待评价</a><a href="http://club.jd.com/mycomments.aspx"><em>25</em></a> -->
+                </li>
+                <!-- <li class="fore2">
+                  <a id="ordertoRecycle" class="ftx-03" clstag="click|keycount|orderlist|dingdanhuishouzhan" href="//order.jd.com/center/recycle.action?d=1">订单回收站</a>
+                </li> -->
+              </ul>
+              <div class="extra-r">
+                <div class="search">
+                  <input type="text" placeholder="商品名称/订单号" class="itxt" id="ip_keyword" style="color: rgb(204, 204, 204);" name="keyword">
+                  <a clstag="click|keycount|orderinfo|search" class="search-btn" onclick="searchOrder(this);">搜索<b></b></a>
+                  <!-- <a class="default-btn high-search" clstag="click|keycount|orderlist|gaoji" href="#none">高级<b></b></a> -->
+                </div>
+              </div>
+            </div>
+            <div class="mc">
+              <table class="td-void order-tb">
+                <colgroup>
+                    <col class="number-col">
+                    <col class="consignee-col">
+                    <col class="amount-col">
+                    <col class="status-col">
+                    <col class="operate-col">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="ordertime-cont" onclick="showTimeOrder(event);">
+                        <div class="time-txt">近三个月订单<b></b><span class="blank"></span> </div>
+                        <div class="time-list">
+                          <ul>
+                            <li><a class="curr" clstag="click|keycount|orderlist|zuijinsangeyue" _val="1" href="#none"><b></b>近三个月订单</a></li>
+                            <li><a clstag="click|keycount|orderlist|jinniannei" _val="2" href="#none"><b></b>今年内订单</a></li>
+                            <li><a clstag="click|keycount|orderlist|2015" _val="3" href="#none"><b></b>2015年订单</a></li>
+                            <li><a clstag="click|keycount|orderlist|2014" _val="4" href="#none"><b></b>2014年订单</a></li>
+                            <li><a clstag="click|keycount|orderlist|2013" _val="5" href="#none"><b></b>2013年订单</a></li>
+                            <li><a clstag="click|ke ycount|orderlist|before_2013" _val="6" href="#none"><b></b>2013年以前订单</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="order-detail-txt ac">订单详情</div>
+                    </th>
+                    <th>收货人</th>
+                    <th>金额</th>
+                    <th>
+                      <div>
+                        <div>状态<!-- <b></b> --><span class="blank"></span></div>
+                        <!-- <div class="state-list">
+                          <ul>
+                            <li value="4096">
+                                <a class="curr" clstag="click|keycount|orderlist|quanbuzhuangtai" href="#none"><b></b>全部状态</a>
+                            </li>
+                            <li value="1">
+                                <a clstag="click|keycount|orderlist|dengdaifukuan" href="#none"><b></b>等待付款</a>
+                            </li>
+                            <li clstag="click|keycount|orderlist|dengdaishouhuo" value="128">
+                                <a href="#none"><b></b>等待收货</a>
+                            </li>
+                            <li value="1024">
+                                <a clstag="click|keycount|orderlist|yiwancheng" href="#none"><b></b>已完成</a>
+                            </li>
+                            <li value="-1">
+                                <a clstag="click|keycount|orderlist|yiquxiao" href="#none"><b></b>已取消</a>
+                            </li>
+                          </ul>
+                        </div> -->
+                      </div>
+                    </th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+
+              <!-- 一个订单一个tbody -->
+              <foreach name="orderList" item="order" key="key">
+                <tbody id="tb-12251082074">
+                  <tr class="sep-row"><td colspan="5"></td></tr>
+
+                  <tr class="tr-th">
+                    <td colspan="5">
+                      <span class="gap"></span>
+                      <span title="{$order.add_time|date="Y-m-d H:i:s",###}" class="dealtime">{$order.add_time|date="Y-m-d H:i:s",###}</span>
+                      <input type="hidden" value="2016-02-29 23:00:47" id="datasubmit-12251082074">
+
+                      <span class="number">订单号：<a clstag="click|keycount|orderinfo|order_num" target="_blank" id="idUrl12251082074" name="orderIdLinks">{$order.order_sn}</a></span>
+
+                      <div class="tr-operate">
+                        <span class="order-shop">
+                          <span>卖家：</span>
+                          <span class="shop-txt"><a href="/User/showUser/user_id/{$order.seller_id}">{$order.seller_name}</a></span>
+                          <a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd" onclick="addLetter({$order.seller_id}, '{$order.seller_name}', {$Think.session.shop.user|default=-1});"></a>
+                        </span>
+                        <span class="order-shop">
+                          <span>买家：</span>
+                          <span class="shop-txt"><a href="/User/showUser/user_id/{$order.user_id}">{$order.user_name}</a></span>
+                          <a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd" onclick="addLetter({$order.user_id}, '{$order.seller_name}', {$Think.session.shop.user|default=-1});"></a>
+                        </span>
+                        <!-- <a _passkey="25D65818AA427ED48B8CB7B385AC42DB" _orderid="12251082074" class="order-del" clstag="click|keycount|orderlist|dingdanshanchu" href="#none" style="display: none;" title="删除"></a> -->
+                      </div>
+                    </td>
+                  </tr>
+
+                <!-- 一个商品一个tr -->
+                <foreach name="goodList[$key]" item="good" key="key2">
+
+                    <eq name="key2" value="0">
+                        <!-- 仅第一个进入 -->
+                        <tr oty="0,4,70" id="track12251082074" class="tr-bd">
+
+
+                          <td>
+                            <div class="goods-item p-188078">
+                              <div class="p-img">
+                                  <a target="_blank" clstag="click|keycount|orderinfo|order_product" href="/{$good.good_id}.html">
+                                    <img width="60" height="60" data-lazy-img="done" title="{$good.good_name}" src="{$good.thumb_img}" class="">
+
+                                  </a>
+                              </div>
+                              <div class="p-msg">
+                                <div class="p-name"><a title="{$good.good_name}" target="_blank" clstag="click|keycount|orderinfo|order_product" class="a-link" href="/{$good.good_id}.html">{$good.good_name}</a></div>
+
+                              </div>
+                            </div>
+                            <div class="goods-number">
+                                x{$good.num}
+                            </div>
+
+                            <div class="clr"></div>
+                          </td>
+
+                          <td rowspan="{$goodList.$key|count=###}">
+                            <div class="consignee tooltip">
+                              <span class="txt">{$order.address_name}</span><b></b>
+                              <div class="prompt-01 prompt-02">
+                                <div class="pc">
+                                  <strong>{$order.address_name}</strong>
+                                  <p>{$order.address_location}</p>
+                                  <p>{$order.phone}</p>
+                                </div>
+                                <div class="p-arrow p-arrow-left"></div>
+                              </div>
+                            </div>
+                          </td>
+                          <td rowspan="{$goodList.$key|count=###}">
+                            <div class="amount">
+                              <span>总额 ¥{$order.total_price}</span>
+                            </div>
+                          </td>
+                          <td rowspan="{$goodList.$key|count=###}">
+                            <div class="status">
+                              <span class="order-status ftx-03">
+                              <eq name="order.status" value="1">
+                                已完成
+                              <else />
+                                未完成
+                              </eq>
+                              </span>
+                              <br>
+                              <!-- <a target="_blank" clstag="click|keycount|orderlist|dingdanxiangqing" href="//order.jd.com/normal/item.action?orderid=12251082074&amp;PassKey=5A96D671ADFB10FDD0E03545550AD4CB">订单详情</a> -->
+                            </div>
+                          </td>
+                          <td id="operate12251082074" rowspan="{$goodList.$key|count=###}">
+                            <div class="operate">
+                              <div _baina="0" id="pay-button-12251082074"></div>
+
+                                <neq name="order.status" value="1">
+                                    <span target="_blank" class="btn-again" onclick="fullOrder({$order.order_id})"><b></b>完成</span>
+                                </neq>
+                              <br>
+                            </div>
+                          </td>
+                        </tr>
+
+                    <else />
+
+                        <!-- 仅在不是第一个进入 -->
+                        <tr oty="0,4,70" id="track12251082074" class="tr-bd">
+                          <td>
+                            <div class="goods-item p-830486">
+                              <div class="p-img">
+                                  <a target="_blank" clstag="click|keycount|orderinfo|order_product" href="{$good.good_name}">
+                                    <img width="60" height="60" data-lazy-img="done" title="{$good.good_name}" src="{$good.thumb_img}" class="">
+                                  </a>
+                              </div>
+                              <div class="p-msg">
+                                <div class="p-name"><a title="{$good.good_name}" target="_blank" clstag="click|keycount|orderinfo|order_product" class="a-link" href="/{$good.good_id}.html">{$good.good_name}</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="goods-number">
+                                x1
+                            </div>
+
+                            <div class="clr"></div>
+                          </td>
+                        </tr>
+
+                    </eq>
+
+                </foreach>
+
+              </tbody>
+
+            </foreach>
+
+              </table>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt20">
+    <div class="pagin fr">
+        <div>{$page}</div>
+    </div>
+    <div class="clr"></div>
+</div>
+
+<script type="text/javascript">
+
+var _status = {$Think.get.status|default=2}; // 0：未完成，1：已完成
+var _type = {$Think.get.type|default=0};  // 0：买家订单
+
+// 自动选中正确的时间类别
+var _timeType = {$Think.get.timeType|default=1}; // 查看一定时间范围内的订单
+if (_timeType) {
+  var _obj = $('.time-list ul li').eq(_timeType-1);
+  _obj.find('a').addClass('curr');
+  _obj.siblings().find('a').removeClass('curr');
+  $('.ordertime-cont .time-txt').html(_obj.text() + '<b></b>');
+}
+
+// 收货人信息的查看和隐藏
+$('.consignee').mouseenter(function () {
+  $(this).find('.prompt-01').show();
+}).mouseleave(function () {
+  $(this).find('.prompt-01').hide();
+});
+
+function fullOrder (order_id) {
+    if (confirm('确定执行该操作？')) {
+        $.post('/Order/fullOrder', {'order_id': order_id}, function (msg) {
+            backAppend(msg);
+        });
+    }
+    return false;
+}
+
+function showNotFull (status) {
+  var type = {$Think.get.type|default=0};  // 0：买家订单
+  status = status ? 0 : 1; // 为1，说明要查看未完成订单，所以status=0
+  location.href = '/Order/showOrder/status/' + status + '/type/' + type;
+}
+
+function searchOrder (e) {
+  var _this = $(e);
+  var val = _this.prev().val();
+  location.href = '/Order/showOrder/keyword/' + val;
+}
+
+function showOrderType (type) {
+  location.href = '/Order/showOrder/type/' + type;
+}
+
+function showTimeOrder(e, timeType) {
+  var status = {$Think.get.status|default=2}; // 0：未完成，1：已完成
+  var type = {$Think.get.type|default=0};  // 0：买家订单
+  var timeType = {$Think.get.timeType|default=1}; // 查看一定时间范围内的订单
+
+  $('.ordertime-cont .time-list').toggle();
+  var target = $(e.target);
+  var timeType = target.attr('_val');
+  $('.ordertime-cont .time-txt').html(target.text() + '<b></b>');
+  if (timeType) {
+    location.href = "/Order/showOrder/timeType/" + timeType + '/type/' + type + '/status/' + status;
+  }
+}
+
+</script>

@@ -1,0 +1,57 @@
+
+    <body>
+        <div id="back" class="back"></div>
+        <div class="msg"></div>
+        <div class="form"></div>
+
+        <div class="sou-wrap">
+            <p id="top"><a><img src="/Public/Wap/Img/bg.png" alt=""></a><span id="more"><img src="/Public/Wap/Img/more.png" alt=""/></span>
+                我的账号
+                <ul id="more_in">
+                    <li onclick="location.href='/User/index'">个人中心</li>
+                    <li onclick="location.href='/'">返回首页</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="account-wrap">
+            <h4>用户名</h4>
+            <p><span class="left">{$row.user_name}</span><span class="right" onclick="location.href='/User/changePassword';">修改密码</span></p>
+            <div class="clear"></div>
+            <h4 class="left">我的邮箱</h4>
+            <span class="right" style="line-height: 1.5rem;" onclick="changeEmail(1);">修改</span>
+            <eq name="row.is_check" value="0">
+                <span class="right email-check" style="line-height: 1.5rem;" onclick="userCheck();">邮箱未验证，立即验证</span>
+            <else />
+                <span class="right" style="line-height: 1.5rem;">邮箱已验证</span>
+            </eq>
+            <p>
+            <span class="left">{$row.email}</span>
+            </p>
+            <div class="clear"></div>
+            <h4 class="left">实名信息</h4>
+            <notempty name="realInfo">
+                <eq name="row.is_real" value="1">
+                    <span class="right" style="line-height: 1.5rem;">已实名</span>
+                <else />
+                    <span class="right" style="line-height: 1.5rem;">已提交认证申请，正在审核中</span>
+                </eq>
+                <span class="left realinfo first">　　  真实姓名：{$realInfo.real_name}</span>
+                <notempty name="realInfo.phone"><span class="left realinfo">　　　  　手机：{$realInfo.phone}</span></notempty>
+                <notempty name="realInfo.qq"><span class="left realinfo">　　　  　Q Q：{$realInfo.qq}</span></notempty>
+                <span class="left realinfo">学号/证件号码：{$realInfo.real_number}</span>
+                <span class="left realinfo">　　  认证地点：{$realInfo.real_location}</span>
+            <else />
+                <span class="right" style="line-height: 1.5rem;" onclick="location.href='/Real/add';">未实名，马上去实名？</span>
+                <p>
+                    <span class="left">未实名</span>
+                </p>
+            </notempty>
+            <div class="clear"></div>
+            <h4 class="left" style="margin-top: 0.8rem;">注册时间</h4>
+                <span class="right">　</span>
+            <p>
+            <span class="left">{$row.add_time|date="Y-m-d H:i:s",###}</span>
+            </p>
+            <div class="clear"></div>
+        </div>

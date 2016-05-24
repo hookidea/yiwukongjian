@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>管理中心 - 用户实名申请列表</title>
+  <meta name="robots">
+  <meta charset="UTF-8" />
+  <import type="css" file="Admin.Css.main"/>
+  <import type="css" file="Admin.Css.general"/>
+</head>
+<body>
+
+  <h1>
+    <span class="action-span1">
+      <a href="#">管理中心</a>
+    </span>
+    <span id="search_id" class="action-span1">- 用户实名申请列表</span>
+    <div style="clear:both"></div>
+  </h1>
+
+  <form name="listForm" id="listForm">
+
+    <div class="list-div" id="listDiv">
+      <table cellpadding="3" cellspacing="1">
+        <tr>
+          <th>
+            <input current="0" onclick='setSelect(this);' type="checkbox" />
+            用户ID
+          </th>
+          <th>
+            用户名
+          </th>
+          <th>
+            昵称
+          </th>
+          <th>
+            用户角色
+          </th>
+          <th>
+            绑定邮箱
+          </th>
+          <th>
+            <a href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='__CONTROLLER__/getList/sort/is_seal/order/'+order;location.href=url;">封号</a>
+            <if condition="$Think.get.sort eq 'is_seal'">
+              <img src="/Public/Admin/Img/sort_<if condition='$Think.get.order eq desc'>desc<else />asc</if>.gif"/>
+              <else />
+                <span class="icon_sort">
+                  <img src="/Public/Admin/Img/sort_asc.gif"/>
+                  <img src="/Public/Admin/Img/sort_desc.gif"/>
+                </span>
+            </if>
+          </th>
+          <th>
+            <a href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='__CONTROLLER__/getList/sort/is_check/order/'+order;location.href=url;">审核</a>
+            <if condition="$Think.get.sort eq 'is_check'">
+              <img src="/Public/Admin/Img/sort_<if condition='$Think.get.order eq desc'>desc<else />asc</if>.gif"/>
+              <else />
+                <span class="icon_sort">
+                  <img src="/Public/Admin/Img/sort_asc.gif"/>
+                  <img src="/Public/Admin/Img/sort_desc.gif"/>
+                </span>
+            </if>
+          </th>
+          <th>
+            <a href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='__CONTROLLER__/getList/sort/add_time/order/'+order;location.href=url;">注册时间</a>
+            <if condition="$Think.get.sort eq 'add_time'">
+              <img src="/Public/Admin/Img/sort_<if condition='$Think.get.order eq desc'>desc<else />asc</if>.gif"/>
+              <else />
+                <span class="icon_sort">
+                  <img src="/Public/Admin/Img/sort_asc.gif"/>
+                  <img src="/Public/Admin/Img/sort_desc.gif"/>
+                </span>
+            </if>
+          </th>
+          <th>
+            <a href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='__CONTROLLER__/getList/sort/seal_stop/order/'+order;location.href=url;">封号结束时间</a>
+            <if condition="$Think.get.sort eq 'seal_stop'">
+              <img src="/Public/Admin/Img/sort_<if condition='$Think.get.order eq desc'>desc<else />asc</if>.gif"/>
+              <else />
+                <span class="icon_sort">
+                  <img src="/Public/Admin/Img/sort_asc.gif"/>
+                  <img src="/Public/Admin/Img/sort_desc.gif"/>
+                </span>
+            </if>
+          </th>
+          <th>
+            实名姓名
+          </th>
+          <th>
+            实名号码
+          </th>
+          <th>
+            实名位置
+          </th>
+          <th>操作</th>
+        </tr>
+
+      <foreach name="list" item="vo">
+        <tr>
+          <td align="center">
+            <input type="checkbox" name="user_id[]" value="{$vo.user_id}" />
+            {$vo.user_id}
+          </td>
+          <td align="center">
+            {$vo.user_name}
+          </td>
+          <td align="center">
+            {$vo.nickname}
+          </td>
+          <td align="center">
+            {$vo.role_name}
+          </td>
+          <td align="center">
+            {$vo.email}
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.is_seal' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.is_check' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            {$vo.add_time|date='Y-m-d H:i:s',###}
+          </td>
+          <td align="center">
+            <neq name="vo.seal_stop" value="0">
+              {$vo.seal_stop|date='Y-m-d H:i:s',###}
+            <else />
+              0
+            </neq>
+          </td>
+          <td align="center">
+            {$vo.real_name}
+          </td>
+          <td align="center">
+            {$vo.real_number}
+          </td>
+          <td align="center">
+            {$vo.real_location}
+          </td>
+          <td align="center">
+            <a href="javascript:if(confirm('通过该用户的实名请求？')){var user_id = {$vo.user_id}, current={$vo.is_check}; $.post('__CONTROLLER__/real', {user_id: user_id}, function (msg) {alert(msg.info); location.reload();})}"  title="通过该用户的实名请求">
+              实
+            </a>
+          </td>
+        </tr>
+        </foreach>
+        </table>
+    </table>
+  </div>
+
+  <div id="full_action" style="float: left;">
+    <input type="button" value="全选" onclick="full_select();">
+    <input type="button" value="不全选" onclick="del_select();">
+    <input type="button" value="全部通过实名申请" onclick="return multiUser('real');">
+  </div>
+
+  <div id="pager">{$page}</div>
+</form>
+
+
+</body>
+</html>
+
+<import type="js" file="Admin.Js.jquery" />
+<import type="js" file="Admin.Js.good" />

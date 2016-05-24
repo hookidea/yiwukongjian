@@ -1,0 +1,26 @@
+
+        <div class="top">
+          <h1><a href="/"><img src="/Public/Wap/Img/logo.png" /></a></h1>
+            <form method="get" action="/Good/getList">
+                <input type="submit" value="" class="keyword-submit">
+                <span class="search-btn"></span>
+                <input type="text" name="keyword" placeholder="搜索商品" value="{$Think.get.keyword}">
+            </form>
+        </div>
+          <div class="classwrap">
+            <!-- <h2>分类</h2> -->
+              <ul>
+                <a href="/Beg/getList"><li><span>求购专区</span></li></a>
+                <a href="/Lost/getList"><li><span>招领专区</span></li></a>
+                <foreach name="list" item="vo">
+                    <a href="/Good/getList/cat_id/{$vo.cat_id}"><li><span>{$vo.cat_name}</span></li></a>
+                </foreach>
+              </ul>
+          </div>
+    <div class="bottom">
+        <ul>
+          <li><a href="/"><img src="/Public/Wap/Img/bmt.png"/></a></li>
+          <li><a href="/Category/getList"><img src="/Public/Wap/Img/bmq.png"/></a></li>
+          <li><a href="/User/index"><img src="/Public/Wap/Img/bmv.png"/></a></li>
+        </ul>
+    </div>

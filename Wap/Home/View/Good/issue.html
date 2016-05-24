@@ -1,0 +1,68 @@
+
+<form id="upload-form" method="post" flag="good">
+      <p id="top"><a><img src="/Public/Wap/Img/bg.png" alt=""></a><span id="more"><img src="/Public/Wap/Img/more.png" alt=""/></span>
+          发布商品
+          <ul id="more_in">
+              <li onclick="location.href='/User/index'">个人中心</li>
+              <li onclick="location.href='/'">返回首页</li>
+          </ul>
+      </p>
+      <div class="release_wrap">
+              <div class="upload-wr">
+                  <div class="photo-area init-up">
+                      <div id="html5" class="moxie-shim moxie-shim-html5" _s="{$Think.config.IMAGE_SIZE}">
+                        <div>
+                              <input id="html5_file" type="file" name="" accept="image/*" class="image-input" capture="camera">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="release_detail textarea"><span class="title"><font color="red">*</font>商品名称：<span id="good_name-error" class="error-div">必填：长度必须在1-60个字符内</span></span><textarea type="text" placeholder="必填：请输入商品名称" name="good_name"></textarea></div>
+
+              <div class="release_detail textarea"><span class="title"><font color="red">*</font>交易地点：<span id="address-error" class="error-div">必填：长度必须在1-150个字符内</span></span><textarea type="text" placeholder="必填：请输入交易地点" name="address">工贸校园一站式楼下交易</textarea></div>
+
+              <div class="release_detail textarea"><span class="title"><font color="red">*</font>商品详情：<span id="good_desc-error" class="error-div">必填：长度必须在20-150个字符内</span></span><textarea type="text" placeholder="必填：请输入商品详情" name="good_desc"></textarea></div>
+
+               <div class="release_detail select">
+                <span class="title">
+                <font color="red">*</font>所属分类：
+                  <select name="cat_id" id="">
+                        <option value="{$co.cat_id}">选择分类</option>
+                        <foreach name="cateList" item="co">
+                          <option value="{$co.cat_id}">{$co.cat_name}</option>
+                        </foreach>
+
+                  </select>
+                </span>
+              </div>
+
+              <div class="release_detail"><span class="title"><font color="red">*</font>商品价格：<span id="shop_price-error" class="error-div">必填：商品价格必须在0-99999之间</span></span><input type="text" placeholder="必填：商品价格/促销价格必填其一" name="shop_price"></div>
+
+              <div class="release_detail"><span class="title"><font color="red">*</font>手机：<span id="phone-error" class="error-div">手机号码格式不正确</span></span><input type="text" placeholder="必填：手机/QQ必填其一" name="phone"></div>
+              <div class="release_detail"><span class="title"><font color="red">*</font>QQ：<span id="qq-error" class="error-div">QQ号码格式不正确</span></span><input type="text" placeholder="必填：手机/QQ必填其一" name="qq"></div>
+
+              <div class="release_detail"><span class="title"><font color="red">*</font>可否议价：</span><input type="radio" class="first" name="is_chaffer" value="1" checked="checked">是<input type="radio" name="is_chaffer" value="0">否</div>
+
+              <div class="release_detail">
+              <span class="title"><font color="red">*</font>商品类型：</span>
+                <input type="radio" class="first" name="is_new" value="1" checked="checked">二手<input type="radio" name="is_new" value="0">全新
+              </div>
+
+              <div class="release_detail"><span class="title"><font color="red">*</font>立即上架：</span><input type="radio" class="first" name="is_on_sale" value="1" checked="checked">是<input type="radio" name="is_on_sale" value="0">否</div>
+
+              <div class="release_detail"><span class="title"><font color="red">*</font>可否换购：</span><input type="radio" class="first" name="is_switch" value="1" checked="checked">是<input type="radio" name="is_switch" value="0">否</div>
+
+              <div class="release_detail"><span class="title">&nbsp;库存数量：<span id="good_number-error" class="error-div">库存数量必须在1-65535之间</span></span><input type="text" placeholder="必填：请输入库存数量" name="good_number" value="1"></div>
+
+              <div class="release_detail"><span class="title">&nbsp;促销价格：<span id="promote_price-error" class="error-div">选填：促销价格必须在0-99999之间</span></span><input type="text" placeholder="选填：商品价格/促销价格必填其一" name="promote_price"></div>
+
+              <div class="release_detail textarea"><span class="title">&nbsp;我想换购：<span id="switch-error" class="error-div">选填：长度必须在30个字符内</span></span><textarea type="text" placeholder="选填：请输入你想换购的物品" name="switch"></textarea></div>
+
+              <div class="release_detail textarea"><span class="title">&nbsp;搜索关键字：<span id="keywords-error" class="error-div">选填：长度必须在30个字符内</span></span><textarea type="text" placeholder="选填：请输入商品搜索关键字" name="keywords"></textarea></div>
+
+              <div class="release_btn">
+                <input type="submit" value="立即发布">
+              </div>
+      </div>
+</form>

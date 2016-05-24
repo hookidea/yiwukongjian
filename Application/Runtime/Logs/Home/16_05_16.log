@@ -1,0 +1,111 @@
+[ 2016-05-16T16:36:04+08:00 ] 127.0.0.1 /?wap=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `categorys` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT * FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 0,9   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `categorys` ORDER BY `grade` desc  [ RunTime:0.0003s ]
+INFO: [ view_begin ] --START--
+INFO: Run \Home\Behavior\SideBehavior [ RunTime:0.000843s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000883s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
+NOTIC: [8] Undefined index: totalNotReal /home/stu/Code/www/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 166 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009077s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000423s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000476s ]
+
+[ 2016-05-16T16:36:04+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `categorys` [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT * FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 0,9   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `categorys` ORDER BY `grade` desc  [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run \Home\Behavior\SideBehavior [ RunTime:0.000522s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000555s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
+NOTIC: [8] Undefined index: totalNotReal /home/stu/Code/www/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 166 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007912s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000483s ]
+
+[ 2016-05-16T16:36:09+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `categorys` [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT * FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 0,9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `categorys` ORDER BY `grade` desc  [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run \Home\Behavior\SideBehavior [ RunTime:0.000563s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000597s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
+NOTIC: [8] Undefined index: totalNotReal /home/stu/Code/www/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 166 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007699s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007733s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000417s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000459s ]
+

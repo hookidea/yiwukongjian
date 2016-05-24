@@ -1,0 +1,82 @@
+<div class="container">
+   <!-- <div class="main_center">
+       <div class="zuo">
+           <div class="tx">
+
+            <img src="{$row.save_path}">
+            <img src="/Public/Home/Img/person_hover.png">
+
+           </div>
+       </div>
+
+       <div class="you">
+           <div class="name_user"><span>{$row.user_name}</span>
+            <img src="/Public/Home/Img/ico_lv1.png" alt="" />
+
+           </div>
+           <p>已卖出{$row.sales_num}件商品</p>
+           <ul class="seller_attr">
+                <li>
+                    当前等级：1
+                    <span><a href="#">等级有什么用？</a></span>
+                </li>
+                <li>
+                    当前积分：{$row.integral}
+                    <span><a href="#">查看积分明细</a></span>
+               </li>
+               <li>
+                    升级还需：0
+                   <span><a href="#">如何升级？</a></span>
+               </li>
+           </ul>
+       </div>
+   </div> -->
+
+    <div class="suibian">
+        <ul class="middle_nav">
+          <li class="personalhover"><a href="/User/showUser">我的资料</a></li>
+          <li><a href="/Good/getUserList">商品管理</a></li>
+          <li><a href="/Beg/getUserList">求购管理</a></li>
+          <li><a href="/Lost/getUserList">招领管理</a></li>
+          <li><a href="/User/showCollect">收藏管理</a></li>
+          <li><a href="/User/showAddress">地址管理</a></li>
+          <li><a href="/Order/showOrder">订单管理</a></li>
+          <li><a href="/Switch/showSwitch">换购管理</a></li>
+          <li><a href="/Message/showMessage">消息管理</a></li>
+          <li><a href="/User/showReal">认证管理</a></li>
+        </ul>
+   </div>
+   <div class="qq">
+        <div class="aa">
+            <div class="my_info">
+                    <div class="account_info">
+                        <h2>用户信息</h2>
+                        <ul class="infos">
+                            <li>用户名称</li>
+                            <li class="right_info">{$row.user_name}</li>
+                            <li style="cursor: pointer;" class="check_user_btn right_info" onclick="changePassword(1);">更改密码</li>
+                        </ul>
+                        <ul class="infos">
+                            <li>绑定邮箱</li>
+                            <li class="right_info" id="email_name">{$row.email}</li>
+                            <eq name="row.is_check" value="0">
+                                <li style="cursor: pointer;" class="check_user_btn right_info"><span onclick="userCheck();">邮箱未验证，立即验证</span><span onclick="changeEmail(1);" style="margin-left: 20px;cursor: pointer;">修改邮箱</span></li>
+                            <else />
+                                <li class="check_user_btn right_info">邮箱已验证<span onclick="changeEmail(1);" style="margin-left: 20px;cursor: pointer;">修改邮箱</span></li>
+                            </eq>
+                        </ul>
+                        <ul class="infos">
+                            <li>注册时间</li>
+                            <li class="right_info">{$row.add_time|date='Y-m-d H:i:s',###}</li>
+                        </ul>
+                        <ul class="infos">
+                            <li style="height: 70px; line-height: 70px;">我的头像</li>
+                            <li class="right_info"><img style="width: 70px;" src="{$row.save_path}"></li>
+                            <li  style="height: 70px; line-height: 70px;" class="check_user_btn right_info" id="upload_head"><span onclick="ajaxUploadImg();">点击修改头像</span></li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+

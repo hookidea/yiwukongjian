@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>管理中心 - 订单列表</title>
+  <meta name="robots">
+  <meta charset="UTF-8" />
+  <import type="css" file="Admin.Css.general" />
+  <import type="css" file="Admin.Css.main" />
+</head>
+<body>
+
+  <h1>
+    <span class="action-span1">
+      <a href="#">管理中心</a>
+    </span>
+    <span id="search_id" class="action-span1">- 订单列表</span>
+    <div style="clear:both"></div>
+  </h1>
+
+  <div class="form-div">
+
+  <form action="__CONTROLLER__/getList" name="searchForm" method="get" style="width: 400px; margin: 0 auto;">
+      <input type="text" name="keyword" size="15" placeholder="商品名/商品SN/关键字/用户名/用户ID" style="width: 220px; text-align: center;" value="<present name="Think.get.keyword">{$Think.get.keyword}</present>"/>
+      <input type="submit" value=" 搜索 " class="button" />
+
+      <if condition="($Think.get.keyword neq '') OR ($list eq '')">
+          <a href="__CONTROLLER__/getList"><input type="button" value=" 返回查看全部 " class="button" /></a>
+      </if>
+      
+    </form>
+
+  <present name="list">
+
+          <form method="post" action="" name="listForm">
+
+            <div class="list-div" id="listDiv">
+              <table cellpadding="3" cellspacing="1">
+                <tr>
+                 <th>
+                    <a href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='__CONTROLLER__/getList/sort/order_id/order/'+order;location.href=url;">编号</a>
+                    <if condition="$Think.get.sort eq 'order_id'">
+                      <img src="/Public/Admin/Img/sort_<if condition='$Think.get.order eq desc'>desc<else />asc</if>.gif"/>
+                      <else />
+                        <span class="icon_sort">
+                          <img src="/Public/Admin/Img/sort_asc.gif"/>
+                          <img src="/Public/Admin/Img/sort_desc.gif"/>
+                        </span>
+                    </if>
+                  </th>
+                  <th>
+                    订单SN
+                  </th>
+                  <th>
+                    <a href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='__CONTROLLER__/getList/sort/total_price/order/'+order;location.href=url;">金额</a>
+                    <if condition="$Think.get.sort eq 'total_price'">
+                      <img src="/Public/Admin/Img/sort_<if condition='$Think.get.order eq desc'>desc<else />asc</if>.gif"/>
+                      <else />
+                        <span class="icon_sort">
+                          <img src="/Public/Admin/Img/sort_asc.gif"/>
+                          <img src="/Public/Admin/Img/sort_desc.gif"/>
+                        </span>
+                    </if>
+                  </th>
+                  
+                  <th>
+                    <a href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='__CONTROLLER__/getList/sort/status/order/'+order;location.href=url;">状态</a>
+                    <if condition="$Think.get.sort eq 'status'">
+                      <img src="/Public/Admin/Img/sort_<if condition='$Think.get.order eq desc'>desc<else />asc</if>.gif"/>
+                      <else />
+                        <span class="icon_sort">
+                          <img src="/Public/Admin/Img/sort_asc.gif"/>
+                          <img src="/Public/Admin/Img/sort_desc.gif"/>
+                        </span>
+                    </if>
+                  </th>
+                  <th>
+                    <a href="javascript:var order='{$Think.get.order}'=='asc'?'desc':'asc',url='__CONTROLLER__/getList/sort/add_time/order/'+order;location.href=url;">发布时间</a>
+                    <if condition="$Think.get.sort eq 'add_time'">
+                        <img src="/Public/Admin/Img/sort_<if condition='$Think.get.order eq desc'>desc<else />asc</if>.gif"/>
+                      <else />
+                        <if condition="$Think.get.sort neq ''">
+                          <span class="icon_sort">
+                            <img src="/Public/Admin/Img/sort_asc.gif"/>
+                            <img src="/Public/Admin/Img/sort_desc.gif"/>
+                          </span>
+                          <else/>
+                            <img src="/Public/Admin/Img/sort_desc.gif"/>
+                        </if>
+                        
+                    </if>
+                  </th>
+                  <th>
+                    下单者
+                  </th>
+                  <th>操作</th>
+                </tr>
+                <foreach name="list" item="vo">
+                <tr>
+                  <td>
+                    {$vo.order_id}
+                  </td>
+                  <td class="first-cell" style="">
+                    <span >
+                      {$vo.order_sn}
+                    </span>
+                  </td>
+                  <td>
+                    <span >
+                      {$vo.total_price}
+                    </span>
+                  </td>
+                  <td align="center">
+                    <img src="/Public/Admin/Img/<eq name='vo.status' value='1'>yes<else />no</eq>.gif" />
+                  </td>
+                  <td align="center">
+                    <span >
+                      {$vo.add_time|date='Y-m-d H:i:s',###}
+                    </span>
+                  </td>
+                  <td align="center">
+                    <span >
+                      {$vo.user_name}
+                    </span>
+                  </td>
+                  <td align="center">
+                    <a href="__CONTROLLER__/showOrder/order_id/{$vo.order_id}" title="查看该商品页面">
+                      看
+                    </a>
+                  </td>
+                </tr>
+                </foreach>
+                </table>
+
+                
+            </table>
+          </div>
+          <div id="pager">{$page}</div>
+        </form>
+
+    <else />
+
+        <p style="color:red; text-align: center;">没有匹配结果！正在返回上一页...</p>
+        <script>
+            setTimeout(function () {
+              history.go(-1);
+            }, 800);
+        </script>
+
+  </present>
+
+
+</body>
+</html>
+
+<script src="/Public/Admin/Js/jquery.js"></script>
+<script src="/Public/Admin/Js/good.js"></script>

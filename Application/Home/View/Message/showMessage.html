@@ -1,0 +1,208 @@
+<link rel="stylesheet" type="text/css" href="/Public/Home/Css/showMessage.css?v=2.1">
+<div class="container">
+	<div class="suibian">
+		<ul class="middle_nav">
+			<li><a href="/User/showUser">我的资料</a></li>
+	      <li><a href="/Good/getUserList">商品管理</a></li>
+	      <li><a href="/Beg/getUserList">求购管理</a></li>
+	      <li><a href="/Lost/getUserList">招领管理</a></li>
+	      <li><a href="/User/showCollect">收藏管理</a></li>
+	      <li><a href="/User/showAddress">地址管理</a></li>
+	      <li><a href="/Order/showOrder">订单管理</a></li>
+	      <li><a href="/Switch/showSwitch">换购管理</a></li>
+	      <li class="personalhover"><a href="/Message/showMessage">消息管理</a></li>
+	      <li><a href="/User/showReal">认证管理</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+
+	<div id="container">
+	<div class="w">
+		<div id="content">
+			<div id="main" style="height: 659px;">
+				<div class="mod-main mod-comm message-box">
+					<form action="" id="queryMsgFrom" method="post">
+					<div class="mc">
+						<div class="mg-left" style="padding-top:0px">
+							<div class="ui-scrollbar-wrap" style="position: relative; overflow: hidden; width: 253px; height: 659px; z-index: 0;">
+							<div style="position: relative; overflow: hidden; width: 253px; height: 659px; z-index: 0;" class="ui-scrollbar-wrap">
+								<div class="mg-noticelist" style="position: absolute; left: 0px; top: 0px; overflow: hidden;">
+									<div class="ui-scrollbar-main">
+										<ul>
+											<!-- 一个侧边栏开始 -->
+	    					        		<li onclick="queryByType(1)" class="mg-types <eq name="Think.get.type" value="1">mg-types-cur</eq>">
+								        		<span class="mg-timg actimg">
+	    										<s id="unsubscribe_icon_1" class="hide"></s>
+	    								        </span>
+	    						        		<div class="mg-tcont">
+	        										<div class="mg-ttitle">
+	    												<div style="float:left;width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+			            									<a href="/Message/showMessage/type/1" title="系统通知">
+			            										系统通知
+			            									</a>
+	        											</div>
+	        										<span class="mg-ttime"></span>
+	        										</div>
+			            							<span class="mg-illus">
+			            								<div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:135px;float:left">
+			            								    <neq name="notReadSystemInfo" value="0">
+			            										<font color="red">{$notRead}条未读消息</font>
+		            										<else />
+			            										<font color="grey">无未读消息</font>
+			            									</neq>
+			            								</div>
+			            							</span>
+	        									</div>
+	    									</li>
+	    									<li onclick="queryByType(2)" class="mg-types <eq name="Think.get.type" value="2">mg-types-cur</eq>">
+								        		<span class="mg-timg actimg">
+	    										<s id="unsubscribe_icon_1" class="hide"></s>
+	    								        </span>
+	    						        		<div class="mg-tcont">
+	        										<div class="mg-ttitle">
+	    												<div style="float:left;width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+			            									<a href="javascript:void(0);" title="订单通知">
+			            										订单通知
+			            									</a>
+	        											</div>
+	        										<span class="mg-ttime"></span>
+	        										</div>
+			            							<span class="mg-illus">
+			            								<div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:135px;float:left">
+			            								    <neq name="notReadOrderInfo" value="0">
+			            										<font color="red">{$notReadOrderInfo}条未读消息</font>
+		            										<else />
+			            										<font color="grey">无未读消息</font>
+			            									</neq>
+			            								</div>
+			            							</span>
+	        									</div>
+	    									</li>
+	    									<li onclick="queryByType(3)" class="mg-types <eq name="Think.get.type" value="3">mg-types-cur</eq>">
+								        		<span class="mg-timg actimg">
+	    										<s id="unsubscribe_icon_1" class="hide"></s>
+	    								        </span>
+	    						        		<div class="mg-tcont">
+	        										<div class="mg-ttitle">
+	    												<div style="float:left;width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+			            									<a href="javascript:void(0);" title="商品交换">
+			            										商品交换
+			            									</a>
+	        											</div>
+	        										<span class="mg-ttime"></span>
+	        										</div>
+			            							<span class="mg-illus">
+			            								<div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:135px;float:left">
+			            								    <neq name="notReadSwitchInfo" value="0">
+			            										<font color="red">{$notReadSwitchInfo}条未读消息</font>
+		            										<else />
+			            										<font color="grey">无未读消息</font>
+			            									</neq>
+			            								</div>
+			            							</span>
+	        									</div>
+	    									</li>
+	    									<li onclick="queryByType(4)" class="mg-types <eq name="Think.get.type" value="4">mg-types-cur</eq>">
+								        		<span class="mg-timg actimg">
+	    										<s id="unsubscribe_icon_1" class="hide"></s>
+	    								        </span>
+	    						        		<div class="mg-tcont">
+	        										<div class="mg-ttitle">
+	    												<div style="float:left;width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+			            									<a href="javascript:void(0);" title="订单通知">
+			            										私信通知
+			            									</a>
+	        											</div>
+	        										<span class="mg-ttime"></span>
+	        										</div>
+			            							<span class="mg-illus">
+			            								<div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:135px;float:left">
+			            								    <neq name="notReadLetter" value="0">
+			            										<font color="red">{$notReadLetter}条未读消息</font>
+		            										<else />
+			            										<font color="grey">无未读消息</font>
+			            									</neq>
+			            								</div>
+			            							</span>
+	        									</div>
+	    									</li>
+	    									<li onclick="queryByType(5)" class="mg-types <eq name="Think.get.type" value="5">mg-types-cur</eq>">
+								        		<span class="mg-timg actimg">
+	    										<s id="unsubscribe_icon_1" class="hide"></s>
+	    								        </span>
+	    						        		<div class="mg-tcont">
+	        										<div class="mg-ttitle">
+	    												<div style="float:left;width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+			            									<a href="javascript:void(0);" title="回复通知">
+			            										回复通知
+			            									</a>
+	        											</div>
+	        										<span class="mg-ttime"></span>
+	        										</div>
+			            							<span class="mg-illus">
+			            								<div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:135px;float:left">
+			            								    <neq name="notReadCommentInfo" value="0">
+			            										<font color="red">{$notReadCommentInfo}条未读消息</font>
+		            										<else />
+			            										<font color="grey">无未读消息</font>
+			            									</neq>
+			            								</div>
+			            							</span>
+	        									</div>
+	    									</li>
+	    									<!-- 一个侧边栏结束 -->
+	    					        	</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="mg-right" style="padding-bottom: 10px; height: 659px;">
+
+						<div class="ui-scrollbar-wrap" style="position: relative; height: 675px; z-index: 0;">
+							<div class="ui-scrollbar-main" style="margin-top:10px">
+
+						    	<ul id="msg-node-6163378646" class="mg-coupon">
+								<!-- 每个消息开始 -->
+								<foreach name="list" item="vo">
+									<li>
+										<span class="mg-time" style="width:125px;margin-left:230px">{$vo.add_time|date="Y-m-d H:i:s",###}</span>
+										<div class="mg-box">
+											<div class="mg-title">
+	    										<h4 style="float: left">{$vo.title}</h4>
+											</div>
+											<div class="mg-content clearfix">
+												<div>
+													{$vo.content}
+												</div>
+										    	<a target="_blank" onclick="" href="{$vo.url}" class="mg-details">
+										    		链接&nbsp;&gt;&nbsp;
+										    	</a>
+										    </div>
+										</div>
+									</li>
+								</foreach>
+								<!-- 每个消息结束 -->
+								</ul>
+							</div>
+						</div>
+					</div>
+					</div>
+					</form>
+				</div>
+			</div>
+	 		</div>
+	</div>
+	</div>
+</div>
+
+<div class="mt20">
+    <div class="pagin fr">
+        <div>{$page}</div>
+    </div>
+    <div class="clr"></div>
+</div>
+
+</body>
+</html>

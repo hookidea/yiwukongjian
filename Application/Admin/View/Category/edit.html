@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>管理中心 - 编辑分类</title>
+        <meta charset="utf-8">
+    </head>
+    <body style="background: #DDEEF2;">
+        <h1 style="text-align: center;">正在编辑 - <span style="color:red;">{$row.cat_name}</span> - 分类</h1>
+        <div style="margin: 0px auto; width: 240px;">
+
+            <form action="" method="POST" id="form">
+            <p>
+            分类名称：
+            <input type="text" name="cat_name" value="{$row.cat_name}" />
+            </p>
+
+            <p>
+            分类描述：
+            <textarea name="cat_desc">{$row.cat_desc}</textarea>
+            </p>
+
+            <p>
+            显示排名：
+            <input type="text" name="grade" id="" value="{$row.grade}">
+            <br/><span style="color:red;font-size: 12px;">数值越大，排名越靠前</span>
+            </p>
+
+            <p>
+            是否显示：
+            <input type="radio" name="is_show" value="1" <eq name="row.is_show" value="1">checked</eq>><span style="margin-right: 20px;">显示</span><input type="radio" name="is_show" value="0" <eq name="row.is_show" value="0">checked</eq>><span>不显示</span>
+            </p>
+
+            <p style="text-align: center;"><input type="button" value="提交" style="margin-right: 20px;" onclick="javascript:if(confirm('确定保存修改吗？')){var cat_id={$Think.get.cat_id}; $.post('__CONTROLLER__/edit/cat_id/' + cat_id, $('#form').serialize(), function (msg) {alert(msg.info);location.href='__CONTROLLER__/getList';})}" /><input type="button" value="返回" onclick="javascript:history.back();" /></p>
+        </form>
+        </div>
+    </body>
+</html>
+
+<import file="Admin/Js/jquery" />

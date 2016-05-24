@@ -1,0 +1,85 @@
+
+    <div class="top">
+        <h1><a href="/"><img src="/Public/Wap/Img/logo.png" /></h1></a>
+        <form method="get" action="/Good/getList">
+            <input type="submit" value="" class="keyword-submit">
+            <span class="search-btn"></span>
+            <input type="text" name="keyword" placeholder="搜索商品" value="{$Think.get.keyword}">
+        </form>
+    </div>
+    <notempty name="list">
+            <div class="wrap">
+              <div class="recommend">
+                <empty name="Think.get.keyword">
+                    <div id="mGen1" class="pad-change" style="display: block;">
+                        <ul class="jd-search-tab border-change">
+                            <li submenu="integrative-menu" class="sort-by-integrative li-change-eleven <empty name='Think.get.sort'>active</empty><eq name='Think.get.sort' value='add_time'>active</eq>" id="integrative">
+                                <a href="/Good/getList/cat_id/{$Think.get.cat_id|default=0}/sort/add_time/order/desc">时间</a>
+                            </li>
+                            <li class="li-change-eleven <eq name='Think.get.sort' value='sales_num'>active</eq>" id="sales-volume-order">
+                                <a report-eventid="MList_SalesVolume" report-eventparam="" class="J_ping" href="/Good/getList/cat_id/{$Think.get.cat_id|default=0}/sort/sales_num/order/desc">销量</a>
+                            </li>
+                            <li class="sort-by-price li-change-eleven <eq name='Think.get.sort' value='shop_price'>active</eq>" id="prcie-order">
+                                <a report-eventid="MList_Price" report-eventparam="" class="J_ping" href="/Good/getList/cat_id/{$Think.get.cat_id|default=0}/sort/shop_price/order/desc">价格</a>
+                            </li>
+                        </ul>
+                    </div>
+                </empty>
+                    <ul class="good-list">
+                      <foreach name="list" item="to">
+
+                            <li>
+                              <a href="/{$to.good_id}.html">
+                              <div class="index_img"><img src="{$to.thumb_img}" alt="{$to.good_name}" /></div> </a>
+                              <div class="name_wrap">
+                                <p>
+                                  {$to.good_name}
+                                </p>
+                              </div>
+                              <div class="love-item-bottom">
+                                <eq name="to.is_promote" value="1">
+                                    <span class="shop_price">￥{$to.promote_price}</span>
+                                  <else />
+                                    <span class="shop_price">￥{$to.shop_price}</span>
+                                </eq>
+                                <a href="/User/showUser/user_id/{$to.user_id}"><span class="right user_name">{$to.user_name}</span></a>
+                              </div>
+                            </li>
+
+                      </foreach>
+
+                      <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>
+              </div>
+            </div>
+
+<div class="mt20">
+    <div class="pagin fr">
+        <div>{$page}</div>
+    </div>
+    <div class="clr"></div>
+</div>
+
+        <else />
+
+            <notempty name="Think.get.cat_id">
+                    <p class="empty-p">抱歉，该分类下暂无商品，正在返回上一页...</p>
+                <else />
+                    <p class="empty-p">抱歉，没有找到“<span style="color: #333;font-weight:700;">{$Think.get.keyword}</span>”的搜索结果，，正在返回上一页...</p>
+            </notempty>
+
+            <script type="text/javascript">setTimeout(function(){history.go(-1);}, 1000);</script>
+
+
+    </notempty>
+
+<div class="bottom">
+    <ul>
+      <li><a href="/Index/index"><img src="/Public/Wap/Img/bmt.png"/></a></li>
+      <li><a href="/Category/getList"><img src="/Public/Wap/Img/bmp.png"/></a></li>
+      <li><a href="/User/index"><img src="/Public/Wap/Img/bmv.png"/></a></li>
+    </ul>
+</div>
+
+

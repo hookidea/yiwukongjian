@@ -1,0 +1,61 @@
+<form id="upload-form" method="post" flag="lost">
+
+<div class="wrap">
+	<div class="post_text">
+			<img src="/Public/Home/Img/zhaoling.png" alt="" />
+	</div>
+<div class="information">
+
+	<div class="commodity">
+		<div class="commodity_left">
+			<p class="product-name">　<font color="red">*</font>标题</p>
+			<p class="product-details">　<font color="red">*</font>描述</p>
+		</div>
+		<div class="commodity_right">
+			<div>
+                <input type="text" name="lost_title" class="product-text" placeholder="必填：长度必须在1-60个字符之间">
+                <div class="error-div" id="lost_title-error">
+                    <div class="easytip-text">必填：长度必须在1-60个字符之间！</div><div class="easytip-arrow">
+                    </div>
+                </div>
+            </div>
+			<div>
+                <textarea name="lost_desc" class="product-deta-ilstext" placeholder='必填：长度必须在20-150个字符之间'></textarea>
+                <div class="error-div" id="lost_desc-error">
+                    <div class="easytip-text">必填：长度必须在20-150个字符之间！</div><div class="easytip-arrow">
+                    </div>
+                </div>
+            </div>
+
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="contact">联系方式<span>(至少选填一个)</span></div>
+	<div class="contact-information-left">
+		<p class="product-name">&nbsp;<font color="red">*</font>手机</p>
+		<p class="product-name">&nbsp;<font color="red">*</font>Q Q</p>
+	</div>
+	<div class="contact-information-right">
+		<div>
+            <input type="text" name="phone" class="price" placeholder="必填：手机/QQ必填其一">
+            <div class="error-div" id="phone-error">
+                <div class="easytip-text">必填：格式错误</div><div class="easytip-arrow">
+                </div>
+            </div>
+        </div>
+		<div>
+            <input type="text" name="qq" class="price" placeholder="必填：手机/QQ必填其一">
+            <div class="error-div" id="qq-error">
+                <div class="easytip-text">必填：格式错误</div><div class="easytip-arrow">
+                </div>
+            </div>
+        </div>
+
+		<div class="Release-button">
+			<input type="submit" name="name" value="立即发布">
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+
+</form>

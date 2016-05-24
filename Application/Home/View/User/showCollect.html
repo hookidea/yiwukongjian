@@ -1,0 +1,60 @@
+    <div class="container">
+        <div class="suibian">
+          <ul class="middle_nav">
+            <li><a href="/User/showUser">我的资料</a></li>
+            <li><a href="/Good/getUserList">商品管理</a></li>
+            <li><a href="/Beg/getUserList">求购管理</a></li>
+            <li><a href="/Lost/getUserList">招领管理</a></li>
+            <li class="personalhover"><a href="/User/showCollect">收藏管理</a></li>
+            <li><a href="/User/showAddress">地址管理</a></li>
+            <li><a href="/Order/showOrder">订单管理</a></li>
+            <li><a href="/Switch/showSwitch">换购管理</a></li>
+            <li><a href="/Message/showMessage">消息管理</a></li>
+            <li><a href="/User/showReal">认证管理</a></li>
+          </ul>
+          <div class="clear">
+          </div>
+       </div>
+       <div class="qq">
+         <div class="sc">
+
+          <foreach name="list" item="vo">
+
+             <div class="enshr_each">
+                <a href="/{$vo.data.good_id}.html">
+                 <img src="{$vo.data.thumb_img}" alt="">
+                </a>
+                 <h2><a href="/{$vo.data.good_id}.html">{$vo.data.good_name|mb_substr=###,0,40} ...</a></h2>
+                 <p>
+                   收藏价格：<a href="/{$vo.data.good_id}.html" class="user_good"></a><span class="shop-price"><em>￥</em>{$vo.shop_price}</a></span>
+                   <span>收藏时间：{$vo.add_time|date="Y年m月d日",###}</span>
+
+                 </p>
+                 <div class="enshr_state">
+
+                    <eq name="vo.data.is_on_sale" value="0">
+                      <span class="onsaling">下架中</span>
+                      <else />
+                      <span class="onsaling">上架中</span>
+                    </eq>
+
+
+
+                    <div class="beg_btn collect_user_btn" onclick="collect_user({$vo.data.good_id});">
+                        取消收藏
+                    </div>
+
+
+                 </div>
+             </div>
+          </foreach>
+         </div>
+        </div>
+    </div>
+
+<div class="mt20">
+    <div class="pagin fr">
+        <div>{$page}</div>
+    </div>
+    <div class="clr"></div>
+</div>

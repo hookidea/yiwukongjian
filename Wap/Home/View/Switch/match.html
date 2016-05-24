@@ -1,0 +1,134 @@
+
+  	<div id="back" class="back"></div>
+    <form id="upload-form" class="match-form" method="POST" action="/Switch/create" flag="switch">
+      <p id="top"><a><img src="/Public/Wap/Img/bg.png" alt=""></a><span id="more"><img src="/Public/Wap/Img/more.png" alt=""/></span>
+        商品匹配
+        <ul id="more_in">
+            <li onclick="location.href='/User/index'">个人中心</li>
+            <li onclick="location.href='/'">返回首页</li>
+        </ul>
+    </p>
+      <div class="compared_wrap">
+        <div class="compare_column">
+
+          <div class="compared_left">
+            <a href="/{$raplyGood.good_id}.html">
+              <img src="{$raplyGood.thumb_img}" alt="">
+              <span class="compared_text">{$raplyGood.good_name}</span>
+              <div class="Reference_Price"><span><em>￥</em><eq name="raplyGood.is_promote}">{$raplyGood.shop_price}<else />{$raplyGood.promote_price}</eq></span></div>
+            </a>
+          </div>
+
+          <div class="compared_right">
+            <a href="/{$userList.0.good_id}.html">
+              <img src="/Public/Wap/Img/match-img.png" alt="请点击选择下方你要用来交换的物品">
+                <span class="compared_text">{$userList.good_name}</span>
+              <div class="Reference_Price"><span><em>￥</em><eq name="userList.is_promote}">{$userList.shop_price}<else />{$userList.promote_price}</eq></span></div>
+            </a>
+          </div>
+
+          <div class="vs">vs</div>
+          <div class="clear"></div>
+        </div>
+        <div class="compared_btn">
+
+
+            <input type="hidden" name="raply_id" value="{$raplyGood.user_id}">
+            <input type="hidden" name="raply_name" value="{$raplyGood.user_name}">
+            <input type="hidden" name="raply_good_id" value="{$raplyGood.good_id}">
+            <input type="hidden" name="user_good_id">
+
+            <present name="userList">
+              <button type="button" name="button" id="button">交换</button>
+            </present>
+
+            <div class="clear"></div>
+        </div>
+        <present name="userList">
+            <p class="change"><a style="float: left; margin-left: 1rem;">{$info}</a><a id="match_id" _page=1 style="float: right;" onclick="getMatch({$raplyGood.good_id});">换一批</a></p>
+            <div class="clear"></div>
+            <div class="compared_recommend">
+                  <ul id="compared_recommend_in">
+                    <foreach name="userList" item="vo">
+                        <li _good_id="{$vo.good_id}">
+
+                          <img src="{$vo.thumb_img}" alt="" />
+                            <a href="/{$vo.good_id}.html">
+                              <div class="name_wrap">
+                                <span class="compared_text">{$vo.good_name}</span>
+                              </div>
+                            </a>
+                            <div class="Reference_Price"><span><em>￥</em><eq name="vo.is_promote}">{$vo.shop_price}<else />{$vo.promote_price}</eq></span></div>
+                        </li>
+                    </foreach>
+                  </ul>
+                  <div class="clear"></div>
+            </div>
+          <else />
+            <p style="padding: 3rem; color: #666;">没有匹配到结果，是否<a href="/Good/issue" style="color: red;">立即去发布</a>新商品用以交换该商品？</p>
+        </present>
+      </div>
+      <!--弹出地址确认-->
+      <div id="address">
+      		<h2>确认地址</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><p>收货人</p><input type="text" name="address_name"></td>
+                    </tr>
+                    <tr><td class="error-td" id="address_name-error">必填：长度必须在1-20个字符内</td></tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td><p>收货地址</p><input type="text" name="address_location"></td>
+                    </tr>
+                    <tr><td class="error-td" id="address_location-error">必填：长度必须在1-150个字符内</td></tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td><p>手机</p><input type="text" name="phone"></td>
+                    </tr>
+                    <tr><td class="error-td" id="phone-error">必填：手机/QQ必填其一</td></tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td><p>QQ</p><input type="text" name=""></td>
+                    </tr>
+                    <tr><td class="error-td" id="qq-error">必填：手机/QQ必填其一</td></tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td><p>交换数量</p><input type="text" name="num" value="1" id="num-error"></td>
+                    </tr>
+                    <tr><td class="error-td">必填：必须是一个有效的整数</td></tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td><input type="submit" id="btn"></td>
+                    </tr>
+                </tbody>
+            </table>
+      </div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

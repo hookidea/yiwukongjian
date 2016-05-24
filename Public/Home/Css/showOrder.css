@@ -1,0 +1,861 @@
+/*
+* @Author: hookidea
+* @Date:   2016-04-11 19:52:41
+* @Last Modified by:   hookidea
+* @Last Modified time: 2016-05-03 17:00:51
+*/
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #666;
+}
+
+.root61 .w {
+  width: 1210px;
+}
+.w {
+  margin: 0 auto;
+  /*width: 990px;*/
+}
+#content::after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+#content {
+  display: block;
+  /*padding-left: 120px;*/
+  padding-top: 20px;
+}
+#main {
+  font: 12px/150% Arial,Verdana,"宋体";
+  float: left;
+  /*margin-left: -120px;*/
+  /*overflow: hidden;*/
+  width: 99.9%;
+}
+.mod-comm {
+  padding: 10px 20px 20px;
+}
+.mod-main {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.mod-main .mt::after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.mod-comm .mt {
+  padding: 10px 0;
+}
+.mod-main .mt {
+  display: block;
+  padding: 10px;
+}
+.m, .mb, .mc, .mt, .sm, .smb, .smc, .smt {
+  overflow: hidden;
+}
+.m, .mb, .mc, .mt, .p-detail, .p-img, .p-market, .p-name, .p-price, .sm, .smb, .smc, .smt {
+  overflow: hidden;
+}
+.mod-comm .mt h3 {
+  color: #666;
+  font-family: "宋体";
+  font-size: 12px;
+  line-height: 18px;
+}
+.mod-main .mt h3 {
+  color: #333;
+  float: left;
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.mod-main .mt h3.curr{
+  border-bottom: 2px solid #e4393c;
+  color: #e4393c;
+}
+.mod-main .mt h3:first-child{
+  margin-right: 40px;
+}
+.mod-main .mt .extra-r {
+  float: right;
+}
+div#order02 {
+  position: relative;
+}
+.mod-comm {
+  padding: 10px 20px 20px;
+}
+.mod-main {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.mod-main .mt::after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.mod-comm .mt {
+  padding: 10px 0;
+}
+.mod-main .mt {
+  display: block;
+  padding: 10px;
+}
+.mod-main .mt .extra-l {
+  float: left;
+}
+ol, ul {
+  list-style: outside none none;
+}
+.root61 div.mod-main .mt .extra-l li {
+  padding-right: 20px;
+}
+div.mod-main .mt .extra-l li.fore1 {
+  padding-right: 20px;
+}
+div.mod-main .mt .extra-l li {
+  padding-right: 15px;
+}
+.lefta-box .mt .extra-l li {
+  padding: 0 20px 0 0;
+}
+.mod-main .mt .extra-l li {
+  float: left;
+  padding-left: 20px;
+}
+li {
+  list-style: outside none none;
+}
+.mod-main .mt .extra-l li a.curr {
+  border-bottom: 2px solid #e4393c;
+  color: #e4393c;
+  cursor: pointer;
+  font-weight: 700;
+  padding-bottom: 0;
+  text-decoration: none;
+}
+div.mod-main .mt .extra-l li a {
+  color: #333;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.mod-main .mt .extra-l li a {
+  color: #999;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+.root61 div.mod-main .mt .extra-l li.fore2 {
+  margin-left: 20px;
+  padding-left: 40px;
+}
+.root61 div.mod-main .mt .extra-l li {
+  padding-right: 20px;
+}
+div.mod-main .mt .extra-l li.fore2 {
+  border-left: 1px dotted #ddd;
+  padding: 0 15px;
+  position: relative;
+}
+div.mod-main .mt .extra-l li a.ftx-03 {
+  color: #999;
+}
+.mod-main .mt .extra-r {
+  float: right;
+}
+.mt .search {
+  position: relative;
+  top: -3px;
+}
+.mt .search .itxt {
+  border: 1px solid #ccc;
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  padding: 2px 5px 3px;
+  width: 158px;
+}
+.mt .search .search-btn {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-color: #f7f7f7;
+  background-image: linear-gradient(to bottom, #f7f7f7 0px, #f3f2f2 100%);
+  border-color: #ddd #ddd #ddd -moz-use-text-color;
+  border-image: none;
+  border-style: solid solid solid none;
+  border-width: 1px 1px 1px 0;
+  float: left;
+  height: 23px;
+  line-height: 99em;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 52px;
+}
+.mt .search .search-btn b {
+  background: rgba(0, 0, 0, 0) url("/Public/Home/Img/order-icon20150212.png") repeat scroll -8px -58px;
+  display: inline-block;
+  height: 16px;
+  left: 17px;
+  overflow: hidden;
+  position: absolute;
+  top: 3px;
+  vertical-align: middle;
+  width: 18px;
+}
+.mt .search .default-btn {
+  background-color: #f7f7f7;
+  background-image: linear-gradient(to bottom, #f7f7f7 0px, #f3f2f2 100%);
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  color: #333;
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  margin-left: -1px;
+  padding: 2px 0 3px;
+  text-align: center;
+  width: 50px;
+}
+.mt .search .default-btn b {
+  background: rgba(0, 0, 0, 0) url("/Public/Home/Img/order-icon20150212.png") no-repeat scroll -37px -207px;
+  display: inline-block;
+  height: 4px;
+  margin-left: 5px;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 7px;
+}
+.mod-comm .mc {
+  line-height: 20px;
+}
+.mod-main .mc {
+  overflow: visible;
+}
+.order-tb {
+  width: 100%;
+}
+table {
+  border-collapse: collapse;
+}
+.order-tb .number-col {
+  width: 394px;
+}
+.root61 .order-tb .consignee-col {
+  width: 115px;
+}
+.root61 .order-tb .number-col {
+  width: 589px;
+}
+.root61 .order-tb .amount-col, .root61 .order-tb .status-col {
+  width: 110px;
+}
+.root61 .order-tb .amount-col, .root61 .order-tb .status-col {
+  width: 110px;
+}
+.order-tb thead th {
+  background: #f5f5f5 none repeat scroll 0 0;
+  color: #666;
+  font-weight: 400;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+.order-tb .deal-state-cont {
+  cursor: pointer;
+  position: relative;
+  width: 98px;
+  z-index: 10;
+}
+.order-tb .ordertime-cont {
+  cursor: pointer;
+  float: left;
+  position: relative;
+  width: 138px;
+  z-index: 10;
+}
+.order-tb .deal-state-cont .state-txt {
+  border: 1px solid #f5f5f5;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+  padding-right: 12px;
+  position: relative;
+  text-align: left;
+}
+.order-tb .deal-state-cont .state-txt b {
+  background: rgba(0, 0, 0, 0) url("/Public/Home/Img/order-icon20150916.png") no-repeat scroll -37px -207px;
+  height: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 18px;
+  top: 13px;
+  vertical-align: middle;
+  width: 7px;
+}
+.order-tb .deal-state-cont .state-txt {
+  line-height: 30px;
+  text-align: left;
+}
+.order-tb .deal-state-cont {
+  cursor: pointer;
+}
+.order-tb thead th {
+  color: #666;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+}
+.order-tb .ordertime-cont .time-txt {
+  border: 1px solid #f5f5f5;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+  padding-right: 12px;
+  position: relative;
+  text-align: left;
+}
+.order-tb .ordertime-cont .time-list li {
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+}
+.order-tb .ordertime-cont .time-list li a.curr {
+  color: #e4393c;
+}
+.order-tb .ordertime-cont .time-list li a {
+  color: #666;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+  position: relative;
+}
+.order-tb .ordertime-cont .time-list li a.curr b {
+  background: rgba(0, 0, 0, 0) url("/Public/Home/Img/order-icon20150916.png") repeat scroll 0 -207px;
+}
+.order-tb .ordertime-cont .time-list li a b {
+  display: block;
+  height: 7px;
+  left: 5px;
+  overflow: hidden;
+  position: absolute;
+  top: 10px;
+  vertical-align: middle;
+  width: 10px;
+}
+.order-tb .ordertime-cont .time-list li a {
+  color: #666;
+  line-height: 30px;
+}
+
+.order-tb .ordertime-cont .time-list li {
+  line-height: 30px;
+  text-align: left;
+}
+.order-tb .deal-state-cont .state-list {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: #fff none repeat scroll 0 0;
+  border-color: -moz-use-text-color #f5f5f5 #f5f5f5;
+  border-image: none;
+  border-style: none solid solid;
+  border-width: 0 1px 1px;
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 30px;
+  width: 96px;
+  z-index: 2;
+}
+.order-tb .ordertime-cont .time-txt b {
+  background: rgba(0, 0, 0, 0) url("/Public/Home/Img/order-icon20150916.png") no-repeat scroll -37px -207px;
+  height: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 18px;
+  top: 13px;
+  vertical-align: middle;
+  width: 7px;
+}
+.order-tb .ordertime-cont .time-txt {
+  line-height: 30px;
+  text-align: left;
+}
+.order-tb .ordertime-cont {
+  cursor: pointer;
+}
+.order-tb .ordertime-cont .time-list {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: #fff none repeat scroll 0 0;
+  border-color: -moz-use-text-color #f5f5f5 #f5f5f5;
+  border-image: none;
+  border-style: none solid solid;
+  border-width: 0 1px 1px;
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 30px;
+  width: 136px;
+  z-index: 2;
+}
+.order-tb .deal-state-cont .state-list li {
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+}
+.order-tb .deal-state-cont .state-list li a.curr {
+  color: #e4393c;
+}
+.order-tb .deal-state-cont .state-list li a {
+  color: #666;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+  position: relative;
+}
+.order-tb .deal-state-cont .state-list li a.curr b {
+  background: rgba(0, 0, 0, 0) url("/Public/Home/Img/order-icon20150916.png") repeat scroll 0 -207px;
+}
+.order-tb .deal-state-cont .state-list li a b {
+  display: block;
+  height: 7px;
+  left: 5px;
+  overflow: hidden;
+  position: absolute;
+  top: 10px;
+  vertical-align: middle;
+  width: 10px;
+}
+.order-tb .deal-state-cont .state-list li a {
+  color: #666;
+  line-height: 30px;
+}
+.order-tb .deal-state-cont .state-list li {
+  line-height: 30px;
+  text-align: left;
+}
+
+.order-tb .sep-row {
+  height: 20px;
+}
+.order-tb .sep-row td {
+  border: 0 none;
+}
+.order-tb tbody td {
+  border: 1px solid #e5e5e5;
+}
+.order-tb .tr-th {
+  background: #f5f5f5 none repeat scroll 0 0;
+  color: #aaa;
+  height: 31px;
+  line-height: 31px;
+  overflow: hidden;
+}
+.order-tb .tr-th td {
+  border-bottom-color: #f5f5f5;
+}
+.order-tb .tr-th {
+  color: #aaa;
+  line-height: 31px;
+}
+.order-tb .tr-th .gap {
+  width: 14px;
+}
+.order-tb .tr-th span {
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  padding: 2px 0 0;
+}
+.order-tb .tr-th .dealtime {
+  font-family: verdana;
+  margin-right: 30px;
+}
+.order-tb .tr-th .number {
+  font-family: verdana;
+  width: 226px;
+}
+
+.order-tb .tr-th a {
+  color: #333;
+}
+.root61 .order-tb .tr-th .tr-operate {
+  width: 608px;
+}
+.order-tb .tr-th .tr-operate {
+  float: right;
+  height: 23px;
+  margin-right: 15px;
+  overflow: hidden;
+  position: relative;
+  width: 397px;
+}
+.order-tb .tr-th .order-shop {
+  width: 178px;
+}
+.order-tb .tr-th span {
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  padding: 2px 0 0;
+}
+.order-tb .tr-th .order-shop .shop-txt {
+  display: inline-block;
+  margin: 0;
+  max-width: 153px;
+  overflow: hidden;
+  line-height: 22px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.order-tb .tr-th span.shop-txt {
+  padding: 0;
+}
+.order-tb .tr-th .btn-im-jd {
+  background-position: 0 0;
+}
+.order-tb .tr-th .btn-im, .order-tb .tr-th .btn-im-off {
+  background: rgba(0, 0, 0, 0) url("/Public/Home/Img/taobao.gif") no-repeat scroll;
+  display: inline-block;
+  height: 16px;
+  margin: 0 0 0 5px;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 16px;
+}
+.order-tb .tr-th .order-del {
+  background: rgba(0, 0, 0, 0) url("/Public/Home/Img/taobao.gif") no-repeat scroll;
+  display: none;
+  font-size: 0;
+  height: 13px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 6px;
+  vertical-align: middle;
+  width: 13px;
+}
+.order-tb .tr-bd {
+  text-align: center;
+  vertical-align: top;
+}
+.order-tb .tr-bd td {
+  padding: 14px 0;
+}
+.order-tb .goods-item::after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.root61 .order-tb .goods-item {
+  margin-right: 74px;
+  width: 340px;
+}
+.order-tb .goods-item {
+  display: block;
+  float: left;
+  margin-right: 10px;
+  width: 255px;
+}
+.order-tb .goods-item .p-img {
+  border: 1px solid #efefef;
+  float: left;
+  height: 60px;
+  margin: 0 14px;
+  width: 60px;
+}
+img {
+  border: 0 none;
+  vertical-align: middle;
+}
+.root61 .order-tb .goods-item .p-msg {
+  width: 240px;
+}
+.order-tb .goods-item .p-msg {
+  float: left;
+  width: 160px;
+}
+.order-tb .goods-item .p-name {
+  color: #333;
+  height: 36px;
+  line-height: 18px;
+  overflow: hidden;
+  text-align: left;
+}
+.order-tb .goods-item .p-name a {
+  color: #333;
+}
+.order-tb .goods-item .p-name {
+  color: #333;
+  line-height: 18px;
+  text-align: left;
+}
+.order-tb .goods-item .p-extra {
+  color: #aaa;
+  text-align: left;
+}
+.order-tb .goods-item .o-info {
+  color: #aaa;
+  text-align: left;
+}
+.order-tb .goods-item .o-match, .order-tb .goods-item .o-similar {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+}
+.order-tb .goods-item .o-match i {
+  background-position: -56px 0;
+}
+.order-tb .goods-item .o-match i, .order-tb .goods-item .o-similar i {
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: top;
+  width: 16px;
+}
+.jd-otc, .order-tb .goods-item .o-match i, .order-tb .goods-item .o-similar i {
+  background-image: url("/Public/Home/Img/sprite-order-icon.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+em, i, u {
+  font-style: normal;
+}
+.order-tb .goods-item .o-match, .order-tb .goods-item .o-similar {
+  cursor: pointer;
+}
+.order-tb .goods-item .o-match em, .order-tb .goods-item .o-similar em {
+  display: inline-block;
+  vertical-align: top;
+}
+.root61 .order-tb .goods-number {
+  width: 70px;
+}
+.order-tb .goods-number {
+  color: #aaa;
+  float: left;
+  font-family: verdana;
+  text-align: left;
+  width: 40px;
+}
+.root61 .order-tb .goods-repair {
+  width: 104px;
+}
+.order-tb .goods-repair {
+  float: right;
+  text-align: center;
+  width: 84px;
+}
+.order-tb .tooltip {
+  cursor: pointer;
+  margin: 0 auto;
+  position: relative;
+  width: 100px;
+  z-index: 2;
+}
+.order-tb .consignee {
+  color: #333;
+}
+.order-tb .consignee .txt {
+  display: inline-block;
+  max-width: 72px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.order-tb .tooltip {
+  cursor: pointer;
+}
+.order-tb .consignee b {
+  background: rgba(0, 0, 0, 0) url("/Public/Home/Img/order-icon20150916.png") repeat scroll 0 -24px;
+  display: inline-block;
+  height: 16px;
+  margin: 0 0 0 5px;
+  vertical-align: middle;
+  width: 14px;
+}
+.order-tb .tooltip .prompt-02 {
+  color: #666;
+  display: none;
+  line-height: 22px;
+  padding: 20px;
+  position: absolute;
+  right: 90px;
+  top: -22px;
+  width: 220px;
+  z-index: 1;
+}
+.order-tb .tooltip .prompt-01 {
+  cursor: auto;
+  display: none;
+  padding: 9px 9px 0;
+  position: absolute;
+  right: 90px;
+  top: -22px;
+  width: 250px;
+  z-index: 1;
+}
+.order-tb .prompt-01 {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  box-shadow: 0 0 2px 2px #eee;
+  position: absolute;
+  width: 122px;
+}
+.prompt-01 {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  box-shadow: 0 0 2px 2px #eee;
+  position: absolute;
+  width: 122px;
+}
+.order-tb .tooltip .prompt-02 .pc {
+  min-height: 0;
+}
+.order-tb .tooltip .prompt-01 .pc {
+  /*min-height: 235px;*/
+}
+.order-tb .prompt-02 .pc {
+  color: #666;
+}
+.order-tb .prompt-01 .pc {
+  background: #fff none repeat scroll 0 0;
+  color: #333;
+  padding: 0;
+  text-align: left;
+}
+.prompt-01 .pc {
+  background: #fff none repeat scroll 0 0;
+  color: #333;
+  overflow: hidden;
+  padding: 10px;
+  text-align: left;
+}
+.order-tb .tooltip .prompt-01 {
+  cursor: auto;
+}
+.order-tb .prompt-01 .pc {
+  color: #333;
+  text-align: left;
+}
+.prompt-01 .pc {
+  color: #333;
+  text-align: left;
+}
+.order-tb .tooltip .prompt-02 {
+  color: #666;
+  line-height: 22px;
+}
+.order-tb .prompt-01 .p-arrow-left {
+  background-position: -7px 0;
+  height: 16px;
+  right: -8px;
+  top: 25px;
+  width: 8px;
+}
+.prompt-01 .p-arrow-left {
+  background-position: -7px 0;
+  height: 16px;
+  right: -8px;
+  top: 20px;
+  width: 8px;
+}
+.prompt-01 .p-arrow {
+  background: rgba(0, 0, 0, 0) url("/Public/Home/Img/arrow-gray.png") no-repeat scroll 0 0;
+  position: absolute;
+}
+.order-tb .tooltip .prompt-02 {
+  color: #666;
+  line-height: 22px;
+}
+.order-tb .amount {
+  color: #aaa;
+}
+.order-tb .tr-bd {
+  text-align: center;
+}
+.order-tb .amount .ftx-13 {
+  border-top: 1px solid #e5e5e5;
+  display: block;
+  height: 19px;
+  line-height: 19px;
+  margin: 5px 8px 0;
+  overflow: hidden;
+  padding-top: 1px;
+}
+.ftx-13 {
+  color: #aaa;
+}
+.order-tb .status {
+  color: #333;
+  line-height: 22px;
+  position: relative;
+  z-index: 5;
+}
+a.ftx-03, a.ftx03, div.ftx-03, div.ftx03, span.ftx-03, span.ftx03 {
+  color: #aaa;
+}
+.ftx-03, .ftx03 {
+  color: #999;
+}
+.order-tb .status {
+  color: #333;
+  line-height: 22px;
+}
+.order-tb .status a {
+  color: #333;
+}
+.order-tb .operate {
+  line-height: 22px;
+}
+span.btn-again {
+  cursor: pointer;
+  background: #f5f5f5 none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  color: #333;
+  display: inline-block;
+  padding: 2px 0 3px;
+  text-align: center;
+  width: 85px;
+}
+span.btn-again b {
+  background: rgba(0, 0, 0, 0) url("/Public/Home/Img/order-icon20150212.png") no-repeat scroll -22px -180px;
+  display: inline-block;
+  height: 17px;
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 12px;
+}

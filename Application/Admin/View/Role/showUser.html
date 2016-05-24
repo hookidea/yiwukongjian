@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>管理中心 - 查看角色下的所有用户</title>
+  <meta name="robots">
+  <meta charset="UTF-8" />
+  <import type="css" file="Admin.Css.main"/>
+  <import type="css" file="Admin.Css.general"/>
+</head>
+<body>
+
+  <h1>
+    <span class="action-span">
+      <a href="__CONTROLLER__/add">添加新角色</a>
+    </span>
+    <span class="action-span1">
+      <a href="#">管理中心</a>
+    </span>
+    <span id="search_id" class="action-span1">- 查看角色下的所有用户</span>
+    <div style="clear:both"></div>
+  </h1>
+  <form action="__CONTROLLER__/showUser/role_id/{$Think.get.role_id}" name="searchForm" method="GET" style="width: 400px; margin: 0 auto;">
+    <input type="text" name="keyword" size="15" placeholder="用户名" style="width: 220px; text-align: center;" value="<present name="Think.get.keyword">{$Think.get.keyword}</present>"/>
+    <input type="submit" value=" 搜索 " class="button" />
+
+    <if condition="($Think.get.keyword neq '') OR ($list eq '')">
+        <a href="__CONTROLLER__/getList"><input type="button" value=" 返回查看全部 " class="button" /></a>
+    </if>
+    
+  </form>
+
+<present name="list">
+
+  <form method="post" action="" name="listForm">
+
+    <div class="list-div" id="listDiv">
+      <table cellpadding="3" cellspacing="1">
+        <tr>
+          <th>
+            用户ID
+          </th>
+          <th>
+            用户名
+          </th>
+          <th>
+            昵称
+          </th>
+          <th>
+            用户角色
+          </th>
+          <th>
+            绑定邮箱
+          </th>
+          <th>
+            <a href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='__CONTROLLER__/getList/sort/is_seal/order/'+order;location.href=url;">封号</a>
+            <if condition="$Think.get.sort eq 'is_seal'">
+              <img src="/Public/Admin/Img/sort_<if condition='$Think.get.order eq desc'>desc<else />asc</if>.gif"/>
+              <else />
+                <span class="icon_sort">
+                  <img src="/Public/Admin/Img/sort_asc.gif"/>
+                  <img src="/Public/Admin/Img/sort_desc.gif"/>
+                </span>
+            </if>
+          </th>
+          <th>
+            <a href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='__CONTROLLER__/getList/sort/is_check/order/'+order;location.href=url;">审核</a>
+            <if condition="$Think.get.sort eq 'is_check'">
+              <img src="/Public/Admin/Img/sort_<if condition='$Think.get.order eq desc'>desc<else />asc</if>.gif"/>
+              <else />
+                <span class="icon_sort">
+                  <img src="/Public/Admin/Img/sort_asc.gif"/>
+                  <img src="/Public/Admin/Img/sort_desc.gif"/>
+                </span>
+            </if>
+          </th>
+          <th>
+            <a href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='__CONTROLLER__/getList/sort/is_delete/order/'+order;location.href=url;">删除</a>
+            <if condition="$Think.get.sort eq 'is_delete'">
+              <img src="/Public/Admin/Img/sort_<if condition='$Think.get.order eq desc'>desc<else />asc</if>.gif"/>
+              <else />
+                <span class="icon_sort">
+                  <img src="/Public/Admin/Img/sort_asc.gif"/>
+                  <img src="/Public/Admin/Img/sort_desc.gif"/>
+                </span>
+            </if>
+          </th>
+          <th>
+            <a href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='__CONTROLLER__/getList/sort/is_real/order/'+order;location.href=url;">实名</a>
+            <if condition="$Think.get.sort eq 'is_real'">
+              <img src="/Public/Admin/Img/sort_<if condition='$Think.get.order eq desc'>desc<else />asc</if>.gif"/>
+              <else />
+                <span class="icon_sort">
+                  <img src="/Public/Admin/Img/sort_asc.gif"/>
+                  <img src="/Public/Admin/Img/sort_desc.gif"/>
+                </span>
+            </if>
+          </th>
+          <th>
+            <a href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='__CONTROLLER__/getList/sort/add_time/order/'+order;location.href=url;">注册时间</a>
+            <if condition="$Think.get.sort eq 'add_time'">
+              <img src="/Public/Admin/Img/sort_<if condition='$Think.get.order eq desc'>desc<else />asc</if>.gif"/>
+              <else />
+                <span class="icon_sort">
+                  <img src="/Public/Admin/Img/sort_asc.gif"/>
+                  <img src="/Public/Admin/Img/sort_desc.gif"/>
+                </span>
+            </if>
+          </th>
+          <th>
+            <a href="javascript:var order='{$Think.get.order}'=='desc'?'asc':'desc',url='__CONTROLLER__/getList/sort/seal_stop/order/'+order;location.href=url;">封号结束时间</a>
+            <if condition="$Think.get.sort eq 'seal_stop'">
+              <img src="/Public/Admin/Img/sort_<if condition='$Think.get.order eq desc'>desc<else />asc</if>.gif"/>
+              <else />
+                <span class="icon_sort">
+                  <img src="/Public/Admin/Img/sort_asc.gif"/>
+                  <img src="/Public/Admin/Img/sort_desc.gif"/>
+                </span>
+            </if>
+          </th>
+          <th>操作</th>
+        </tr>
+
+      <foreach name="list" item="vo">
+        <tr>
+          <td align="center">
+            {$vo.user_id}
+          </td>
+          <td align="center">
+            {$vo.user_name}
+          </td>
+          <td align="center">
+            {$vo.nickname}
+          </td>
+          <td align="center">
+            {$vo.role_name}
+          </td>
+          <td align="center">
+            {$vo.email}
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.is_seal' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.is_check' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.is_delete' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.is_real' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            {$vo.add_time|date='Y-m-d H:i:s',###}
+          </td>
+          <td align="center">
+            <neq name="vo.seal_stop" value="0">
+              {$vo.seal_stop|date='Y-m-d H:i:s',###}
+            <else />
+              0
+            </neq>
+            
+          </td>
+
+          <td align="center">
+            <a href="__CONTROLLER__/edit/user_id/{$vo.user_id}" title="编辑该用户">
+              编
+            </a>
+            <a href="javascript:if(confirm('确定切换审核状态？')){var user_id = {$vo.user_id}, current={$vo.is_check}; $.get('__CONTROLLER__/check/current/'+ current +'/user_id/' + user_id, function (msg) {alert(msg.info); location.reload();})}"  title="切换审核状态">
+              审
+            </a>
+            <a href="javascript:if(confirm('确定切换审核状态？')){var user_id = {$vo.user_id}, current={$vo.is_check}; $.get('__CONTROLLER__/real/current/'+ current +'/user_id/' + user_id, function (msg) {alert(msg.info); location.reload();})}"  title="切换实名状态">
+              实
+            </a>
+            <a href="javascript:var qian = {$vo.is_seal}, url='__CONTROLLER__', user_id={$vo.user_id}; if (!qian) {if (time = prompt('请输入封号结束时间，格式为：201512112311')) {$.get(url + '/seal/user_id/'+user_id+'/time/' + time, function (msg) {alert(msg.info);if(msg.status === 1){location.reload();}})}}"  title="切换封号状态">
+              封
+            </a>
+            
+            <a href="javascript:if(confirm('确定移入回收站？')){var user_id = {$vo.user_id}; $.get('__CONTROLLER__/delete/user_id/' + user_id, function (msg) {alert(msg.info); location.reload();})}"  title="移入回收站">
+              删
+            </a>
+          </td>
+        </tr>
+        </foreach>
+        </table>    
+    </table>
+  </div>
+  <div id="pager">{$page}</div>
+</form>
+
+  <else />
+
+      <p style="color:red; text-align: center;">没有匹配结果！正在返回上一页...</p>
+      <script>
+          setTimeout(function () {
+            history.go(-1);
+          }, 800);
+      </script>
+
+      
+</present>
+
+
+</body>
+</html>
+
+<import type="js" file="Admin.Js.jquery" />
+<import type="js" file="Admin.Js.good" />

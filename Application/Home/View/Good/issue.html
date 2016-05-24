@@ -1,0 +1,165 @@
+<form id="upload-form" method="post" flag="good">
+
+<div class="wrap">
+	<div class="upload_button">
+			<img src="/Public/Home/Img/release-icon.png" alt="" />
+	</div>
+	<div class="wave">
+		<img src="/Public/Home/Img/black-wave.png" alt="" />
+	</div>
+	<div class="post_text">
+			<img src="/Public/Home/Img/release-title.png" alt="" />
+	</div>
+	<div class="information">
+		<div class="upload-wr">
+            <div class="photo-area init-up">
+                <div id="html5" class="moxie-shim moxie-shim-html5" _s="{$Think.config.IMAGE_SIZE}">
+                	<div>
+                        <input id="html5_file" type="file" name="" accept="image/*" class="image-input" capture="camera">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div class="commodity">
+		<div class="commodity_left">
+			<p class="product-name"><font color="red">*</font>商品名称</p>
+            <p class="product-name"><font color="red">*</font>交易地点</p>
+            <p class="product-name"><font color="red">*</font>商品价格</p>
+            <p class="product-name"><font color="red">*</font>所属分类</p>
+            <p class="product-name"><font color="red">*</font>可否议价</p>
+            <p class="product-name"><font color="red">*</font>商品类型</p>
+            <p class="product-name"><font color="red">*</font>立即上架</p>
+            <p class="product-name"><font color="red">*</font>可否换购</p>
+            <p class="product-name">促销价格</p>
+            <p class="product-name">库存数量</p>
+            <p class="product-name">我想换购</p>
+            <p class="product-name">搜索关键字</p>
+			<p class="product-details"><font color="red">*</font>商品详情</p>
+		</div>
+		<div class="commodity_right">
+			<div>
+                <input type="text" name="good_name" class="product-text" placeholder="必填：商品名称长度必须要在1-60个字符之间">
+                <div class="error-div" id="good_name-error" style="display: none; z-index: 999; text-align: left;">
+                    <div class="easytip-text">必填：长度必须在1-60个字符之间</div><div class="easytip-arrow">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input type="text" name="address" class="product-text" placeholder="必填：交易地点长度必须要在1-150个字符之间" value="工贸校园一站式楼下交易">
+                <div class="error-div" id="address-error">
+                    <div class="easytip-text">必填：长度必须在1-150个字符之间</div><div class="easytip-arrow">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input type="text" value="" name="shop_price" class="price" placeholder="必填：商品价格/促销价格必填其一">
+                <div class="error-div" id="shop_price-error">
+                    <div class="easytip-text">必填：商品价格必须在0-99999之间</div><div class="easytip-arrow">
+                    </div>
+                </div>
+            </div>
+
+			<div>
+				<ul id="main_box">
+				  <li class="select_box" value="">
+				    <span>选择分类</span>
+				    <ul class="son_ul" name="cat_id">
+				    	<foreach name="cateList" item="cate">
+				    		<li value="{$cate.cat_id}">{$cate.cat_name}</li>
+				    	</foreach>
+
+				    </ul>
+				    <input type="hidden" name="cat_id" value="0">
+				  </li>
+				</ul>
+			</div>
+			<div class="can-knife">
+				<input type="button" value="可议价" class="commodity_right_btn btn-hover" status="1">
+				<input type="button" name="name" value="不可议价" class="commodity_right_btn" status="0">
+				<input type="hidden" name="is_chaffer" value="1">
+				<div class="clear"></div>
+			</div>
+			<div class="types-of">
+				<input type="button" value="全新" class="commodity_right_btn" status="1">
+				<input type="button" name="name" value="二手" class="commodity_right_btn btn-hover" status="0">
+				<input type="hidden" name="is_new" value="1">
+				<div class="clear"></div>
+			</div>
+			<div class="added">
+				<input type="button" value="是" class="commodity_right_btn btn-hover" status="1">
+				<input type="button" name="name" value="否" class="commodity_right_btn" status="0">
+				<input type="hidden" name="is_on_sale" value="1">
+				<div class="clear"></div>
+			</div>
+            <div class="added">
+                <input type="button" value="是" class="commodity_right_btn btn-hover" status="1">
+                <input type="button" name="name" value="否" class="commodity_right_btn" status="0">
+                <input type="hidden" name="is_switch" value="1">
+                <div class="clear"></div>
+            </div>
+            <div>
+                <input type="text" value="" name="promote_price" class="price" placeholder="必填：商品价格/促销价格必填其一">
+                <div class="error-div" id="promote_price-error">
+                    <div class="easytip-text">选填：促销价格必须在0-99999之间</div><div class="easytip-arrow">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input type="text" value="1" name="good_number" class="price" placeholder="选填：库存数量">
+                <div class="error-div" id="good_number-error">
+                    <div class="easytip-text">选填：库存数量必须在1-65535之间</div><div class="easytip-arrow">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input type="text" name="switch" class="product-text" placeholder="选填：我想换购的物品的名称">
+                <div class="error-div" id="switch-error">
+                    <div class="easytip-text">选填：长度必须在30个字符内</div><div class="easytip-arrow">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input type="text" value="" name="keywords" class="product-text" placeholder="选填：搜索关键字">
+                <div class="error-div" id="keywords-error">
+                    <div class="easytip-text">选填：长度必须在30个字符内</div><div class="easytip-arrow">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <textarea name="good_desc" class="product-deta-ilstext" placeholder='必填：长度必须在20-150个字符之间'></textarea>
+                <div class="error-div" id="good_desc-error">
+                    <div class="easytip-text">必填：长度必须在20-150个字符之间</div><div class="easytip-arrow">
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="contact">联系方式<span>(至少选填一个)</span></div>
+	<div class="contact-information-left">
+		<p class="product-name">　　<font color="red">*</font>手机</p>
+		<p class="product-name">　　<font color="red">*</font>Q Q</p>
+	</div>
+	<div class="contact-information-right">
+		<div>
+            <input type="text" name="phone" class="price" placeholder="必填：手机/QQ必填其一">
+            <div class="error-div" id="phone-error">
+                <div class="easytip-text">必填：格式错误</div><div class="easytip-arrow">
+                </div>
+            </div>
+        </div>
+		<div>
+            <input type="text" name="qq" class="price" placeholder="必填：手机/QQ必填其一">
+            <div class="error-div" id="qq-error">
+                <div class="easytip-text">必填：格式错误</div><div class="easytip-arrow">
+                </div>
+            </div>
+        </div>
+		<div class="Release-button">
+			<input type="submit" name="name" value="立即发布">
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+</form>

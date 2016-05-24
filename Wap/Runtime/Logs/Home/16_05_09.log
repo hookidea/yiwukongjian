@@ -1,0 +1,31 @@
+[ 2016-05-09T17:17:01+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0014s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0008s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010072s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010112s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+

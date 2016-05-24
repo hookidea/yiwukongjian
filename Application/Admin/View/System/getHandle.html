@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>管理中心 - 操作记录列表</title>
+  <meta name="robots">
+  <meta charset="UTF-8" />
+  <import type="css" file="Admin.Css.main"/>
+  <import type="css" file="Admin.Css.general"/>
+</head>
+<body>
+
+  <h1>
+    <span class="action-span1">
+      <a href="#">管理中心</a>
+    </span>
+    <span id="search_id" class="action-span1">- 操作记录列表</eq></span>
+    <div style="clear:both"></div>
+  </h1>
+  <form action="__CONTROLLER__/getList" name="searchForm" method="GET" style="width: 400px; margin: 0 auto;">
+    <input type="text" name="keyword" size="20" placeholder="操作人/操作对象/操作模块/操作内容" style="width: 220px; text-align: center;" value="<present name="Think.get.keyword">{$Think.get.keyword}</present>"/>
+    <input type="submit" value=" 搜索 " class="button" />
+
+    <if condition="($Think.get.keyword neq '') OR ($list eq '')">
+        <a href="__CONTROLLER__/getList"><input type="button" value=" 返回查看全部 " class="button" /></a>
+    </if>
+
+  </form>
+
+<present name="list">
+
+  <form name="listForm" id="listForm">
+
+    <div class="list-div" id="listDiv">
+      <table cellpadding="3" cellspacing="1">
+        <tr>
+          <th>
+            操作人(ID)
+          </th>
+          <th>
+            操作人
+          </th>
+          <th>
+            操作对象(ID)
+          </th>
+          <th>
+            操作模块
+          </th>
+          <th>
+            操作内容
+          </th>
+          <th>
+            操作时间
+          </th>
+          <th>操作</th>
+        </tr>
+
+      <foreach name="list" item="vo">
+        <tr>
+          <td align="center">
+            {$vo.user_id}
+          </td>
+          <td align="center">
+            {$vo.user_name}
+          </td>
+          <td align="center">
+            {$vo.id}
+          </td>
+          <td align="center">
+            {$vo.controller}
+          </td>
+          <td align="center">
+            {$vo.action}
+          </td>
+          <td align="center">
+            {$vo.add_time|date='Y-m-d H:i:s',###}
+          </td>
+          <td align="center">
+            <a href="__CONTROLLER__/getHandle/user_id/{$vo.user_id}" title="查看该操作人的所有操作">
+              查看该操作人的所有操作
+            </a>
+          </td>
+        </tr>
+        </foreach>
+        </table>
+    </table>
+  </div>
+
+  <div id="pager">{$page}</div>
+</form>
+
+  <else />
+
+      <p style="color:red; text-align: center;">没有匹配结果！</p>
+
+</present>
+
+
+</body>
+</html>
+
+<import type="js" file="Admin.Js.jquery" />
+<import type="js" file="Admin.Js.good" />

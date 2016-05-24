@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>管理中心 - 角色列表</title>
+  <meta name="robots">
+  <meta charset="UTF-8" />
+  <import type="css" file="Admin.Css.main"/>
+  <import type="css" file="Admin.Css.general"/>
+</head>
+<body>
+
+  <h1>
+    <span class="action-span">
+      <a href="__CONTROLLER__/add">添加新角色</a>
+    </span>
+    <span class="action-span1">
+      <a href="#">管理中心</a>
+    </span>
+    <span id="search_id" class="action-span1">- 角色列表</span>
+    <div style="clear:both"></div>
+  </h1>
+
+  <form method="post" action="" name="listForm">
+
+    <div class="list-div" id="listDiv">
+      <table cellpadding="3" cellspacing="1">
+        <tr>
+          <th>
+            角色名称
+          </th>
+          <th>
+            ROOT
+          </th>
+          <th>
+            登陆后台
+          </th>
+          <th>
+            评论管理
+          </th>
+          <th>
+            商品列表
+          </th>
+          <th>
+            商品添加
+          </th>
+          <th>
+            商品编辑
+          </th>
+          <th>
+            商品上架
+          </th>
+          <th>
+            商品促销
+          </th>
+          <th>
+            商品审核
+          </th>
+          <th>
+            商品举报
+          </th>
+          <th>
+            商品删除
+          </th>
+          <th>
+            分类管理
+          </th>
+          <th>
+            用户列表
+          </th>
+          <th>
+            用户添加
+          </th>
+          <th>
+            用户编辑
+          </th>
+          <th>
+            用户审核
+          </th>
+          <th>
+            用户实名
+          </th>
+          <th>
+            用户封号
+          </th>
+          <th>
+            用户删除
+          </th>
+          <th>
+            角色管理
+          </th>
+          <th>
+            订单管理
+          </th>
+          <th>
+            系统管理
+          </th>
+          <th>
+            反馈管理
+          </th>
+
+          <th>操作</th>
+        </tr>
+
+        <foreach name="list" item="vo">
+        <tr>
+          <td align="center">
+            {$vo.role_name}
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.is_root' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.login_bg' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.comment_manage' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.good_getlist' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.good_add' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.good_edit' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.good_onsale' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.good_promote' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.good_check' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.good_lift' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.good_delete' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.category_manage' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.user_getlist' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.user_add' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.user_edit' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.user_check' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.user_real' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.user_seal' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.user_delete' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.role_manage' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.order_manage' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.system_manage' value='1'>yes<else />no</eq>.gif" />
+          </td>
+          <td align="center">
+            <img src="/Public/Admin/Img/<eq name='vo.bug_manage' value='1'>yes<else />no</eq>.gif" />
+          </td>
+
+          <td align="center">
+            <a href="__CONTROLLER__/showUser/role_id/{$vo.role_id}" title="查看该角色下的所有用户">
+              看
+            </a>
+            <a href="__CONTROLLER__/edit/role_id/{$vo.role_id}" title="编辑">
+              编
+            </a>
+            <a href="javascript:if(confirm('确定删除该角色？')){var role_id = {$vo.role_id}; $.get('__CONTROLLER__/delete/role_id/' + role_id, function (msg) {alert(msg.info); location.reload();})}"  title="删除该角色">
+              删
+            </a>
+          </td>
+        </tr>
+        </foreach>
+        </table>
+
+
+    </table>
+  </div>
+  <div id="pager">{$page}</div>
+</form>
+
+</body>
+</html>
+
+<script src="/Public/Admin/Js/jquery.js"></script>
+<script src="/Public/Admin/Js/good.js"></script>

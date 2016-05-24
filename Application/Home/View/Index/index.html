@@ -1,0 +1,72 @@
+<div class="wrap">
+	<div class="category">
+	<h2><img src="/Public/Home/Img/classification.png" alt=""></h2>
+		<div>
+		<ul>
+			<foreach name="cateList" item="vo">
+				<li><a href="/Good/getList/cat_id/{$vo.cat_id}">{$vo.cat_name}</a></li>
+			</foreach>
+				<li><a href="/Beg/getList" style="color: #52B0D4;">求购招领</a></li>
+				<li><a href="/Lost/getList" style="color: #52B0D4;">失物招领</a></li>
+		</ul>
+		</div>
+	</div>
+	<div class="recommend">
+		<div class="index-splide">
+			<div class="latest index_btn"><span></span></div>
+			<ul class="index_ul">
+				<li onclick="indexShowType(0);">最近更新</li>
+				<li onclick="indexShowType(1);">最高销量</li>
+			</ul>
+		</div>
+		<div class="index-splide">
+			<div class="issue index_btn"><span>我要发布</span></div>
+			<ul class="issue_ul">
+				<li onclick="indexIssueType(0);">发布商品</li>
+				<li onclick="indexIssueType(1);">发布求购</li>
+				<li onclick="indexIssueType(2);">发布招领</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="commodity-wrap">
+
+	<ul class="com">
+		<foreach name="list" item="good">
+
+				<li class="single">
+					<a href="/{$good.good_id}.html" class="img" title="{$good.good_name}"><img src="{$good.thumb_img}" alt="{$good.good_name}"></a>
+					<div class="money"><a href="/{$good.good_id}.html"><em>￥</em><eq name="good.promote_price" value="0">{$good.shop_price}<else />{$good.promote_price}</eq></a></div>
+					<div class="Writing">{$good.good_name}</div>
+					<div class="name"><a href="/User/showUser/user_id/{$good.user_id}">{$good.user_name}</a></div>
+				</li>
+
+		</foreach>
+	</ul>
+
+	<div class="clear"></div>
+		</div>
+
+</div>
+
+<div class="mt20">
+    <div class="pagin fr">
+        <div>{$page}</div>
+    </div>
+    <div class="clr"></div>
+</div>
+
+<script type="text/javascript">
+
+	var sort = {$Think.get.sort|default=0};
+	$('.recommend ul li').eq(sort).addClass('curr');
+	var text = ['最新更新', '最高销量'];
+	$('.recommend .latest span').html(text[sort]);
+
+	$('.index-splide').mouseleave(function () {
+		$(this).find('ul').stop().slideUp('fast');
+	}).mouseenter(function () {
+		$(this).find('ul').stop().slideDown('fast');
+	});
+
+</script>

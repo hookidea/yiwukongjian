@@ -1,0 +1,177 @@
+{__NOLAYOUT__}
+<div class="page">
+<div class="form-div address-box" id="form-div">
+    <form id="address-form" action="" method="post">
+        <table>
+            <tr>
+                <td>　　收货人</td>
+                <td><input name="address_name" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>　收货地址</td>
+                <td><input name="address_location" type="text"></td>
+            </tr>
+            <tr>
+                <td>　联系电话</td>
+                <td><input name="phone" type="text"></td>
+            </tr>
+            <tr>
+                <td>　　QQ</td>
+                <td><input name="qq" type="text"></td>
+            </tr>
+        </table>
+
+              <input type="hidden" name="address_id" value="">
+              <input type="hidden" name="edit" value="">
+
+        <div class="buttons">
+            <input value="添 加" type="submit" style="margin-top: 0px;">
+            <input value="重 置" type="reset" class="login-button">
+        </div>
+        <br class="clear">
+    </form>
+</div>
+
+</div>
+
+
+<div class="error-div" id="address_name-error" style="z-index: 999; display:none; text-align: left; position: absolute; width: 250px; left: 854px; top: 122px;">
+    <div class="easytip-text" style="text-align: left; padding: 10px; min-width: 120px; color: rgb(255, 255, 255); border: 1px solid rgb(102, 153, 204); border-radius: 5px; background-color: rgba(51, 153, 204, 0.8);">必填：收货人长度必须在1-20个字符内</div><div class="easytip-arrow" style="padding: 0px; margin: 0px; width: 0px; height: 0px; position: absolute; border-width: 10px; border-style: solid; border-color: transparent rgb(102, 153, 204) transparent transparent; left: -20px; top: 12px;">
+    </div>
+</div>
+
+<div class="error-div" id="address_location-error" style="z-index: 999; display:none; text-align: left; position: absolute; left: 854px; top: 184px;">
+    <div class="easytip-text" style="text-align: left; padding: 10px; min-width: 120px; color: rgb(255, 255, 255); border: 1px solid rgb(102, 153, 204); border-radius: 5px; background-color: rgba(51, 153, 204, 0.8);">收货地址长度必须在1-130个字符内</div><div class="easytip-arrow" style="padding: 0px; margin: 0px; width: 0px; height: 0px; position: absolute; border-width: 10px; border-style: solid; border-color: transparent rgb(102, 153, 204) transparent transparent; left: -20px; top: 11.5px;">
+    </div>
+</div>
+
+<div class="error-div" id="phone-error" style="z-index: 999; display:none; text-align: left; position: absolute; left: 854px; top: 245px"><div class="easytip-text" style="text-align: left; padding: 10px; min-width: 120px; color: rgb(255, 255, 255); border: 1px solid rgb(102, 153, 204); border-radius: 5px; background-color: rgba(51, 153, 204, 0.8);">手机号码格式错误</div>
+    <div class="easytip-arrow" style="padding: 0px; margin: 0px; width: 0px; height: 0px; position: absolute; border-width: 10px; border-style: solid; border-color: transparent rgb(102, 153, 204) transparent transparent; left: -20px; top: 11.5px;">
+    </div>
+</div>
+
+<div class="error-div" id="qq-error" style="z-index: 999; display:none; text-align: left; position: absolute; left: 854px; top: 308px"><div class="easytip-text" style="text-align: left; padding: 10px; min-width: 120px; color: rgb(255, 255, 255); border: 1px solid rgb(102, 153, 204); border-radius: 5px; background-color: rgba(51, 153, 204, 0.8);">QQ格式错误</div>
+    <div class="easytip-arrow" style="padding: 0px; margin: 0px; width: 0px; height: 0px; position: absolute; border-width: 10px; border-style: solid; border-color: transparent rgb(102, 153, 204) transparent transparent; left: -20px; top: 11.5px;">
+    </div>
+</div>
+
+<script src="/Public/Home/Js/validate.js"></script>
+
+<script type="text/javascript">
+(function () {
+
+    $('.back').html(' ');
+    $('.error-div').hide();
+
+    // 遮罩层
+    $('.back').click(function(){
+        $('.page').css('display','none');
+        $(this).css('display','none');
+        $('.error-div').css('display','none');
+        $(window).unbind ('scroll');
+    })
+
+    // 计算出错误信息div的left值
+    function setLeft(){
+      var form_div = $('#form-div');
+      var form_div2 = $('#form-div2');
+      var uid = $('#uid');
+      var position = $('.page').position();
+      var left = position.left + 392;
+      $('.error-div').css({'left': left, 'top': top});
+    }
+
+    setLeft();
+
+    $( "#address-form" ).validate( {
+        rules: {
+          address_name: {
+            required: true,
+            minlength: 1,
+            maxlength: 20,
+          },
+          address_location: {
+            required: true,
+            minlength: 1,
+            maxlength: 20,
+          },
+          'phone': {
+            number: true,
+            minlength: 7,
+            maxlength: 12,
+          },
+          'qq': {
+            number: true,
+            minlength: 5,
+            maxlength: 12,
+          },
+        },
+        success: function (label){
+            var name = $(label).attr('for');
+            switch(name){
+                case 'qq':
+                    var val = $('input[name="qq"]').val();
+                    if (val==0 || val) {
+                        $('#qq-error').hide();
+                        $('#phone-error').hide();
+                    } else {
+                        if (!$('input[name="phone"]').val().match(/^\d{7,12}$/)) {
+                            $('#phone-error').show();
+                        } else {
+                            $('#qq-error').hide();
+                        }
+                    }
+                    return;
+                case 'phone':
+                    var val = $('input[name="phone"]').val();
+                    if (val==0 || val) {
+                        $('#qq-error').hide();
+                        $('#phone-error').hide();
+                    } else {
+                        if (!$('input[name="qq"]').val().match(/^\d{7,12}$/)) {
+                            $('#qq-error').show();
+                        } else {
+                            $('#phone-error').hide();
+                        }
+                    }
+                    return;
+                default:
+                    $('#' + name + '-error').hide();
+                    return;
+            }
+        },
+        errorPlacement: function ( error, element ) {
+          name = $( element ).attr('name');
+          $('#' + name + '-error').show();
+        },
+        submitHandler: function(form){
+
+          var phone = $('input[name="phone"]');
+          var qq = $('input[name="qq"]');
+
+          if (!phone.val() && !qq.val()) {
+              $('#phone-error').show();
+              $('#qq-error').show();
+              return;
+          }
+          if (confirm('确定执行该操作？')) {
+              $('.page').hide();
+              if ($('.page input[name="edit"]').val()) { // 编辑
+                $.post('/Address/edit', $(form).serialize(), function (msg) {
+                    backAppend(msg);
+                });
+              } else { // 添加
+                $.post('/Address/add', $(form).serialize(), function (msg) {
+                    backAppend(msg);
+                });
+              }
+
+          }
+        }
+    } )
+
+    })();
+
+
+</script>

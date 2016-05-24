@@ -1,0 +1,248 @@
+<div class="wrap">
+	<div class="header">
+				<div class="ori-image">
+					<div class="hea" style="background: #F6F6F6 url(/Public/Home/Img/<eq name="is_collect" value="1">heart_full<else />heart</eq>.png) no-repeat scroll center 10px;" current="{$is_collect}"  onclick="collect(this, {$row.good_id}, {$row.shop_price});">
+						{$row.collect_num}
+					</div>
+
+					<foreach name="imgList" item="img">
+						<img src="{$img.save_path}" class="imag"/>
+					</foreach>
+
+					<div class="article">
+						<ul>
+							<foreach name="imgList" item="img" key="key">
+								<li <eq name="key" value="0">class="article_hover"</eq> ><img src="{$img.save_path}" alt="" /></li>
+							</foreach>
+						</ul>
+					</div>
+				</div>
+				<div class="simple">
+					<h3>{$row.good_name}</h3>
+					<div class="rmb">
+						<em>￥</em>
+						<span class="qian <eq name="row.is_promote" value="1">shan</eq>">
+							{$row.shop_price}
+						</span>
+						<eq name="row.is_chaffer" value="1">
+							<span class="is-discount">可议价</span>
+						<else />
+							<span class="is-discount">不可议价</span>
+						</eq>
+						<eq name="row.is_new" value="1">
+	            <span class="is-new">全新商品</span>
+	          <else />
+	            <span class="is-new">二手商品</span>
+		        </eq>
+					</div>
+					<!-- <span style="color:#999; margin-left:5px;">浏览次数</span> -->
+					<div class="list">
+							<div class="list_left">
+										<ul>
+											<li>我想换购</li>
+											<li>促销信息</li>
+											<li>交易地点</li>
+											<li class="two">卖家</li>
+											<li>认证状态</li>
+											<li>联系方式</li>
+											<li class="two">QQ</li>
+											<li class="two">库存</li>
+											<li style="margin-bottom:0px;">发布时间</li>
+										</ul>
+							</div>
+							<div class="list_right">
+										<ul>
+											<li>
+											<notempty name="row.switch">{$row.switch}<else />无</notempty>
+											</li>
+											<li class="list_right-rmb">
+												<eq name="row.is_promote" value="1">
+													<em>￥</em><span>{$row.promote_price}</span>
+												<else />
+													无
+												</eq>
+											</li>
+											<li class="address" title="{$row.address}">{$row.address}</li>
+											<li>
+												<a href="/User/showUser/user_id/{$row.user_id}" class="show_user_name">{$row.user_name}</a>
+												<a title="联系他/她" href="#none" class="btn-im btn-im-jd tel_me_show" onclick="addLetter({$row.user_id}, '{$row.user_name}', {$Think.session.shop.user|default=-1});"></a>
+											</li>
+											<notempty name="location">
+													<li>{$location}</li>dfdsfdsf
+												<else />
+													<li>未验证</li>
+											</notempty>
+
+											<empty name="row.phone">
+												<li>无</li>
+												<else />
+												<empty name="Think.session.shop.user">
+													<li class="login_text">{$row.phone|substr=###,0,4}*******<a class="login_btn">登录查看全部信息</a></li>
+												<else />
+													<empty name="row.phone">
+														<li class="login_text">无</li>
+													<else />
+														<li class="login_text">{$row.phone}</li>
+													</empty>
+
+												</empty>
+											</empty>
+
+											<empty name="row.qq">
+												<li>无</li>
+												<else />
+												<empty name="Think.session.shop.user">
+													<li class="login_text">{$row.qq|substr=###,0,4}*******<a class="login_btn">登录查看全部信息</a></li>
+												<else />
+													<empty name="row.qq">
+														<li class="login_text">无</li>
+													<else />
+														<li class="login_text">{$row.qq}</li>
+													</empty>
+												</empty>
+											</empty>
+											<li>{$row.good_number}</li>
+
+											<li style="margin-bottom:0px;">{$row.add_time|date="Y-m-d H:i:s",###}</li>
+
+										</ul>
+							</div>
+							<div class="gou">
+
+							<!-- 逻辑开始 -->
+								<eq name="row.is_delete" value="1">
+									<span class="wuhuo">该商品已被删除</span>
+								<else />
+								    <php>if (C('CHECK_ISSUE_GOOD') && $row['is_check'] != 1) {</php>
+								    	<span class="wuhuo">该商品暂未审核</span>
+								    <php>} else {</php>
+								        <lt name="row.good_number" value="1">
+								        	<span class="wuhuo">该商品暂时无货</span>
+								        <else />
+								            <php>if ($row['user_id'] != session('user.user_id')) {</php>
+							        			<eq name="row.is_switch" value="1">
+								                	<a href="/Switch/match/good_id/{$row.good_id}">
+														<img class="add_cart_img huangou" src="/Public/Home/Img/huangou.png"/>
+													</a>
+							        			</eq>
+							        			<img class="add_cart_img" src="/Public/Home/Img/add_cart.png" onclick="addCart({$row.good_id});"/>
+							        			<div class="plusless_good">
+							        				<div class="less" onclick="numIncDec({$row.good_id}, 0);">-</div>
+							        				<input type="text" value="1" id="rmb_input">
+							        				<div class="plus" onclick="numIncDec({$row.good_id}, 1);">+</div>
+							        			</div>
+								            <php>}</php>
+								        </lt>
+								    <php>}</php>
+								</eq>
+							<!-- 逻辑结束 -->
+
+							</div>
+					</div>
+
+					<div class="clear"></div>
+
+					<div class="newspaper">
+							<ul>
+								<li class="report" onclick="liftGood({$row.good_id});">举报</li>
+							</ul>
+					</div>
+				</div>
+	</div>
+	<div class="Product_desciption">
+				<div class="Profile_picture">
+							<span><img src="{$head_img}" alt="" /></span>
+				</div>
+				<div class="text_description">
+					{$row.good_desc}
+				</div>
+	</div>
+	<div class="comment">
+			<h5 _num="{$commentList|count=###}">评论</h5>
+			<!-- <div class="comment-view"> -->
+				<div class="comment-wr">
+
+					<foreach name="commentList" item="vo">
+
+						<div class="single_reviews">
+							<div class="comments_avatar">
+								<a href="/User/showUser/user_id/{$vo.user_id}">
+									<img src="{$vo.save_path}" alt="" />
+								</a>
+							</div>
+							<div class="reply">
+								<empty name="vo.raply_id">
+									<a href="/User/showUser/user_id/{$vo.user_id}">
+								 		<p class="user_comment username" uid="{$vo.user_id}">{$vo.user_name}</p>
+								 	</a>
+							 	<else />
+								 	<p class="user_comment">
+								 		<a href="/User/showUser/user_id/{$vo.user_id}">
+									 		<span class="user_name username" uid="{$vo.user_id}">{$vo.user_name}</span>
+									 	</a>
+									 	<span class="huifu">回复</span>
+									 	<a href="/User/showUser/user_id/{$vo.raply_id}">
+									 		<span id="raply_name">{$vo.raply_name}</span>
+									 	</a>
+								 	</p>
+								 </empty>
+								 <div class="comment_text">{$vo.content}</div>
+							</div>
+							<!-- 回复按钮 -->
+							<div class="recover_text" onclick="setRecover(this, {$Think.session.shop.user|default=-1});">回复</div>
+							<span class="comment_time">发表于{$vo.add_time|date="Y-m-d H:i",###}</span>
+						</div>
+
+					</foreach>
+
+				</div>
+			<!-- </div> -->
+
+			<!-- <div class="more-style more">显示全部评论</div> -->
+
+	        <notempty name="Think.session.shop.user">
+				<div class="reply_box">
+					<div class="reply_box_avatar">
+						<a href="/User/showUser/user_id/{$row.user_id}">
+							<img src="<php>echo session('user.save_path');</php>" alt="" />
+						</a>
+					</div>
+					<div>
+						<form class="send_comment">
+							<input type="hidden" name="good_id" value="{$row.good_id}">
+							<input type="hidden" name="good_user_id" value="{$row.user_id}">
+							<input type="hidden" name="good_user_name" value="{$row.user_name}">
+							<input type="hidden" name="raply_id" value="">
+							<input type="hidden" name="raply_name" value="">
+							<input type="hidden" name="user_id" value="<php>echo session('user.user_id');</php>">
+							<input type="hidden" name="user_name" value="<php>echo session('user.user_name');</php>">
+							<textarea type="text" name="content" class="reply_to_text_box comment_content"></textarea>
+							<input type="button" name="submit" value="评论" onclick="addComment(this);" class="reply_box_button comment_btn">
+						</form>
+					</div>
+				</div>
+			</notempty>
+
+			<div class="page-wrap">
+				<div class="mt20">
+				    <div class="pagin fr">
+				        <div>{$page}</div>
+				    </div>
+				    <div class="clr"></div>
+				</div>
+			</div>
+	</div>
+
+
+	<!-- <div class="want">
+		<h4>猜你想要</h4>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+	</div> -->
+	<div class="clear"></div>
+
+

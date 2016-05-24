@@ -1,0 +1,23 @@
+
+<form id="upload-form" method="post" flag="lost">
+      <p id="top"><a><img src="/Public/Wap/Img/bg.png" alt=""></a><span id="more"><img src="/Public/Wap/Img/more.png" alt=""/></span>
+          发布招领
+          <ul id="more_in">
+              <li onclick="location.href='/User/index'">个人中心</li>
+              <li onclick="location.href='/'">返回首页</li>
+          </ul>
+      </p>
+      <div class="release_wrap">
+              <div class="release_detail textarea"><span class="title"><font color="red">*</font>标题：<span id="lost_title-error" class="error-div">必填：长度必须在1-60个字符内</span></span><textarea type="text" placeholder="必填：请输入招领标题" name="lost_title"></textarea></div>
+
+              <div class="release_detail textarea"><span class="title"><font color="red">*</font>描述：<span id="lost_desc-error" class="error-div">必填：长度必须在20-150个字符内</span></span><textarea type="text" placeholder="必填：请输入招领描述" name="lost_desc"></textarea></div>
+
+              <div class="release_detail"><span class="title"><font color="red">*</font>手机：<span id="phone-error" class="error-div">必填：格式错误</span></span><input type="text" placeholder="选填：手机/QQ必填其一" name="phone"></div>
+
+              <div class="release_detail"><span class="title"><font color="red">*</font>QQ：<span id="qq-error" class="error-div">必填：格式错误</span></span><input type="text" placeholder="选填：手机/QQ必填其一" name="qq"></div>
+
+              <div class="release_btn">
+                <input type="submit" value="立即发布">
+              </div>
+      </div>
+</form>

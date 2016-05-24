@@ -1,0 +1,44 @@
+
+    <body>
+        <div id="back" class="back"></div>
+        <div class="msg"></div>
+        <div class="form"></div>
+
+        <p id="top"><a><img src="/Public/Wap/Img/bg.png" alt=""></a><span id="more"><img src="/Public/Wap/Img/more.png" alt=""/></span>
+            {$row.user_name}
+            <ul id="more_in">
+                <li onclick="location.href='/Good/getUserList/user_id/{$Think.get.user_id}/user_name/{$row.user_name}'">TA的商品<span class="not-real-num">{$notReadOrderInfo}</span></li>
+                <li onclick="location.href='/Beg/getUserList/user_id/{$Think.get.user_id}/user_name/{$row.user_name}'">TA的求购<span class="not-real-num">{$notReadSystemInfo}</span></li>
+                <li onclick="location.href='/Lost/getUserList/user_id/{$Think.get.user_id}/user_name/{$row.user_name}'">TA的招领<span class="not-real-num">{$notReadSwitchInfo}</span></li>
+                <li onclick="location.href='/User/index'">个人中心</li>
+                <li onclick="location.href='/'">返回首页</li>
+            </ul>
+        </p>
+
+        <div class="account-wrap" style="margin-top: 50px;">
+            <h4>用户名</h4>
+            <p><span class="left">{$row.user_name}</span>
+            <div class="clear"></div>
+            <h4 class="left">实名信息</h4>
+            <notempty name="realInfo">
+                <eq name="row.is_real" value="1">
+                    <span class="right" style="line-height: 1.5rem;">已实名</span>
+                    <span class="left realinfo first">　　  真实姓名：{$realInfo.real_name|mb_substr=###,0,1,'UTF-8'}**</span>
+                    <notempty name="realInfo.phone"><span class="left realinfo">　　　  　手机：{$realInfo.phone|substr=###,0,5}******</span></notempty>
+                    <notempty name="realInfo.qq"><span class="left realinfo">　　　  　Q Q：{$realInfo.qq|substr=###,0,5}******</span></notempty>
+                    <span class="left realinfo">学号/证件号码：{$realInfo.real_number|substr=###,0,5}*************</span>
+                    <span class="left realinfo">　　  认证地点：{$realInfo.real_location}</span>
+                <else />
+                    <p><span class="left">未实名</span>
+                </eq>
+            <else />
+                <p><span class="left">未实名</span>
+            </notempty>
+            <div class="clear"></div>
+            <h4 class="left" style="margin-top: 0.8rem;">注册时间</h4>
+                <span class="right">　</span>
+            <p>
+            <span class="left">{$row.add_time|date="Y-m-d H:i:s",###}</span>
+            </p>
+            <div class="clear"></div>
+        </div>

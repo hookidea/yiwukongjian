@@ -1,0 +1,82 @@
+
+<div id="back" class="back"></div>
+<div class="msg"></div>
+<div class="form"></div>
+
+<div class="sou-wrap order-sou-wrap">
+    <p id="top"><a><img src="/Public/Wap/Img/bg.png" alt=""></a><span class="menu-btn"><img src="/Public/Wap/Img/more.png" alt=""></span>
+        我的换购
+    </p>
+    <div>
+        <form action="/Switch/showSwitch" method="GET">
+            <input type="text" id="sousuo" name="keyword" placeholder="请输入商品名称/用户名/交换编号">
+            <input type="submit" id="btn" value="">
+        </form>
+    </div>
+</div>
+<ul id="banner">
+    <empty name="Think.get.keyword">
+        <li onclick="location.href='/Switch/showSwitch/type/0';" class="<neq name="Think.get.type" value="1">co</neq>">主动交换</li>
+        <li onclick="location.href='/Switch/showSwitch/type/1';" class="<eq name="Think.get.type" value="1">co</eq>">被动交换</li>
+    <else />
+        <li class="co">搜索：{$Think.get.keyword}，<a style="color: #999;" href="/Order/showOrder">返回查看全部</a></li>
+    </empty>
+</ul>
+<div id="wrap">
+    <notempty name="switchList">
+        <ul id="news">
+            <foreach name="switchList" item="switch" key="key">
+                <li class="style_3">
+                	<p class="news_top">交换编号：<span class="num">{$switch.switch_sn}</span>
+
+                        <switch name="switch.status" >
+                        <case value="0">
+                            <php>if ($switch['raply_id'] == session('user.user_id')) {</php>
+                                <span class="zhuangtai link-agress" onclick="changeSwitchStatus({$switch.switch_id}, 1);">同意</span>
+                                <span class="zhuangtai link-agress" onclick="changeSwitchStatus({$switch.switch_id}, 2);">不同意</span>
+                            <php>} else {</php>
+                                <span class="zhuangtai" onclick="changeSwitchStatus({$switch.switch_id}, 2);">等待对方同意</span>
+                            <php>}</php>
+                        </case>
+                        <case value="1">
+                            <span class="zhuangtai link-agress" onclick="changeSwitchStatus({$switch.switch_id}, 1);">交易达成，等待完成</span>
+                        </case>
+                        <case value="2">
+                            <span class="zhuangtai link-agress" onclick="changeSwitchStatus({$switch.switch_id}, 1);">对方拒绝，交易取消</span>
+                        </case>
+                        <case value="3">
+                            <span class="zhuangtai link-agress" onclick="changeSwitchStatus({$switch.switch_id}, 1);">交易完成</span>
+                        </case>
+                        </switch>
+                    </p>
+                    <ul class="con">
+                    	  <li>
+                          		<span class="con_img"><a href="/{$goodList.$key.0.good_id}.html"><img src="{$goodList.$key.0.thumb_img}" alt=""></a></span>
+                        		<p class="con_c">{$goodList.$key.0.good_name}</p>
+                        		<!-- <em class="con_n">×1</em> -->
+                                <div class="clear"></div>
+                                <p class="who"><a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd" onclick="addLetter({$goodList.$key.0.user_id}, '{$goodList.$key.0.user_name}', {$Think.session.shop.user});"></a>交换者：{$goodList.$key.0.user_name}</p>
+                          </li>
+                    	  <li class="huan"><img src="/Public/Wap/Img/f0ec.png" alt=""><em class="con_n">×1</em></li>
+                           <li>
+                          		<span class="con_img"><a href="/{$goodList.$key.1.good_id}.html"><img src="{$goodList.$key.1.thumb_img}" alt=""></a></span>
+                        		<p class="con_c">{$goodList.$key.1.good_name}</p>
+                        		<!-- <em class="con_n">×1</em> -->
+                                <div class="clear"></div>
+                                <p class="who"><a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd" onclick="addLetter({$goodList.$key.1.user_id}, '{$goodList.$key.1.user_name}', {$Think.session.shop.user});"></a>被交换者：{$goodList.$key.1.user_name}</p>
+                          </li>
+                    </ul>
+                </li>
+            </foreach>
+        </ul>
+    <else />
+        <p style="text-align: center; padding-top:20px;font-size: 14px; color: #999;">暂无</p>
+    </notempty>
+</div>
+
+<div class="mt20">
+    <div class="pagin fr">
+        <div>{$page}</div>
+    </div>
+    <div class="clr"></div>
+</div>

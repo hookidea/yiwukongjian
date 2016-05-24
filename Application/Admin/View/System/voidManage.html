@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>管理中心 - 空间管理</title>
+        <meta charset="utf-8">
+        <import type="css" file="Admin.Css.main" />
+        <style>
+a{text-decoration: none;}
+body{background: #DDEEF2; color: #192E32; font: 12px "sans-serif", "Arial", "Verdana";}
+table{border: 1px solid #ccc; border-collapse: collapse; background: #FFF; width: 100%;}
+th{background: #BBDDE5 url("/Public/Admin/Img/th_bg.gif") repeat-x;}
+td,th{border: 1px solid #ccc; padding: 8px;text-align: center; }
+button{font: 12px "sans-serif", "Arial", "Verdana";}
+        </style>
+    </head>
+    <body>
+<h1>
+    <span class="action-span1">
+      <a href="#">管理中心</a>
+    </span>
+    <span id="search_id" class="action-span1">- 空间管理</span>
+    <div style="clear:both"></div>
+  </h1>
+        <table id="config-table">
+            <tr>
+                <th>管理项目</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td>清空临时图片存储空间（/Uploads/Tmp/*）（注：建议在凌晨访问量少时执行，否则极有可能丢失用户上传的图片！）</td>
+                <td><button onclick="voidManage('RM_TMP_IMAGE');">清空</button></td>
+            </tr>
+            <tr>
+                <td>清空PC端Runtime（/Application/Runtime/*）</td>
+                <td><button onclick="voidManage('RM_PC_RUNTIME');">清空</button></td>
+            </tr>
+            <tr>
+                <td>清空移动端Runtime（/Wap/Runtime/*）</td>
+                <td><button onclick="voidManage('RM_WAP_RUNTIME');">清空</button></td>
+            </tr>
+            <tr>
+                <td>更新搜索引擎数据缓存：</td>
+                <td><button onclick="voidManage('SPHINX_CACHE');">更新</button></td>
+            </tr>
+
+
+        </table>
+
+    </body>
+</html>
+
+
+<import file="Admin.Js.jquery" />
+<import file="Admin.Js.good" />

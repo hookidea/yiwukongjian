@@ -1,0 +1,1903 @@
+[ 2016-05-24T22:23:06+08:00 ] 127.0.0.1 /?wap=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0018s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0007s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012925s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013023s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000182s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000314s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000624s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000705s ]
+
+[ 2016-05-24T22:23:06+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008178s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008222s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000183s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2016-05-24T22:23:13+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000784s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0008s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0004s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007694s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007748s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000089s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000396s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000432s ]
+
+[ 2016-05-24T22:23:15+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0007s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010489s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010527s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2016-05-24T22:23:17+08:00 ] 127.0.0.1 /4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `reals` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`user_id`,`user_name`,`raply_id`,`raply_name`,`content`,`add_time` FROM `comments` WHERE ( 1=1 AND good_id='4' )  [ RunTime:0.0002s ]
+SQL: SELECT `save_path` FROM `images` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: user_id /home/stu/Code/www/Wap/Home/Controller/GoodController.class.php 第 162 行.
+SQL: SELECT `real_location` FROM `reals` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `collect_goods` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect_goods` WHERE `user_id` = '1' AND `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`save_path` FROM `images` WHERE `good_id` = 4  [ RunTime:0.0001s ]
+SQL: select a.user_id,a.user_name,a.raply_id,a.raply_name,a.content,a.add_time,b.save_path from (select user_id,user_name,raply_id,raply_name,content,add_time from comments where good_id = 4 order by add_time desc limit 0,9) as a left join images as b on a.user_id = b.user_id [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+NOTIC: [8] Undefined variable: is_new /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 32 行.
+NOTIC: [8] Undefined variable: is_real /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015999s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016043s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000214s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000478s ]
+
+[ 2016-05-24T22:23:24+08:00 ] 127.0.0.1 /User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `letters` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `letters` WHERE `raply_id` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 2 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 3 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 5 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006040s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006078s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000096s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000303s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000334s ]
+
+[ 2016-05-24T22:23:25+08:00 ] 127.0.0.1 /User/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003807s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003852s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000345s ]
+
+[ 2016-05-24T22:23:27+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001420s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010540s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010595s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000131s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000186s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000477s ]
+
+[ 2016-05-24T22:23:28+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0007s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008127s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000511s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000579s ]
+
+[ 2016-05-24T22:23:29+08:00 ] 127.0.0.1 /6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `reals` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` = 6 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `good_id`,`user_id`,`user_name`,`raply_id`,`raply_name`,`content`,`add_time` FROM `comments` WHERE ( 1=1 AND good_id='6' )  [ RunTime:0.0004s ]
+SQL: SELECT `save_path` FROM `images` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: user_id /home/stu/Code/www/Wap/Home/Controller/GoodController.class.php 第 162 行.
+SQL: SELECT `real_location` FROM `reals` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `collect_goods` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect_goods` WHERE `user_id` = null AND `good_id` = 6 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`save_path` FROM `images` WHERE `good_id` = 6  [ RunTime:0.0002s ]
+SQL: select a.user_id,a.user_name,a.raply_id,a.raply_name,a.content,a.add_time,b.save_path from (select user_id,user_name,raply_id,raply_name,content,add_time from comments where good_id = 6 order by add_time desc limit 0,9) as a left join images as b on a.user_id = b.user_id [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000194s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+NOTIC: [8] Undefined variable: is_new /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 32 行.
+NOTIC: [8] Undefined variable: is_real /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013963s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000181s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000628s ]
+
+[ 2016-05-24T22:25:09+08:00 ] 127.0.0.1 /6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000711s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `reals` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` = 6 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `good_id`,`user_id`,`user_name`,`raply_id`,`raply_name`,`content`,`add_time` FROM `comments` WHERE ( 1=1 AND good_id='6' )  [ RunTime:0.0003s ]
+SQL: SELECT `save_path` FROM `images` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: user_id /home/stu/Code/www/Wap/Home/Controller/GoodController.class.php 第 162 行.
+SQL: SELECT `real_location` FROM `reals` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `collect_goods` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect_goods` WHERE `user_id` = null AND `good_id` = 6 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `good_id`,`save_path` FROM `images` WHERE `good_id` = 6  [ RunTime:0.0002s ]
+SQL: select a.user_id,a.user_name,a.raply_id,a.raply_name,a.content,a.add_time,b.save_path from (select user_id,user_name,raply_id,raply_name,content,add_time from comments where good_id = 6 order by add_time desc limit 0,9) as a left join images as b on a.user_id = b.user_id [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+NOTIC: [8] Undefined variable: is_new /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 32 行.
+NOTIC: [8] Undefined variable: is_real /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012898s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013640s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000180s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000374s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000415s ]
+
+[ 2016-05-24T22:25:33+08:00 ] 127.0.0.1 /6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `reals` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` = 6 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`user_id`,`user_name`,`raply_id`,`raply_name`,`content`,`add_time` FROM `comments` WHERE ( 1=1 AND good_id='6' )  [ RunTime:0.0002s ]
+SQL: SELECT `save_path` FROM `images` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: user_id /home/stu/Code/www/Wap/Home/Controller/GoodController.class.php 第 162 行.
+SQL: SELECT `real_location` FROM `reals` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `collect_goods` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect_goods` WHERE `user_id` = null AND `good_id` = 6 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `good_id`,`save_path` FROM `images` WHERE `good_id` = 6  [ RunTime:0.0001s ]
+SQL: select a.user_id,a.user_name,a.raply_id,a.raply_name,a.content,a.add_time,b.save_path from (select user_id,user_name,raply_id,raply_name,content,add_time from comments where good_id = 6 order by add_time desc limit 0,9) as a left join images as b on a.user_id = b.user_id [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+NOTIC: [8] Undefined variable: is_new /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 32 行.
+NOTIC: [8] Undefined variable: is_real /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015468s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015520s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000149s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001180s ]
+
+[ 2016-05-24T22:25:56+08:00 ] 127.0.0.1 /Category/getList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+SQL: SHOW COLUMNS FROM `categorys` [ RunTime:0.0005s ]
+SQL: SELECT `cat_id`,`cat_name` FROM `categorys` WHERE `is_show` = 1 ORDER BY `grade` desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/1bb636dde540b0fda4ff8d8031389177.php 第 23 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005820s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000172s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2016-05-24T22:25:58+08:00 ] 127.0.0.1 /Lost/getList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `losts` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT * FROM `losts` WHERE `is_full` = 0 AND `add_time` BETWEEN 1461507958 AND 1464099958 ORDER BY `lost_id` desc LIMIT 0,9   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011126s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011168s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000296s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000328s ]
+
+[ 2016-05-24T22:26:06+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000295s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0004s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000384s ]
+
+[ 2016-05-24T22:42:48+08:00 ] 127.0.0.1 /?wap=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008077s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008115s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000517s ]
+
+[ 2016-05-24T22:42:48+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0008s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0004s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008933s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2016-05-24T22:42:54+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0002s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009740s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009781s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000336s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000377s ]
+
+[ 2016-05-24T22:42:56+08:00 ] 127.0.0.1 /4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `reals` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`user_id`,`user_name`,`raply_id`,`raply_name`,`content`,`add_time` FROM `comments` WHERE ( 1=1 AND good_id='4' )  [ RunTime:0.0002s ]
+SQL: SELECT `save_path` FROM `images` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: user_id /home/stu/Code/www/Wap/Home/Controller/GoodController.class.php 第 162 行.
+SQL: SELECT `real_location` FROM `reals` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `collect_goods` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect_goods` WHERE `user_id` = '1' AND `good_id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `good_id`,`save_path` FROM `images` WHERE `good_id` = 4  [ RunTime:0.0001s ]
+SQL: select a.user_id,a.user_name,a.raply_id,a.raply_name,a.content,a.add_time,b.save_path from (select user_id,user_name,raply_id,raply_name,content,add_time from comments where good_id = 4 order by add_time desc limit 0,9) as a left join images as b on a.user_id = b.user_id [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] Undefined variable: is_new /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 32 行.
+NOTIC: [8] Undefined variable: is_real /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010977s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000332s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000361s ]
+
+[ 2016-05-24T22:43:56+08:00 ] 127.0.0.1 /4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `reals` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`user_id`,`user_name`,`raply_id`,`raply_name`,`content`,`add_time` FROM `comments` WHERE ( 1=1 AND good_id='4' )  [ RunTime:0.0002s ]
+SQL: SELECT `save_path` FROM `images` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: user_id /home/stu/Code/www/Wap/Home/Controller/GoodController.class.php 第 162 行.
+SQL: SELECT `real_location` FROM `reals` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `collect_goods` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect_goods` WHERE `user_id` = '1' AND `good_id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `good_id`,`save_path` FROM `images` WHERE `good_id` = 4  [ RunTime:0.0001s ]
+SQL: select a.user_id,a.user_name,a.raply_id,a.raply_name,a.content,a.add_time,b.save_path from (select user_id,user_name,raply_id,raply_name,content,add_time from comments where good_id = 4 order by add_time desc limit 0,9) as a left join images as b on a.user_id = b.user_id [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000236s ]
+NOTIC: [8] Undefined variable: is_new /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 32 行.
+NOTIC: [8] Undefined variable: is_real /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012977s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013020s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000175s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000424s ]
+
+[ 2016-05-24T22:44:21+08:00 ] 127.0.0.1 /4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `reals` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`user_id`,`user_name`,`raply_id`,`raply_name`,`content`,`add_time` FROM `comments` WHERE ( 1=1 AND good_id='4' )  [ RunTime:0.0002s ]
+SQL: SELECT `save_path` FROM `images` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: user_id /home/stu/Code/www/Wap/Home/Controller/GoodController.class.php 第 162 行.
+SQL: SELECT `real_location` FROM `reals` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `collect_goods` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect_goods` WHERE `user_id` = '1' AND `good_id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `good_id`,`save_path` FROM `images` WHERE `good_id` = 4  [ RunTime:0.0001s ]
+SQL: select a.user_id,a.user_name,a.raply_id,a.raply_name,a.content,a.add_time,b.save_path from (select user_id,user_name,raply_id,raply_name,content,add_time from comments where good_id = 4 order by add_time desc limit 0,9) as a left join images as b on a.user_id = b.user_id [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+NOTIC: [8] Undefined variable: is_new /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 32 行.
+NOTIC: [8] Undefined variable: is_real /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011915s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011963s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000157s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000319s ]
+
+[ 2016-05-24T22:44:52+08:00 ] 127.0.0.1 /4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000710s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000829s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `reals` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`user_id`,`user_name`,`raply_id`,`raply_name`,`content`,`add_time` FROM `comments` WHERE ( 1=1 AND good_id='4' )  [ RunTime:0.0002s ]
+SQL: SELECT `save_path` FROM `images` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: user_id /home/stu/Code/www/Wap/Home/Controller/GoodController.class.php 第 162 行.
+SQL: SELECT `real_location` FROM `reals` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `collect_goods` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect_goods` WHERE `user_id` = '1' AND `good_id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `good_id`,`save_path` FROM `images` WHERE `good_id` = 4  [ RunTime:0.0001s ]
+SQL: select a.user_id,a.user_name,a.raply_id,a.raply_name,a.content,a.add_time,b.save_path from (select user_id,user_name,raply_id,raply_name,content,add_time from comments where good_id = 4 order by add_time desc limit 0,9) as a left join images as b on a.user_id = b.user_id [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+NOTIC: [8] Undefined variable: is_new /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 32 行.
+NOTIC: [8] Undefined variable: is_real /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012147s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000147s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000176s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000563s ]
+
+[ 2016-05-24T22:45:14+08:00 ] 127.0.0.1 /4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `reals` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`user_id`,`user_name`,`raply_id`,`raply_name`,`content`,`add_time` FROM `comments` WHERE ( 1=1 AND good_id='4' )  [ RunTime:0.0004s ]
+SQL: SELECT `save_path` FROM `images` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: user_id /home/stu/Code/www/Wap/Home/Controller/GoodController.class.php 第 162 行.
+SQL: SELECT `real_location` FROM `reals` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `collect_goods` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect_goods` WHERE `user_id` = '1' AND `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`save_path` FROM `images` WHERE `good_id` = 4  [ RunTime:0.0002s ]
+SQL: select a.user_id,a.user_name,a.raply_id,a.raply_name,a.content,a.add_time,b.save_path from (select user_id,user_name,raply_id,raply_name,content,add_time from comments where good_id = 4 order by add_time desc limit 0,9) as a left join images as b on a.user_id = b.user_id [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [8] Undefined variable: is_real /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011451s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000172s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000175s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2016-05-24T22:46:12+08:00 ] 127.0.0.1 /4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `reals` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `good_id`,`user_id`,`user_name`,`raply_id`,`raply_name`,`content`,`add_time` FROM `comments` WHERE ( 1=1 AND good_id='4' )  [ RunTime:0.0002s ]
+SQL: SELECT `save_path` FROM `images` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: user_id /home/stu/Code/www/Wap/Home/Controller/GoodController.class.php 第 162 行.
+SQL: SELECT `real_location` FROM `reals` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `collect_goods` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect_goods` WHERE `user_id` = '1' AND `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`save_path` FROM `images` WHERE `good_id` = 4  [ RunTime:0.0003s ]
+SQL: select a.user_id,a.user_name,a.raply_id,a.raply_name,a.content,a.add_time,b.save_path from (select user_id,user_name,raply_id,raply_name,content,add_time from comments where good_id = 4 order by add_time desc limit 0,9) as a left join images as b on a.user_id = b.user_id [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000291s ]
+NOTIC: [8] Undefined variable: is_real /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021864s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021908s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000176s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000382s ]
+
+[ 2016-05-24T23:00:32+08:00 ] 127.0.0.1 /?wap=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008511s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008550s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000175s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2016-05-24T23:00:32+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0007s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008252s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008291s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000562s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000621s ]
+
+[ 2016-05-24T23:00:39+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007746s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007781s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000156s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000317s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2016-05-24T23:00:41+08:00 ] 127.0.0.1 /4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `reals` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`user_id`,`user_name`,`raply_id`,`raply_name`,`content`,`add_time` FROM `comments` WHERE ( 1=1 AND good_id='4' )  [ RunTime:0.0002s ]
+SQL: SELECT `save_path` FROM `images` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: user_id /home/stu/Code/www/Wap/Home/Controller/GoodController.class.php 第 162 行.
+SQL: SELECT `real_location` FROM `reals` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `collect_goods` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect_goods` WHERE `user_id` = '1' AND `good_id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `good_id`,`save_path` FROM `images` WHERE `good_id` = 4  [ RunTime:0.0001s ]
+SQL: select a.user_id,a.user_name,a.raply_id,a.raply_name,a.content,a.add_time,b.save_path from (select user_id,user_name,raply_id,raply_name,content,add_time from comments where good_id = 4 order by add_time desc limit 0,9) as a left join images as b on a.user_id = b.user_id [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+NOTIC: [8] Undefined variable: is_real /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012705s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012746s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000281s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000309s ]
+
+[ 2016-05-24T23:00:46+08:00 ] 127.0.0.1 /User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+SQL: SHOW COLUMNS FROM `letters` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `letters` WHERE `raply_id` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 2 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 3 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 5 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007887s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007923s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000335s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000363s ]
+
+[ 2016-05-24T23:00:48+08:00 ] 127.0.0.1 /Message/showMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT * FROM `messages` WHERE `user_id` = 1 AND `type` = 2 ORDER BY `is_read` asc,`add_time` desc LIMIT 0,16   [ RunTime:0.0003s ]
+SQL: UPDATE `messages` SET `is_read`='1' WHERE `message_id` IN ('5') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `letters` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `letters` WHERE `raply_id` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 2 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 3 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 5 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/1f62d829671dceef0d5c8fde7c92837b.php 第 19 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008244s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008281s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000103s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000299s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000329s ]
+
+[ 2016-05-24T23:02:08+08:00 ] 127.0.0.1 /Message/showMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000287s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT * FROM `messages` WHERE `user_id` = 1 AND `type` = 2 ORDER BY `is_read` asc,`add_time` desc LIMIT 0,16   [ RunTime:0.0003s ]
+SQL: UPDATE `messages` SET `is_read`='1' WHERE `message_id` IN ('5') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `letters` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `letters` WHERE `raply_id` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 2 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 3 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 5 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/1f62d829671dceef0d5c8fde7c92837b.php 第 19 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007074s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000311s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000341s ]
+
+[ 2016-05-24T23:03:03+08:00 ] 127.0.0.1 /Message/showMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000463s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT * FROM `messages` WHERE `user_id` = 1 AND `type` = 2 ORDER BY `is_read` asc,`add_time` desc LIMIT 0,16   [ RunTime:0.0003s ]
+SQL: UPDATE `messages` SET `is_read`='1' WHERE `message_id` IN ('5') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `letters` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `letters` WHERE `raply_id` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 2 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 3 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 5 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/1f62d829671dceef0d5c8fde7c92837b.php 第 19 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006754s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006793s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000325s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000371s ]
+
+[ 2016-05-24T23:10:15+08:00 ] 127.0.0.1 /Message/showMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT * FROM `messages` WHERE `user_id` = 1 AND `type` = 2 ORDER BY `is_read` asc,`add_time` desc LIMIT 0,16   [ RunTime:0.0004s ]
+SQL: UPDATE `messages` SET `is_read`='1' WHERE `message_id` IN ('5') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `letters` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `letters` WHERE `raply_id` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 2 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 3 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 5 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/1f62d829671dceef0d5c8fde7c92837b.php 第 19 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007921s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007960s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000341s ]
+
+[ 2016-05-24T23:12:42+08:00 ] 127.0.0.1 /Message/showMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT * FROM `messages` WHERE `user_id` = 1 AND `type` = 2 ORDER BY `is_read` asc,`add_time` desc LIMIT 0,16   [ RunTime:0.0003s ]
+SQL: UPDATE `messages` SET `is_read`='1' WHERE `message_id` IN ('5') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `letters` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `letters` WHERE `raply_id` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 2 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 3 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 5 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/1f62d829671dceef0d5c8fde7c92837b.php 第 19 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013782s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013831s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000219s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000480s ]
+
+[ 2016-05-24T23:12:55+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0007s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009439s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009483s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000202s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000409s ]
+
+[ 2016-05-24T23:12:57+08:00 ] 127.0.0.1 /4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `reals` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`user_id`,`user_name`,`raply_id`,`raply_name`,`content`,`add_time` FROM `comments` WHERE ( 1=1 AND good_id='4' )  [ RunTime:0.0002s ]
+SQL: SELECT `save_path` FROM `images` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: user_id /home/stu/Code/www/Wap/Home/Controller/GoodController.class.php 第 162 行.
+SQL: SELECT `real_location` FROM `reals` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `collect_goods` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect_goods` WHERE `user_id` = '1' AND `good_id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `good_id`,`save_path` FROM `images` WHERE `good_id` = 4  [ RunTime:0.0003s ]
+SQL: select a.user_id,a.user_name,a.raply_id,a.raply_name,a.content,a.add_time,b.save_path from (select user_id,user_name,raply_id,raply_name,content,add_time from comments where good_id = 4 order by add_time desc limit 0,9) as a left join images as b on a.user_id = b.user_id [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+NOTIC: [8] Undefined variable: is_real /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012407s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012445s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000301s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000330s ]
+
+[ 2016-05-24T23:13:02+08:00 ] 127.0.0.1 /Comment/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: beg_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+NOTIC: [8] Undefined index: lost_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+SQL: INSERT INTO `comments` (`good_id`,`raply_id`,`raply_name`,`user_id`,`user_name`,`content`,`add_time`) VALUES ('4','1','hookidea','1','hookidea','ddfdsfsdf','1464102782') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0007s ]
+SQL: INSERT INTO `messages` (`title`,`type`,`add_time`,`user_id`,`user_name`,`content`,`url`) VALUES ('回复提醒','5','1464102782','1','hookidea','用户 “ <b> hookidea </b> ” 对您的评论回复了，立即去看看？','/Good/showGood/good_id/4') [ RunTime:0.0004s ]
+
+[ 2016-05-24T23:13:05+08:00 ] 127.0.0.1 /User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000308s ]
+SQL: SHOW COLUMNS FROM `letters` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `letters` WHERE `raply_id` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 2 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 3 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 5 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006553s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006595s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000174s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2016-05-24T23:13:06+08:00 ] 127.0.0.1 /Message/showMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT * FROM `messages` WHERE `user_id` = 1 AND `type` = 2 ORDER BY `is_read` asc,`add_time` desc LIMIT 0,16   [ RunTime:0.0003s ]
+SQL: UPDATE `messages` SET `is_read`='1' WHERE `message_id` IN ('5') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `letters` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `letters` WHERE `raply_id` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 2 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 3 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 5 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/1f62d829671dceef0d5c8fde7c92837b.php 第 19 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011082s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011142s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000270s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2016-05-24T23:13:36+08:00 ] 127.0.0.1 /Message/showMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT * FROM `messages` WHERE `user_id` = 1 AND `type` = 2 ORDER BY `is_read` asc,`add_time` desc LIMIT 0,16   [ RunTime:0.0003s ]
+SQL: UPDATE `messages` SET `is_read`='1' WHERE `message_id` IN ('5') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `letters` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `letters` WHERE `raply_id` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 2 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 3 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 5 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/1f62d829671dceef0d5c8fde7c92837b.php 第 19 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007387s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007477s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000179s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000324s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2016-05-24T23:14:09+08:00 ] 127.0.0.1 /Message/showMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT * FROM `messages` WHERE `user_id` = 1 AND `type` = 2 ORDER BY `is_read` asc,`add_time` desc LIMIT 0,16   [ RunTime:0.0003s ]
+SQL: UPDATE `messages` SET `is_read`='1' WHERE `message_id` IN ('5') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `letters` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `letters` WHERE `raply_id` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 2 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 3 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 5 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/1f62d829671dceef0d5c8fde7c92837b.php 第 19 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009592s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000314s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000564s ]
+
+[ 2016-05-24T23:14:31+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456326871 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0005s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 34 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 35 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 54 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 58 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016114s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000183s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000353s ]
+
+[ 2016-05-24T23:17:42+08:00 ] 127.0.0.1 /Message/showMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT * FROM `messages` WHERE `user_id` = 1 AND `type` = 2 ORDER BY `is_read` asc,`add_time` desc LIMIT 0,16   [ RunTime:0.0004s ]
+SQL: UPDATE `messages` SET `is_read`='1' WHERE `message_id` IN ('5') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `letters` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `letters` WHERE `raply_id` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 2 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 3 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 5 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/1f62d829671dceef0d5c8fde7c92837b.php 第 19 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006702s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006742s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000151s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2016-05-24T23:19:47+08:00 ] 127.0.0.1 /Message/showMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT * FROM `messages` WHERE `user_id` = 1 AND `type` = 2 ORDER BY `is_read` asc,`add_time` desc LIMIT 0,16   [ RunTime:0.0003s ]
+SQL: UPDATE `messages` SET `is_read`='1' WHERE `message_id` IN ('5') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `letters` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `letters` WHERE `raply_id` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 2 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 3 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 5 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/1f62d829671dceef0d5c8fde7c92837b.php 第 19 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006946s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000318s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2016-05-24T23:33:52+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000377s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010088s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000290s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000845s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000434s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2016-05-24T23:33:53+08:00 ] 127.0.0.1 /4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `reals` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`user_id`,`user_name`,`raply_id`,`raply_name`,`content`,`add_time` FROM `comments` WHERE ( 1=1 AND good_id='4' )  [ RunTime:0.0002s ]
+SQL: SELECT `save_path` FROM `images` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: user_id /home/stu/Code/www/Wap/Home/Controller/GoodController.class.php 第 162 行.
+SQL: SELECT `real_location` FROM `reals` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `collect_goods` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect_goods` WHERE `user_id` = '1' AND `good_id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `good_id`,`save_path` FROM `images` WHERE `good_id` = 4  [ RunTime:0.0001s ]
+SQL: select a.user_id,a.user_name,a.raply_id,a.raply_name,a.content,a.add_time,b.save_path from (select user_id,user_name,raply_id,raply_name,content,add_time from comments where good_id = 4 order by add_time desc limit 0,9) as a left join images as b on a.user_id = b.user_id [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] Undefined variable: is_real /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012683s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2016-05-24T23:33:56+08:00 ] 127.0.0.1 /Comment/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000280s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: beg_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+NOTIC: [8] Undefined index: lost_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+SQL: INSERT INTO `comments` (`good_id`,`raply_id`,`raply_name`,`user_id`,`user_name`,`content`,`add_time`) VALUES ('4','','','1','hookidea','sdfsdfsd','1464104036') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0004s ]
+SQL: INSERT INTO `messages` (`title`,`type`,`add_time`,`user_id`,`user_name`,`content`,`url`) VALUES ('回复提醒','5','1464104036','2','dandan','用户 “ <b> hookidea </b> ” 对您的商品回复了，立即去看看？','/Good/showGood/good_id/4') [ RunTime:0.0002s ]
+
+[ 2016-05-24T23:34:01+08:00 ] 127.0.0.1 /Comment/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: beg_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+NOTIC: [8] Undefined index: lost_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+SQL: INSERT INTO `comments` (`good_id`,`raply_id`,`raply_name`,`user_id`,`user_name`,`content`,`add_time`) VALUES ('4','1','hookidea','1','hookidea','sdfsdfsd','1464104041') [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0010s ]
+SQL: INSERT INTO `messages` (`title`,`type`,`add_time`,`user_id`,`user_name`,`content`,`url`) VALUES ('回复提醒','5','1464104041','1','hookidea','用户 “ <b> hookidea </b> ” 对您的评论回复了，立即去看看？','/Good/showGood/good_id/4') [ RunTime:0.0003s ]
+
+[ 2016-05-24T23:38:53+08:00 ] 127.0.0.1 /4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `reals` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`user_id`,`user_name`,`raply_id`,`raply_name`,`content`,`add_time` FROM `comments` WHERE ( 1=1 AND good_id='4' )  [ RunTime:0.0003s ]
+SQL: SELECT `save_path` FROM `images` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: user_id /home/stu/Code/www/Wap/Home/Controller/GoodController.class.php 第 162 行.
+SQL: SELECT `real_location` FROM `reals` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `collect_goods` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect_goods` WHERE `user_id` = '1' AND `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`save_path` FROM `images` WHERE `good_id` = 4  [ RunTime:0.0001s ]
+SQL: select a.user_id,a.user_name,a.raply_id,a.raply_name,a.content,a.add_time,b.save_path from (select user_id,user_name,raply_id,raply_name,content,add_time from comments where good_id = 4 order by add_time desc limit 0,9) as a left join images as b on a.user_id = b.user_id [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined variable: is_real /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011145s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011183s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2016-05-24T23:38:56+08:00 ] 127.0.0.1 /Comment/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: beg_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+NOTIC: [8] Undefined index: lost_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+SQL: INSERT INTO `comments` (`good_id`,`raply_id`,`raply_name`,`user_id`,`user_name`,`content`,`add_time`) VALUES ('4','','','1','hookidea','sdfsdfsdf','1464104336') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0004s ]
+SQL: INSERT INTO `messages` (`title`,`type`,`add_time`,`user_id`,`user_name`,`content`,`url`) VALUES ('回复提醒','5','1464104336','2','dandan','用户 “ <b> hookidea </b> ” 对您的商品回复了，立即去看看？','/Good/showGood/good_id/4') [ RunTime:0.0003s ]
+
+[ 2016-05-24T23:39:03+08:00 ] 127.0.0.1 /Comment/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: beg_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+NOTIC: [8] Undefined index: lost_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+SQL: INSERT INTO `comments` (`good_id`,`raply_id`,`raply_name`,`user_id`,`user_name`,`content`,`add_time`) VALUES ('4','1','hookidea','1','hookidea','sdfsdfsdf','1464104343') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0004s ]
+SQL: INSERT INTO `messages` (`title`,`type`,`add_time`,`user_id`,`user_name`,`content`,`url`) VALUES ('回复提醒','5','1464104343','1','hookidea','用户 “ <b> hookidea </b> ” 对您的评论回复了，立即去看看？','/Good/showGood/good_id/4') [ RunTime:0.0002s ]
+
+[ 2016-05-24T23:39:09+08:00 ] 127.0.0.1 /Comment/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: beg_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+NOTIC: [8] Undefined index: lost_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+SQL: INSERT INTO `comments` (`good_id`,`raply_id`,`raply_name`,`user_id`,`user_name`,`content`,`add_time`) VALUES ('4','1','hookidea','1','hookidea','dsfdsfsdfsdf','1464104349') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0004s ]
+SQL: INSERT INTO `messages` (`title`,`type`,`add_time`,`user_id`,`user_name`,`content`,`url`) VALUES ('回复提醒','5','1464104349','1','hookidea','用户 “ <b> hookidea </b> ” 对您的评论回复了，立即去看看？','/Good/showGood/good_id/4') [ RunTime:0.0002s ]
+
+[ 2016-05-24T23:40:03+08:00 ] 127.0.0.1 /4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `reals` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`user_id`,`user_name`,`raply_id`,`raply_name`,`content`,`add_time` FROM `comments` WHERE ( 1=1 AND good_id='4' )  [ RunTime:0.0003s ]
+SQL: SELECT `save_path` FROM `images` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: user_id /home/stu/Code/www/Wap/Home/Controller/GoodController.class.php 第 162 行.
+SQL: SELECT `real_location` FROM `reals` WHERE `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `collect_goods` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `collect_goods` WHERE `user_id` = '1' AND `good_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `good_id`,`save_path` FROM `images` WHERE `good_id` = 4  [ RunTime:0.0002s ]
+SQL: select a.user_id,a.user_name,a.raply_id,a.raply_name,a.content,a.add_time,b.save_path from (select user_id,user_name,raply_id,raply_name,content,add_time from comments where good_id = 4 order by add_time desc limit 0,9) as a left join images as b on a.user_id = b.user_id [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+NOTIC: [8] Undefined variable: is_real /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 70 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/a1ffc0aa71dfc52e79397fe04b154d30.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012347s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012392s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000416s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2016-05-24T23:40:10+08:00 ] 127.0.0.1 /Comment/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: beg_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+NOTIC: [8] Undefined index: lost_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+SQL: INSERT INTO `comments` (`good_id`,`raply_id`,`raply_name`,`user_id`,`user_name`,`content`,`add_time`) VALUES ('4','1','hookidea','1','hookidea','dsfdsfsdf','1464104410') [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0015s ]
+SQL: INSERT INTO `messages` (`title`,`type`,`add_time`,`user_id`,`user_name`,`content`,`url`) VALUES ('回复提醒','5','1464104410','1','hookidea','用户 “ <b> hookidea </b> ” 对您的评论回复了，立即去看看？','/Good/showGood/good_id/4') [ RunTime:0.0003s ]
+
+[ 2016-05-24T23:40:13+08:00 ] 127.0.0.1 /Comment/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: beg_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+NOTIC: [8] Undefined index: lost_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+SQL: INSERT INTO `comments` (`good_id`,`raply_id`,`raply_name`,`user_id`,`user_name`,`content`,`add_time`) VALUES ('4','','','1','hookidea','dsfsdfs','1464104413') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0005s ]
+SQL: INSERT INTO `messages` (`title`,`type`,`add_time`,`user_id`,`user_name`,`content`,`url`) VALUES ('回复提醒','5','1464104413','2','dandan','用户 “ <b> hookidea </b> ” 对您的商品回复了，立即去看看？','/Good/showGood/good_id/4') [ RunTime:0.0002s ]
+
+[ 2016-05-24T23:40:16+08:00 ] 127.0.0.1 /Comment/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000283s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: beg_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+NOTIC: [8] Undefined index: lost_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+SQL: INSERT INTO `comments` (`good_id`,`raply_id`,`raply_name`,`user_id`,`user_name`,`content`,`add_time`) VALUES ('4','','','1','hookidea','dsfdsfsdafsafsdfdsf','1464104416') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0004s ]
+SQL: INSERT INTO `messages` (`title`,`type`,`add_time`,`user_id`,`user_name`,`content`,`url`) VALUES ('回复提醒','5','1464104416','2','dandan','用户 “ <b> hookidea </b> ” 对您的商品回复了，立即去看看？','/Good/showGood/good_id/4') [ RunTime:0.0002s ]
+
+[ 2016-05-24T23:40:20+08:00 ] 127.0.0.1 /Comment/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000464s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: beg_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+NOTIC: [8] Undefined index: lost_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+SQL: INSERT INTO `comments` (`good_id`,`raply_id`,`raply_name`,`user_id`,`user_name`,`content`,`add_time`) VALUES ('4','1','hookidea','1','hookidea','sfsdfafvcxzcx','1464104420') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0004s ]
+SQL: INSERT INTO `messages` (`title`,`type`,`add_time`,`user_id`,`user_name`,`content`,`url`) VALUES ('回复提醒','5','1464104420','1','hookidea','用户 “ <b> hookidea </b> ” 对您的评论回复了，立即去看看？','/Good/showGood/good_id/4') [ RunTime:0.0002s ]
+
+[ 2016-05-24T23:40:24+08:00 ] 127.0.0.1 /Comment/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: beg_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+NOTIC: [8] Undefined index: lost_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+SQL: INSERT INTO `comments` (`good_id`,`raply_id`,`raply_name`,`user_id`,`user_name`,`content`,`add_time`) VALUES ('4','1','hookidea','1','hookidea','dsfdsfsdfsd','1464104424') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0006s ]
+SQL: INSERT INTO `messages` (`title`,`type`,`add_time`,`user_id`,`user_name`,`content`,`url`) VALUES ('回复提醒','5','1464104424','1','hookidea','用户 “ <b> hookidea </b> ” 对您的评论回复了，立即去看看？','/Good/showGood/good_id/4') [ RunTime:0.0003s ]
+
+[ 2016-05-24T23:40:30+08:00 ] 127.0.0.1 /Comment/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: beg_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+NOTIC: [8] Undefined index: lost_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+
+[ 2016-05-24T23:40:35+08:00 ] 127.0.0.1 /Comment/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000973s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: beg_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+NOTIC: [8] Undefined index: lost_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+SQL: INSERT INTO `comments` (`good_id`,`raply_id`,`raply_name`,`user_id`,`user_name`,`content`,`add_time`) VALUES ('4','1','hookidea','1','hookidea','zvcxvcxvsdfsdf','1464104435') [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0007s ]
+SQL: INSERT INTO `messages` (`title`,`type`,`add_time`,`user_id`,`user_name`,`content`,`url`) VALUES ('回复提醒','5','1464104435','1','hookidea','用户 “ <b> hookidea </b> ” 对您的评论回复了，立即去看看？','/Good/showGood/good_id/4') [ RunTime:0.0003s ]
+
+[ 2016-05-24T23:40:39+08:00 ] 127.0.0.1 /Comment/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000386s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: beg_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+NOTIC: [8] Undefined index: lost_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+SQL: INSERT INTO `comments` (`good_id`,`raply_id`,`raply_name`,`user_id`,`user_name`,`content`,`add_time`) VALUES ('4','','','1','hookidea','asrewt34w3245dsfdsfsvcxvxc','1464104439') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0006s ]
+SQL: INSERT INTO `messages` (`title`,`type`,`add_time`,`user_id`,`user_name`,`content`,`url`) VALUES ('回复提醒','5','1464104439','2','dandan','用户 “ <b> hookidea </b> ” 对您的商品回复了，立即去看看？','/Good/showGood/good_id/4') [ RunTime:0.0002s ]
+
+[ 2016-05-24T23:40:42+08:00 ] 127.0.0.1 /Comment/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: beg_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+NOTIC: [8] Undefined index: lost_id /home/stu/Code/www/ThinkPHP/Library/Think/Model.class.php 第 1340 行.
+SQL: INSERT INTO `comments` (`good_id`,`raply_id`,`raply_name`,`user_id`,`user_name`,`content`,`add_time`) VALUES ('4','1','hookidea','1','hookidea','fsdfsdfwst','1464104442') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0005s ]
+SQL: INSERT INTO `messages` (`title`,`type`,`add_time`,`user_id`,`user_name`,`content`,`url`) VALUES ('回复提醒','5','1464104442','1','hookidea','用户 “ <b> hookidea </b> ” 对您的评论回复了，立即去看看？','/Good/showGood/good_id/4') [ RunTime:0.0002s ]
+

@@ -1,0 +1,73 @@
+
+<div class="container">
+
+    <div class="suibian">
+        <ul class="middle_nav">
+            <li><a href="/User/showUser">我的资料</a></li>
+            <li><a href="/Good/getUserList">商品管理</a></li>
+            <li><a href="/Beg/getUserList">求购管理</a></li>
+            <li><a href="/Lost/getUserList">招领管理</a></li>
+            <li><a href="/User/showCollect">收藏管理</a></li>
+            <li><a href="/User/showAddress">地址管理</a></li>
+            <li><a href="/Order/showOrder">订单管理</a></li>
+            <li><a href="/Switch/showSwitch">换购管理</a></li>
+            <li><a href="/Message/showMessage">消息管理</a></li>
+            <li class="personalhover"><a href="/User/showReal">认证管理</a></li>
+        </ul>
+   </div>
+   <div class="qq">
+	<div class="modify_information">
+    <form flag="real" id="upload-form">
+            <div class="commodity">
+                  <div class="commodity_left_intro">
+                      <p class="product-name">姓名</p>
+                      <p class="product-name">学号/身份证</p>
+                      <p class="product-name">认证地点</p>
+                  </div>
+                  <div class="commodity_right_intro">
+                      <p><input type="text" name="real_name" value="" class="price" placeholder="请输入你的姓名"></p>
+                      <p><input type="text" name="real_number" value="" class="price" placeholder="请输入你的学号"></p>
+                      <p><input type="text" name="real_location" value="" class="price" placeholder="请输入你的验证位置"></p>
+                  </div>
+                  <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="verification_contact">联系方式<span>(至少选填一个)</span></div>
+            <div class="commodity_left_intro">
+              <p class="product-name">手机</p>
+              <p class="product-name">QQ</p>
+            </div>
+            <div class="commodity_right_intro">
+              <p><input type="text" value="" class="price" name="phone"></p>
+              <p><input type="text" value="" class="price" name="qq"></p>
+              <div class="Release-button">
+              <input type="submit" name="name" value="申请认证">
+              </div>
+            </div>
+      </form>
+              <div class="clear"></div>
+      </div>
+    </div>
+</div>
+
+
+<div class="error-div" id="real_name-error" style="display: none; z-index: 999; text-align: left; position: absolute; width: 250px; left: 738px; top: 510px;">
+    <div class="easytip-text" style="text-align: left; padding: 10px; min-width: 120px; color: rgb(255, 255, 255); border: 1px solid rgb(102, 153, 204); border-radius: 5px; background-color: rgba(51, 153, 204, 0.8);">姓名长度应该在1-20个字符之间</div><div class="easytip-arrow" style="padding: 0px; margin: 0px; width: 0px; height: 0px; position: absolute; border-width: 10px; border-style: solid; border-color: transparent rgb(102, 153, 204) transparent transparent; left: -20px; top: 12px;">
+    </div>
+</div>
+<div class="error-div" id="real_number-error" style="display: none; z-index: 999; text-align: left; position: absolute; width: 250px; left: 738px; top: 555px;">
+    <div class="easytip-text" style="text-align: left; padding: 10px; min-width: 120px; color: rgb(255, 255, 255); border: 1px solid rgb(102, 153, 204); border-radius: 5px; background-color: rgba(51, 153, 204, 0.8);">学号/身份证长度应该在1-18个数字之间</div><div class="easytip-arrow" style="padding: 0px; margin: 0px; width: 0px; height: 0px; position: absolute; border-width: 10px; border-style: solid; border-color: transparent rgb(102, 153, 204) transparent transparent; left: -20px; top: 22px;">
+    </div>
+</div>
+<div class="error-div" id="real_location-error" style="display: none; z-index: 999; text-align: left; position: absolute; width: 250px; left: 738px; top: 620px;">
+    <div class="easytip-text" style="text-align: left; padding: 10px; min-width: 120px; color: rgb(255, 255, 255); border: 1px solid rgb(102, 153, 204); border-radius: 5px; background-color: rgba(51, 153, 204, 0.8);">位置长度应该在1-50个字符之间</div><div class="easytip-arrow" style="padding: 0px; margin: 0px; width: 0px; height: 0px; position: absolute; border-width: 10px; border-style: solid; border-color: transparent rgb(102, 153, 204) transparent transparent; left: -20px; top: 12px;">
+    </div>
+</div>
+<div class="error-div" id="phone-error" style="display: none; z-index: 999; text-align: left; position: absolute; width: 250px; left: 738px; top: 738px;">
+    <div class="easytip-text" style="text-align: left; padding: 10px; min-width: 120px; color: rgb(255, 255, 255); border: 1px solid rgb(102, 153, 204); border-radius: 5px; background-color: rgba(51, 153, 204, 0.8);">手机号码格式不正确</div><div class="easytip-arrow" style="padding: 0px; margin: 0px; width: 0px; height: 0px; position: absolute; border-width: 10px; border-style: solid; border-color: transparent rgb(102, 153, 204) transparent transparent; left: -20px; top: 12px;">
+    </div>
+</div>
+<div class="error-div" id="qq-error" style="display: none; z-index: 999; text-align: left; position: absolute; width: 250px; left: 738px; top: 790px;">
+    <div class="easytip-text" style="text-align: left; padding: 10px; min-width: 120px; color: rgb(255, 255, 255); border: 1px solid rgb(102, 153, 204); border-radius: 5px; background-color: rgba(51, 153, 204, 0.8);">QQ号码格式不正确</div><div class="easytip-arrow" style="padding: 0px; margin: 0px; width: 0px; height: 0px; position: absolute; border-width: 10px; border-style: solid; border-color: transparent rgb(102, 153, 204) transparent transparent; left: -20px; top: 12px;">
+    </div>
+</div>

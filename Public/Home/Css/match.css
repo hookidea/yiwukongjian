@@ -1,0 +1,189 @@
+/*
+* @Author: hookidea
+* @Date:   2016-04-15 16:57:35
+* @Last Modified by:   hookidea
+* @Last Modified time: 2016-05-02 16:31:01
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.info{color: #666; position: absolute;left: -80px;top:-50px;width: 340px;}
+.matches{
+    width: 1030px;
+}
+.matches h2{
+    margin-bottom: 50px;
+    color: #444;
+    text-align: center;
+    line-height: 60px;
+}
+.matches ul li{
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    list-style: none;
+}
+.matches ul li:hover{
+    border: 1px solid #52B0D4;
+    opacity: 0.8;
+}
+.matches ul li.curr{
+    border: 2px solid #52B0D4;
+}
+.wrap{
+    margin: 0 auto;
+}
+.div-ul{
+    width: 183px;
+    height: 520px;
+    overflow: scroll;
+    float: left;
+}
+
+.ul li img{
+    width: 162px;
+}
+.match-left{
+    position: relative;
+    float: left;
+}
+.left-right{
+    border: 1px solid #CCC;
+    margin: 70px 0 0 50px;
+    float: right;
+    width: 200px;
+    height: 250px;
+}
+.left-right div img{
+    width: 200px;
+}
+.img_div{
+    width: 200px;
+    height: 200px;
+}
+.left-right .desc{
+    width: 200px;
+}
+.match-right{
+    position: relative;
+    float: right;
+}
+.right-left{
+    border: 1px solid #CCC;
+    margin: 70px 50px 0 0px;
+    width: 200px;
+    height: 250px;
+    float: left;
+}
+.left-right .desc div:first-child{
+    width: 200px;
+}
+.right-left .desc div:first-child{
+    width: 200px;
+}
+.img_div{
+    width: 200px;
+    height: 200px;
+}
+.right-left div img{
+    width: 200px;
+}
+.center{
+    position: relative;
+    width: 170px;
+    float: left;
+    /*font-size: 80px;*/
+}
+.center .center-top{
+    font-size: 80px;
+    margin: 150px 0 100px 66px;
+}
+.center .center-button {
+    margin: 30px 0 0 11px;
+}
+.center .center-button .match-next{
+    margin-left: 10px;
+}
+.center .center-button .button{
+  float: left;
+  background-color: #52B0D4;
+  border: medium none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(75, 75, 75, 0.3);
+  color: #fff;
+  min-width: 70px;
+  overflow: hidden;
+  padding: 7px 15px;
+  text-align: center;
+}
+.center .num{
+    margin: 96px 0 0 25px;
+}
+.center .num input{
+    border: 1px solid #CCC;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 20px;
+}
+.match-form .center input[type="text"]{
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    width: 100%;
+}
+.good_name{
+    color: #666;
+    width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 15px;
+    font-size: 12px;
+    margin: 4px 0;
+}
+.rmb-matches{
+    color: #b51d1a;
+    margin-bottom: 4px;
+}
+
+.ajax-info{
+    display: none;
+    position: absolute;
+    left: 20px;
+    width: 145px;
+}
+.ajax-info img{
+    position: relative;
+    top: 3px;
+}
+.ul-view{
+    border: 1px solid #CCC;
+    padding: 5px;
+    width: 165px;
+    height: 504px;
+    overflow: hidden;
+}
+.view-left{
+    float: left;
+}
+.view-right{
+    float: right;
+}
+.ul-title{
+    position: absolute;
+    top: -35px;
+    color: #666;
+    text-align: center;
+}
+.right-ul-title{
+    right: 0px;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.desc{
+    margin: 0px 6px;
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>管理中心 - 添加角色</title>
+        <meta charset="utf-8">
+        <import type="css" file="Admin.Css.main"/>
+        <import type="css" file="Admin.Css.general"/>
+    </head>
+    <body style="background: #DDEEF2;">
+        <h1>
+            <span class="action-span1">
+              <a href="#">管理中心</a>
+            </span>
+            <span id="search_id" class="action-span1">- 正在添加新角色</span>
+            <div style="clear:both"></div>
+        </h1>
+
+        <div>
+
+            <form id="form">
+            <table style="margin: 0px auto;">
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    角色名称：
+                </td>
+                <td>
+                    <input type="text" name="role_name" value="" placeholder="请输入角色名称" />
+                </td>
+                <td><span style="color:red;font-size: 10px;">必填：1 - 20 个字符之间</span></td></tr>
+            </tr>
+
+            <php>if (session('user.is_root')) {</php>
+                <tr>
+                    <td>
+                        <span style="color:red;">*</span>
+                        ROOT：
+                    </td>
+                    <td>
+                        <input type="radio" name="is_root" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="is_root" value="0"  checked="checked"><span>否</span>
+                    </td>
+                    <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+                </tr>
+            <php>}</php>
+
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    登陆后台：
+                </td>
+                <td>
+                    <input type="radio" name="login_bg" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="login_bg" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    反馈管理：
+                </td>
+                <td>
+                    <input type="radio" name="bug_manage" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="bug_manage" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    评论管理：
+                </td>
+                <td>
+                    <input type="radio" name="comment_manage" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" checked="checked" name="comment_manage" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    商品列表：
+                </td>
+                <td>
+                    <input type="radio" name="good_getlist" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="good_getlist" value="0" checked="checked" ><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    商品添加：
+                </td>
+                <td>
+                    <input type="radio" name="good_add" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="good_add" value="0" checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    商品编辑：
+                </td>
+                <td>
+                    <input type="radio" name="good_edit" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="good_edit" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    商品上架：
+                </td>
+                <td>
+                    <input type="radio" name="good_onsale" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="good_onsale" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    商品促销：
+                </td>
+                <td>
+                    <input type="radio" name="good_promote" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="good_promote" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    商品审核：
+                </td>
+                <td>
+                    <input type="radio" name="good_check" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="good_check" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    商品举报：
+                </td>
+                <td>
+                    <input type="radio" name="good_lift" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="good_lift" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    商品删除：
+                </td>
+                <td>
+                    <input type="radio" name="good_delete" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="good_delete" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    分类管理：
+                </td>
+                <td>
+                    <input type="radio" name="category_manage" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="category_manage" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    用户列表：
+                </td>
+
+                <td>
+                    <input type="radio" name="user_getlist" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="user_getlist" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    用户添加：
+                </td>
+
+                <td>
+                    <input type="radio" name="user_add" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="user_add" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    用户编辑：
+                </td>
+
+                <td>
+                    <input type="radio" name="user_edit" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="user_edit" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    用户审核：
+                </td>
+
+                <td>
+                    <input type="radio" name="user_check" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="user_check" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    用户实名：
+                </td>
+
+                <td>
+                    <input type="radio" name="user_real" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="user_real" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    用户封号：
+                </td>
+
+                <td>
+                    <input type="radio" name="user_seal" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="user_seal" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    用户删除：
+                </td>
+
+                <td>
+                    <input type="radio" name="user_delete" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="user_delete" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    角色管理：
+                </td>
+
+                <td>
+                    <input type="radio" name="role_manage" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="role_manage" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    订单管理：
+                </td>
+
+                <td>
+                    <input type="radio" name="order_manage" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="order_manage" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td>
+                    <span style="color:red;">*</span>
+                    系统管理：
+                </td>
+
+                <td>
+                    <input type="radio" name="system_manage" value="1" ><span style="margin-right: 20px;">是</span><input type="radio" name="system_manage" value="0"  checked="checked"><span>否</span>
+                </td>
+                <td><span style="color:red;font-size: 10px;">必选其一</span></td></tr>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="添加" style="margin-right: 20px;" onclick="javascript:if(confirm('确定添加新角色？')){$.post('__CONTROLLER__/add', $('#form').serialize(), function (msg) {alert(msg.info); if(msg.status === 1){location.href='__CONTROLLER__/getList';} })}" /><input type="button" value="返回" onclick="javascript:history.back();" />
+                <td>
+            </tr>
+        </table>
+        </form>
+        </div>
+    </body>
+</html>
+
+<import file="Admin/Js/jquery" />

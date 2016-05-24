@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="suibian">
+        <ul class="middle_nav">
+          <li><a href="/User/showUser">我的资料</a></li>
+          <li><a href="/Good/getUserList">商品管理</a></li>
+          <li><a href="/Beg/getUserList">求购管理</a></li>
+          <li><a href="/Lost/getUserList">招领管理</a></li>
+          <li><a href="/User/showCollect">收藏管理</a></li>
+          <li><a href="/User/showAddress">地址管理</a></li>
+          <li><a href="/Order/showOrder">订单管理</a></li>
+          <li><a href="/Switch/showSwitch">换购管理</a></li>
+          <li><a href="/Message/showMessage">消息管理</a></li>
+          <li class="personalhover"><a href="/User/showReal">认证管理</a></li>
+        </ul>
+         <div class="clear">
+
+         </div>
+   </div>
+   <div class="qq">
+        <div class="identify">
+          <h2>实名认证</h2>
+          <notempty name="realInfo">
+                 <div class="id_it">
+                      <div>
+                        <ul>
+                          <eq name="realInfo.is_full" value="0">
+                            <li>　　　 　状态：<span>已提交认证申请，正在审核中</span></li>
+                          <else />
+                            <li>　　　 　状态：<span>已实名验证</span></li>
+                          </eq>
+                          <li>　　 真实姓名：{$realInfo.real_name}</li>
+                          <notempty name="realInfo.phone">
+                              <li>　　　 　手机：{$realInfo.phone}</li>
+                          </notempty>
+                          <notempty name="realInfo.qq">
+                              <li>　　　 　Q Q：{$realInfo.qq}</li>
+                          </notempty>
+                          <li>　　 认证地点：{$realInfo.real_location}</li>
+                          <li>学号/证件号码：{$realInfo.real_number}</li>
+                        </ul>
+                      </div>
+                  </div>
+          <else />
+                <div class="id_it">
+                    <div>
+                        <dl>
+                          <dt>认证流程：</dt>
+                          <dd>1、填写申请表单，填写您的实名信息，然后提交申请</dd>
+                          <dd>2、管理员在阅读您的信息之后，会尽快联系您，然后进行当面验证</dd>
+                        </dl>
+                        <!-- <dl>
+                          <dt>特权：</dt>
+                          <dd>1、可以发布商品</dd>
+                        </dl> -->
+                    </div>
+                    <a href="/Real/add">
+                      <div class="id-buttom">
+                          立即认证
+                      </div>
+                    </a>
+                </div>
+          </notempty>
+        </div>
+    </div>
+</div>

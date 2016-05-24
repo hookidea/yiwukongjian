@@ -1,0 +1,179 @@
+
+  <div id="back" class="back"></div>
+  <div class="msg"></div>
+  <div class="form"></div>
+
+    <p id="top"><a><img src="/Public/Wap/Img/bg.png" alt=""></a><span id="more"><img src="/Public/Wap/Img/more.png" alt=""/></span>
+        商品详情
+        <ul id="more_in">
+            <li onclick="location.href='/User/index'">个人中心</li>
+            <li onclick="location.href='/'">返回首页</li>
+        </ul>
+    </p>
+<div class="wrap">
+    <div class="img">
+      <div class="brand_new">
+        <eq name="row.is_new" value="1">
+            全新
+          <else />
+            二手
+        </eq>
+      </div>
+        <div id="slider-wrap">
+          <ul id="slider">
+            <foreach name="imgList" item="io">
+              <li><img src="{$io.save_path}" /></li>
+            </foreach>
+          </ul>
+        </div>
+        <div class="pages">
+          <eq name="row.is_promote" value="1">
+              <span class="detall_money"><em>￥</em>{$row.promote_price}</span>
+              <span class="detall_money" style="text-decoration: line-through;"><em>￥</em>{$row.shop_price}</span>
+            <else />
+              <span class="detall_money"><em>￥</em>{$row.shop_price}</span>
+          </eq>
+
+          <span class="chaffer">
+            <eq name="row.is_chaffer" value="1">
+                可议价
+              <else />
+                不可议价
+            </eq>
+          </span>
+          <span class="collect <eq name="is_collect" value="1">collect-on<else />collect-off</eq>" current="{$is_collect}" onclick="collect(this, {$row.good_id}, {$row.shop_price});"></span>
+          <span class="number">1/{$imgList|count=###}</span>
+        </div>
+    </div>
+    <div class="brief_introduction">
+      {$row.good_name}
+    </div>
+    <div class="details_column">
+        <div class="release">发布时间：{$row.add_time|date='Y-m-d H:i:s',###}</div>
+        <!-- <div class="frequency">浏览次数:111</div> -->
+        <div class="clear"></div>
+        <div class="transaction">
+          交易地点：<span>{$row.address}</span>
+        </div>
+
+    </div>
+    <div class="item">
+        <div class="item_img"><img src="{$head_img}" alt="">
+          <span class="item_name"><a href="/User/showUser/user_id/{$row.user_id}" style="color: #52B0D4;">{$row.user_name}</a>（<eq name="is_real" value="1">已实名<else />未实名</eq>）<a style="margin-top:-2px;" clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd" onclick="addLetter({$row.user_id}, '{$row.user_name}', {$Think.session.shop.user|default=-1});"></a></span>
+        </div>
+    </div>
+    <div class="introduction">
+      <!-- <span class="product_details"><img src="/Public/Wap/Img/8.png" alt=""></span> -->
+      <p>卖家描述：{$row.good_desc}</p>
+      <div class="clear"></div>
+    </div>
+    <notempty name="row.switch">
+      <div class="contact_information">
+         我想换购：{$row.switch}
+      </div>
+    </notempty>
+    <div class="contact_information">
+         库　　存：{$row.good_number}
+    </div>
+      <div class="contact_information">
+          <div class="phone">
+            <notempty name="row.qq">
+                <empty name="Think.session.shop.user">
+                  <p>Q&nbsp;&nbsp;　　Q：{$row.qq|substr=###,0,4}*******<a class="login-text" href="/User/login">登录查看全部信息</a></p>
+                <else />
+                  <notempty name="row.qq">
+                    <p>Q　　&nbsp;&nbsp;Q：{$row.qq}</p>
+                  </notempty>
+                </empty>
+            </notempty>
+
+            <notempty name="row.phone">
+
+                <empty name="Think.session.shop.user">
+                  <p>手　　机：{$row.phone|substr=###,0,4}*******<a class="login-text" href="/User/login">登录查看全部信息</a></p>
+                <else />
+                  <notempty name="row.phone">
+                    <p>手　　机：{$row.phone}</p>
+                  </notempty>
+                </empty>
+            </notempty>
+
+          </div>
+          <div class="clear"></div>
+      </div>
+      <div class="leave_message">
+        <div class="text_box">
+          <form class="send_comment" method="POST">
+            <input type="hidden" name="good_id" value="{$row.good_id}">
+            <input type="hidden" name="raply_id" value="">
+            <input type="hidden" name="raply_name" value="">
+            <input type="hidden" name="good_user_id" value="{$row.user_id}">
+            <input type="hidden" name="good_user_name" value="{$row.user_name}">
+            <input type="hidden" name="user_id" value="<php>echo session('user.user_id');</php>">
+            <input type="hidden" name="user_name" value="<php>echo session('user.user_name');</php>">
+
+            <notempty name="Think.session.shop.user">
+              <textarea name="content" class="reply_to_text_box comment_content"></textarea>
+              <button type="button" name="button" class="reply_box_button comment_btn" onclick="addComment(this, '<php>echo session("user.save_path");</php>');">评论</button>
+            </notempty>
+            <div class="clear"></div>
+          </form>
+        </div>
+        <div class="commentList">
+          <div class="comment-wr">
+            <foreach name="commentList" item="vo">
+              <div class="message_text">
+                <empty name="vo.raply_id">
+                  <div class="message_user">
+                    <span class="username" uid="{$vo.user_id}">{$vo.user_name}</span>
+                  </div>
+                <else />
+                  <div class="user_comment">
+                    <div class="message_user username" uid="{$vo.user_id}">{$vo.user_name}</div>
+                    <div class="message_user huifu-text">回复</div>
+                    <div class="message_user">{$vo.raply_name}</div>
+                  </div>
+                </empty>
+                <div class="detall_reply" onclick="setRecover(this, {$Think.session.shop.user|default=-1})">回复</div>
+                <div class="message_user time">{$vo.add_time|date="m-d H:i",###}</div>
+                <div class="clear"></div>
+                <div class="detall_text">{$vo.content}</div>
+              </div>
+            </foreach>
+          </div>
+          <div class="page-wrap">
+            <div class="mt20">
+                <div class="pagin fr">
+                    <div>{$page}</div>
+                </div>
+                <div class="clr"></div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+        <!-- 逻辑开始 -->
+          <eq name="row.is_delete" value="1">
+              <div class="Join"><a class="shan">该商品已被删除</a></div>
+          <else />
+              <php>if (C('CHECK_ISSUE_GOOD') && $row['is_check'] != 1) {</php>
+                  <div class="Join"><a class="shan">该商品暂未审核</a></div>
+              <php>} else {</php>
+                  <lt name="row.good_number" value="1">
+                      <div class="Join"><a class="shan">该商品暂时无货</a></div>
+                  <else />
+                      <php>if ($row['user_id'] != session('user.user_id')) {</php>
+                          <eq name="row.is_switch" value="1">
+                             <div class="Join"> <a href="/Switch/match/good_id/{$row.good_id}">立即换购</a></div>
+                          <else />
+                              <div class="Join"><a class="shan">该商品不支持换购</a></div>
+                          </eq>
+                      <php>}</php>
+                  </lt>
+              <php>}</php>
+          </eq>
+        <!-- 逻辑结束 -->
+</div>

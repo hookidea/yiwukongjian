@@ -1,0 +1,90 @@
+<link rel="stylesheet" type="text/css" href="/Public/Home/Css/showAddress.css?v=2.1">
+
+<div class="container">
+    <div class="suibian">
+        <ul class="middle_nav">
+          <li><a href="/User/showUser">我的资料</a></li>
+          <li><a href="/Good/getUserList">商品管理</a></li>
+          <li><a href="/Beg/getUserList">求购管理</a></li>
+          <li><a href="/Lost/getUserList">招领管理</a></li>
+          <li><a href="/User/showCollect">收藏管理</a></li>
+          <li class="personalhover"><a href="/User/showAddress">地址管理</a></li>
+          <li><a href="/Order/showOrder">订单管理</a></li>
+          <li><a href="/Switch/showSwitch">换购管理</a></li>
+          <li><a href="/Message/showMessage">消息管理</a></li>
+          <li><a href="/User/showReal">认证管理</a></li>
+        </ul>
+   </div>
+   <div class="qq">
+        
+        <div id="main-address">
+          <div class="mod-main mod-comm" id="addressList">
+              <div class="mt">
+                <a href="javascript:;" class="e-btn add-btn btn-5" onclick="addAddress();">新增收货地址</a>
+                <!-- <span class="ftx-03">您已创建<span class="ftx-02" id="addressNum_top">{$list|count}</span>个收货地址，最多可创建<span class="ftx-02">20</span>个</span> -->
+              </div>
+
+              <div class="mc">
+              <foreach name="list" item="vo">
+                  <div id="addresssDiv-137842514" class="sm easebuy-m ">
+                    <div class="smt">
+                      <h3>
+                        {$vo.address_name}
+                        <eq name="vo.is_default" value="1"><span class="ftx-04 ml10">默认地址</span></eq>
+                      </h3>
+                      <div class="extra">
+                        <a href="#none" class="del-btn" onclick="delAddress(this, {$vo.address_id});">删除</a>
+                      </div>
+
+                    </div>
+
+                    <div class="smc">
+                      <div class="items new-items">
+                        <div class="item-lcol">
+                          <div class="item">
+                              <span class="label">收货人：</span>
+                              <div class="fl">
+                                  {$vo.address_name}
+                              </div>
+                              <div class="clr"></div>
+                          </div>
+                          <div class="item">
+                              <span class="label">地址：</span>
+                              <div class="fl">
+                                  {$vo.address_location}
+                              </div>
+                              <div class="clr"></div>
+                          </div>
+                          <div class="item">
+                              <span class="label">手机：</span>
+                              <div class="fl">
+                                  {$vo.phone}
+                              </div>
+                              <div class="clr"></div>
+                          </div>
+                          <div class="item">
+                              <span class="label">QQ：</span>
+                              <div class="fl">
+                                  {$vo.qq}
+                              </div>
+                              <div class="clr"></div>
+                          </div>
+                        </div>
+
+                        <div class="item-rcol">
+                            <div class="extra">
+
+                              <a onclick="setAddress({$vo.address_id});" href="javascript:;" class="ml10 ftx-05">设为默认</a>
+                            </div>
+                        </div>
+                        <div class="clr"></div>
+                      </div>
+                    </div>
+                  </div>
+              </foreach>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
+

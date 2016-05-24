@@ -1,0 +1,180 @@
+    <div class="container">
+        <div class="suibian">
+          <ul class="middle_nav">
+            <li><a href="/User/showUser/user_id/{$Think.get.user_id}">TA的资料</a></li>
+            <li><a href="/Good/getUserList/user_id/{$Think.get.user_id}">TA的商品</a></li>
+            <li><a href="/Beg/getUserList/user_id/{$Think.get.user_id}">TA的求购</a></li>
+            <li class="personalhover"><a href="/Lost/getUserList/user_id/{$Think.get.user_id}">TA的招领</a></li>
+          </ul>
+          <div class="clear">
+          </div>
+       </div>
+       <div class="qq">
+         <div class="sc">
+
+<notempty name="lostList">
+            <php>
+              for ($y=0, $len_y=count($lostList); $y<$len_y; $y++) {
+                $curr = $lostList[$y]['lost_id'];
+            </php>
+                <div class="xs_beg">
+                  <div class="commodity_beg">
+                    <div class="img_beg">
+                      <a href="/User/showUser/user_id/<php>echo $lostList[$y]['user_id'];</php>">
+                        <img src="<php>echo $lostList[$y]['save_path'];</php>" alt="" />
+                      </a>
+                    </div>
+                    <div class="text_details_beg">
+                      <h4><php>echo $lostList[$y]['lost_title'];</php></h4>
+                      <p class="detail"><php>echo $lostList[$y]['lost_desc'];</php></p>
+                      <div class="two_beg">
+                        <span class="data_beg data_lost">
+                              发布时间：<php>echo date('Y-m-d H:i:s', $lostList[$y]['add_time']);</php>
+                        </span>
+
+                      </div>
+                      <div>
+                        <div class="contacts_beg">
+                          <a href="/User/showUser/user_id/<php>echo $lostList[$y]['user_id'];</php>">
+                            <span>
+                              <php>echo $lostList[$y]['user_name'];</php>
+                            </span>
+                          </a>
+                        </div>
+                        <div class="number_beg">
+                        </div>
+                        <div class="information-content_beg">
+                          <php>if (!session('?user')) { </php>
+
+                            <php>if ($lostList[$y]['phone']) {</php>
+                              <span>手机：</span>
+                              <php>echo substr($lostList[$y]['phone'], 0, 4),'*******';</php>
+                              <span class="login_btn">登陆查看全部</span>
+                            <php>}</php>
+
+                            <php>if ($lostList[$y]['qq']) {</php>
+                              <span>QQ：</span>
+                              <php>echo substr($lostList[$y]['qq'], 0, 4),'*******';</php>
+                              <span class="login_btn">
+                              登陆查看全部
+                              </span>
+                            <php>}</php>
+
+                          <php>} else {</php>
+
+                            <php>if ($lostList[$y]['phone']) {</php>
+                              <span>手机：</span><php>echo $lostList[$y]['phone'];</php>
+                            <php>}</php>
+
+                            <php>if ($lostList[$y]['qq']) {</php>
+                              <span>QQ：</span><php>echo $lostList[$y]['qq'];</php>
+                            <php>}</php>
+
+                          <php>}</php>
+
+                        </div>
+                      </div>
+
+                      <div class="comment_button_beg beg_btn">
+                          显示评论
+                      </div>
+
+                      <php>if ($vo[$z]['is_full'] == 1) {</php>
+                        <div class="fin_btn beg_btn disable">已完成</div>
+                      <php>} else {</php>
+                        <div class="fin_btn beg_btn disable">未完成</div>
+                      <php>}</php>
+
+                  <div class="comment_list_beg">
+
+                    <div class="comment_view_beg">
+                      <php>if (!empty($vo = $commentList[$curr])) {</php>
+                        <php>for ($z=0, $len_z=count($vo); $z<$len_z; $z++) {</php>
+                          <div class="single_reviews_beg">
+                            <div class="comments_avatar_beg">
+                              <a href="/User/showUser/user_id/<php>echo $vo[$z]['user_id'];</php>">
+                                <img src="<php>echo $vo[$z]['save_path'];</php>" alt="" />
+                              </a>
+                            </div>
+                            <div class="reply_beg">
+                              <php>if (!$vo[$z]['raply_id']) {</php>
+                                <a href="/User/showUser/user_id/<php>echo $vo[$z]['user_id'];</php>">
+                                  <p class="user_comment_beg username" uid="<php>echo $vo[$z]['user_id'];</php>"><php>echo $vo[$z]['user_name'];</php></p>
+                                </a>
+                              <php>} else {</php>
+                                <p class="user_comment_beg">
+                                  <a href="/User/showUser/user_id/<php>echo $vo[$z]['user_id'];</php>">
+                                    <span class="user_name username" uid="<php>echo $vo[$z]['user_id'];</php>"><php>echo $vo[$z]['user_name'];</php></span>
+                                  </a>
+                                  <span class="huifu">回复</span>
+                                  <a href="/User/showUser/user_id/<php>echo $vo[$z]['raply_id'];</php>">
+                                    <span id="<raply_name></raply_name>"><php>echo $vo[$z]['raply_name'];</php></span>
+                                  </a>
+                                </p>
+                               <php>}</php>
+                               <div class="comment_text_beg"><php>echo $vo[$z]['content'];</php></div>
+                            </div>
+                            <!-- 回复按钮 -->
+                            <div class="recover_text_beg" onclick="setRecoverBeg(this, {$Think.session.shop.user|default=-1})">回复</div>
+                            <span class="comment_time comment_time_beg">发表于：<php>echo date('Y-m-d H:i:s', $vo[$z]['add_time']);</php></span>
+                          </div>
+                        <php>}</php>
+                      <php>}</php>
+                    </div>
+
+                    <php>if (!empty($commentList[$curr])) {</php>
+                      <div class="more more-style">隐藏全部评论</div>
+                    <php> } else { </php>
+                      <div class="more-style">暂无评论</div>
+                    <php> } </php>
+
+                    <php>if (session('?user')) { </php>
+                      <div class="reply_box_beg">
+                          <div class="reply_box_avatar_beg">
+                            <a href="/User/showUser/user_id/<php>echo session('user.user_id');</php>">
+                              <img src="<php>echo session('user.save_path');</php>" alt="" />
+                            </a>
+                          </div>
+                        <textarea type="text" name="content-2" value="" class="reply_to_text_box_beg comment_content"></textarea>
+                        <input type="button" name="name" value="评论" class="reply_box_button_beg" _lost_id="<php>echo $curr;</php>" _lost_user_id="<php>echo $lostList[$y]['user_id'];</php>" _lost_user_name="<php>echo $lostList[$y]['user_name'];</php>">
+                      </div>
+                    <php>}</php>
+
+                    <div class="clear">
+                    </div>
+                  </div>
+                    </div>
+                  </div>
+                </div>
+            <php>}</php>
+
+
+            <form class="send_comment">
+              <input type="hidden" name="type" value="lost">
+              <input type="hidden" name="lost_id" value="">
+              <input type="hidden" name="raply_id" value="">
+              <input type="hidden" name="raply_name" value="">
+              <input type="hidden" name="lost_user_id" value="">
+              <input type="hidden" name="lost_user_name" value="">
+              <input type="hidden" name="user_id" value="<php>echo $_SESSION['shop']['user']['user_id']</php>">
+              <input type="hidden" name="user_name" value="<php>echo $_SESSION['shop']['user']['user_name']</php>">
+              <input type="hidden" name="content" value="">
+            </form>
+
+</notempty>
+
+
+         </div>
+        </div>
+    </div>
+
+<div class="mt20">
+    <div class="pagin fr">
+        <div>{$page}</div>
+    </div>
+    <div class="clr"></div>
+</div>
+
+
+
+
