@@ -2,7 +2,7 @@
 * @Author: hookidea
 * @Date:   2016-04-22 14:20:55
 * @Last Modified by:   hookidea
-* @Last Modified time: 2016-05-24 23:20:58
+* @Last Modified time: 2016-05-25 18:32:45
 */
 body{
 padding-bottom: 1rem;
@@ -145,7 +145,7 @@ body{background:#ffffff}
 #news .meny{text-align:center; display:block; line-height:20px; margin-bottom: 5px; float:left; color:#FF0004}
 #news .style{clear: both;color:#666; font-size:14px;word-break: break-all; margin-bottom: 5px;font-weight: normal;}
 #news .con{color:#666; font-size:14px; word-break: break-all; margin-bottom: 5px;}
-#news .locations_beg{color:#999;font-size: 14px;}
+#news .locations_beg{color:#999;font-size: 14px;float:left;width:100%;}
 #news .locations_time{color:#999; text-align:right; margin-bottom:5px;font-size: 14px;}
 #news .locations_connection{color:#999; text-align:right; margin-bottom:5px;font-size: 14px;}
 #news .time{width: 100%; font-size: 12px;text-align:center; display:block; line-height:20px; margin-bottom:5px; float:right; color:#AFAFAF}
@@ -370,7 +370,7 @@ float: right;
 footer{
 height: 3rem;
 }
-footer a{margin-right: 15px;}
+footer a{margin-right: 15px;font-size: 12px;}
 footer a.last{margin-right: 0;}
 .text_box{
 height: 100%;
