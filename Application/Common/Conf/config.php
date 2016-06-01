@@ -29,10 +29,7 @@ return array(
     ],
 
     'EMAIL_ACCOUNT'        => [
-            ['email' => 'parstore@163.com', 'password' => '12ecodlnpjpxbf17', 'server' => 'smtp.163.com'],
-            ['email' => 'parstore@126.com', 'password' => '12ecodlnpjpxbf17', 'server' => 'smtp.126.com'],
-            ['email' => 'parstore@qq.com', 'password' => 'fcchjncdzwrtdgcf', 'server' => 'smtp.qq.com'],
-            // ['email' => 'parstore@yeah.net', 'password' => '12ecodlnpjpxbf17', 'server' => 'smtp.yeah.net'],
+            ['email' => '*****@163.com', 'password' => '授权码/密码', 'server' => 'smtp.163.com'],
     ],
 
     'IMAGE_SIZE'           =>         7,     // 图片上传限制大小，MB为单位
