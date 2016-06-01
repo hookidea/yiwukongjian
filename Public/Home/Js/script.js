@@ -279,7 +279,7 @@ function addCart (good_id) {
 
 /**
  * 负责在back(即黑色背景上添加提示信息)
- * @param  JSON    status：状态，info：错误信息
+ * @param  JSON    status：状态（1：成功，2：失败），info：信息
  * msg.href = false ，不刷新，只提示几秒退出
  */
 function backAppend(msg){
@@ -293,7 +293,7 @@ function backAppend(msg){
     info_div.css({top: top, left: left});
 
     back.show();
-    var time = msg.time ? msg.time : 500;
+    var time = msg.time ? msg.time : 1200;
     if (msg.href == 'backReload') {
       location.href = document.referrer;
     } else if (msg.href == 'back') {

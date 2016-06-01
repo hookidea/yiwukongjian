@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>易物空间</title>
-    <link rel="stylesheet" type="text/css" href="/Public/Wap/Css/index.css?v=2.1">
+    <link rel="stylesheet" type="text/css" href="/Public/Wap/Css/index.css?v=0.2">
     <link rel="shortcut icon" href="/Public/Home/Img/favicon.ico" />
     <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="/Public/Wap/Js/begin.js"></script>
@@ -171,7 +171,7 @@
       <a href="/Good/showGood/good_id/4?wap=0">电脑版</a>
       <a onclick="addBug(1);">反馈建议</a>
       <a href="/Index/article" class="last">服务条款</a>
-      <p>Copyright © 2016 YW.GZITTC.COM. All rights reserved.</p>
+      <p>Copyright © 2016 YW.GZITTC.com. All Rights Reserved.</p>
 </footer>
 <?php } ?>
 

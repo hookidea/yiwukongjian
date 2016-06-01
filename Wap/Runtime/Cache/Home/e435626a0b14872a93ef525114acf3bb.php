@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="易物空间">
+    <meta name="description" content="易物空间">
+    <meta name="author" content="hookidea@gmail.com">
     <title>易物空间</title>
-    <link rel="stylesheet" type="text/css" href="/Public/Wap/Css/index.css?v=2.1">
+    <link rel="stylesheet" type="text/css" href="/Public/Wap/Css/index.css?v=0.2">
     <link rel="shortcut icon" href="/Public/Home/Img/favicon.ico" />
     <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="/Public/Wap/Js/begin.js"></script>
@@ -45,10 +48,10 @@
                                 <span class="zhuangtai link-agress" onclick="changeSwitchStatus(<?php echo ($switch["switch_id"]); ?>, 1);">同意</span>
                                 <span class="zhuangtai link-agress" onclick="changeSwitchStatus(<?php echo ($switch["switch_id"]); ?>, 2);">不同意</span>
                             <?php } else { ?>
-                                <span class="zhuangtai" onclick="changeSwitchStatus(<?php echo ($switch["switch_id"]); ?>, 2);">等待对方同意</span>
+                                <span class="zhuangtai" onclick="changeSwitchStatus(<?php echo ($switch["switch_id"]); ?>, 2);">交换成立，等待交换完成</span>
                             <?php } break;?>
-                        <?php case "1": ?><span class="zhuangtai link-agress" onclick="changeSwitchStatus(<?php echo ($switch["switch_id"]); ?>, 1);">交易达成，等待完成</span><?php break;?>
-                        <?php case "2": ?><span class="zhuangtai link-agress" onclick="changeSwitchStatus(<?php echo ($switch["switch_id"]); ?>, 1);">对方拒绝，交易取消</span><?php break;?>
+                        <?php case "1": ?><span class="zhuangtai link-agress" onclick="changeSwitchStatus(<?php echo ($switch["switch_id"]); ?>, 1);">交换成立，等待交换完成</span><?php break;?>
+                        <?php case "2": ?><span class="zhuangtai link-agress" onclick="changeSwitchStatus(<?php echo ($switch["switch_id"]); ?>, 1);">交换被拒绝，交换取消</span><?php break;?>
                         <?php case "3": ?><span class="zhuangtai link-agress" onclick="changeSwitchStatus(<?php echo ($switch["switch_id"]); ?>, 1);">交易完成</span><?php break; endswitch;?>
                     </p>
                     <ul class="con">
@@ -57,7 +60,11 @@
                         		<p class="con_c"><?php echo ($goodList["$key"]["0"]["good_name"]); ?></p>
                         		<!-- <em class="con_n">×1</em> -->
                                 <div class="clear"></div>
-                                <p class="who"><a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd" onclick="addLetter(<?php echo ($goodList["$key"]["0"]["user_id"]); ?>, '<?php echo ($goodList["$key"]["0"]["user_name"]); ?>', <?php echo ($_SESSION['shop']['user']); ?>);"></a>交换者：<?php echo ($goodList["$key"]["0"]["user_name"]); ?></p>
+                                <p class="who">
+                                    <img src="/Public/Home/Img/taobao.gif" onclick="addLetter(<?php echo ($goodList["$key"]["1"]["user_id"]); ?>, '<?php echo ($goodList["$key"]["1"]["user_name"]); ?>', <?php echo ($_SESSION['shop']['user']); ?>);" />
+                                    <!-- <a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd" onclick="addLetter(<?php echo ($goodList["$key"]["0"]["user_id"]); ?>, '<?php echo ($goodList["$key"]["0"]["user_name"]); ?>', <?php echo ($_SESSION['shop']['user']); ?>);"></a> -->
+                                    交换者：<?php echo ($goodList["$key"]["0"]["user_name"]); ?>
+                                </p>
                           </li>
                     	  <li class="huan"><img src="/Public/Wap/Img/f0ec.png" alt=""><em class="con_n">×1</em></li>
                            <li>
@@ -65,7 +72,12 @@
                         		<p class="con_c"><?php echo ($goodList["$key"]["1"]["good_name"]); ?></p>
                         		<!-- <em class="con_n">×1</em> -->
                                 <div class="clear"></div>
-                                <p class="who"><a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd" onclick="addLetter(<?php echo ($goodList["$key"]["1"]["user_id"]); ?>, '<?php echo ($goodList["$key"]["1"]["user_name"]); ?>', <?php echo ($_SESSION['shop']['user']); ?>);"></a>被交换者：<?php echo ($goodList["$key"]["1"]["user_name"]); ?></p>
+                                <p class="who">
+                                    <img src="/Public/Home/Img/taobao.gif" onclick="addLetter(<?php echo ($goodList["$key"]["1"]["user_id"]); ?>, '<?php echo ($goodList["$key"]["1"]["user_name"]); ?>', <?php echo ($_SESSION['shop']['user']); ?>);" />
+                                    <!-- <a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd" onclick="addLetter(<?php echo ($goodList["$key"]["1"]["user_id"]); ?>, '<?php echo ($goodList["$key"]["1"]["user_name"]); ?>', <?php echo ($_SESSION['shop']['user']); ?>);"></a> -->
+
+                                    被交换者：<?php echo ($goodList["$key"]["1"]["user_name"]); ?>
+                                </p>
                           </li>
                     </ul>
                 </li><?php endforeach; endif; ?>
@@ -90,10 +102,10 @@
 <?php if (!in_array(CONTROLLER_NAME, ['User', 'Category'])) { ?>
 <footer>
       <a href="/">首页</a>
-      <a href="/Switch/showSwitch/type/0/switch_id/3?wap=0">电脑版</a>
+      <a href="/Switch/showSwitch?wap=0">电脑版</a>
       <a onclick="addBug(1);">反馈建议</a>
       <a href="/Index/article" class="last">服务条款</a>
-      <p>Copyright © 2016 YW.GZITTC.COM. All rights reserved.</p>
+      <p>Copyright © 2016 YW.GZITTC.com. All Rights Reserved.</p>
 </footer>
 <?php } ?>
 

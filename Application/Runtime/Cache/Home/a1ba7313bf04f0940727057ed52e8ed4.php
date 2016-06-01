@@ -7,8 +7,8 @@
     <link rel="shortcut icon" href="/Public/Home/Img/favicon.ico" />
     <meta name="description" content="">
     <meta http-equiv="cleartype" content="on">
-    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/index.css?v=2.1">
-    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/upload.css?v=2.1">
+    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/index.css?v=0.2">
+    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/upload.css?v=0.2">
     <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
@@ -164,7 +164,7 @@
             <span>/</span><a href="/Index/article" target="_blank">服务条款</a>
             <?php if (session('user.login_bg')) { echo '<span>/</span><a href="/admin.php/Index/index" target="_blank">后台管理</a>'; } ?>
         </div>
-        <div class="links-end">Copyright © 2016 YW.GZITTC.COM. All rights reserved.</div>
+        <div class="links-end">Copyright © 2016 YW.GZITTC.com. All Rights Reserved.</div>
     </div>
 
 

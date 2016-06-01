@@ -1,0 +1,1336 @@
+[ 2016-06-01T17:29:04+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0014s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0007s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 30 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011434s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011473s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000519s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000561s ]
+
+[ 2016-06-01T22:14:12+08:00 ] 127.0.0.1 /Order/showOrder/status/1/type/0?wap=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456841652 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0002s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000159s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000421s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000464s ]
+
+[ 2016-06-01T22:14:12+08:00 ] 127.0.0.1 /Order/showOrder/status/1/type/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456841652 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013376s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013428s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001672s ]
+
+[ 2016-06-01T22:14:15+08:00 ] 127.0.0.1 /Order/showOrder/status/1/type/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000629s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456841655 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0005s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015287s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015362s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000208s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2016-06-01T22:14:18+08:00 ] 127.0.0.1 /Order/showOrder/status/1/type/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000771s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001008s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456841658 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018644s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018707s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000182s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000290s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000520s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000575s ]
+
+[ 2016-06-01T22:14:26+08:00 ] 127.0.0.1 /Order/showOrder/status/1/type/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456841665 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0005s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015415s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000181s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000343s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000559s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000637s ]
+
+[ 2016-06-01T22:15:29+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0007s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `add_time` desc LIMIT 8   [ RunTime:0.0003s ]
+SQL: SELECT `is_promote`,`user_name`,`user_id`,`good_id`,`shop_price`,`promote_price`,`good_name`,`thumb_img` FROM `goods` WHERE `is_delete` = 0 AND `is_on_sale` = 1 AND `good_number` > 0 ORDER BY `sales_num` desc LIMIT 8   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+NOTIC: [8] Undefined index: keyword /home/stu/Code/www/Wap/Runtime/Cache/Home/7c43724e8bc014ec693751e0610dba45.php 第 30 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008260s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008309s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000641s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000720s ]
+
+[ 2016-06-01T22:15:31+08:00 ] 127.0.0.1 /User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+SQL: SHOW COLUMNS FROM `letters` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `letters` WHERE `raply_id` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `messages` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 2 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 1 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 3 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messages` WHERE `user_id` = 1 AND `type` = 5 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005554s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005599s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000172s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000347s ]
+
+[ 2016-06-01T22:15:35+08:00 ] 127.0.0.1 /Switch/showSwitch
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001192s ]
+SQL: SHOW COLUMNS FROM `switchs` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `switchs` WHERE `user_id` = 1 AND `status` IN (0,1) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `switchs` WHERE `user_id` = 1 AND `add_time` > 1456841735 ORDER BY `status` asc,`add_time` desc LIMIT 0,9   [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','8')  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('2','9')  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 38 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 63 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 71 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 63 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 71 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 63 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 71 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 63 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 71 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 63 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016079s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016157s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000390s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000775s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000864s ]
+
+[ 2016-06-01T22:15:44+08:00 ] 127.0.0.1 /Switch/showSwitch
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+SQL: SHOW COLUMNS FROM `switchs` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `switchs` WHERE `user_id` = 1 AND `status` IN (0,1) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `switchs` WHERE `user_id` = 1 AND `add_time` > 1456841744 ORDER BY `status` asc,`add_time` desc LIMIT 0,9   [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','8')  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('2','9')  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 38 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 63 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 71 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 63 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 71 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 63 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 71 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 63 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 71 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 63 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018801s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000296s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000702s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2016-06-01T22:19:32+08:00 ] 127.0.0.1 /Switch/showSwitch
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `switchs` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `switchs` WHERE `user_id` = 1 AND `status` IN (0,1) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `switchs` WHERE `user_id` = 1 AND `add_time` > 1456841972 ORDER BY `status` asc,`add_time` desc LIMIT 0,9   [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','8')  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('2','9')  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 38 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 75 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 75 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 75 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 75 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 75 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000174s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000405s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000468s ]
+
+[ 2016-06-01T22:21:39+08:00 ] 127.0.0.1 /Switch/showSwitch
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `switchs` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `switchs` WHERE `user_id` = 1 AND `status` IN (0,1) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `switchs` WHERE `user_id` = 1 AND `add_time` > 1456842099 ORDER BY `status` asc,`add_time` desc LIMIT 0,9   [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','8')  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('2','9')  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 38 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 75 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 75 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 75 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 75 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 75 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009566s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009610s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000344s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000385s ]
+
+[ 2016-06-01T22:23:25+08:00 ] 127.0.0.1 /Switch/showSwitch
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+SQL: SHOW COLUMNS FROM `switchs` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `switchs` WHERE `user_id` = 1 AND `status` IN (0,1) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `switchs` WHERE `user_id` = 1 AND `add_time` > 1456842205 ORDER BY `status` asc,`add_time` desc LIMIT 0,9   [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','8')  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('2','9')  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 38 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 75 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 75 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 75 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 75 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 75 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011350s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011393s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2016-06-01T22:24:37+08:00 ] 127.0.0.1 /Switch/showSwitch
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `switchs` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `switchs` WHERE `user_id` = 1 AND `status` IN (0,1) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `switchs` WHERE `user_id` = 1 AND `add_time` > 1456842277 ORDER BY `status` asc,`add_time` desc LIMIT 0,9   [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','8')  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('2','9')  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 38 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 64 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 76 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 77 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 64 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 76 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 77 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 64 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 76 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 77 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 64 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 76 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 77 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 64 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 76 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 77 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010207s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010251s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2016-06-01T22:24:48+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000705s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456842288 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 38 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016522s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016578s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000160s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000704s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2016-06-01T22:25:02+08:00 ] 127.0.0.1 /Letter/addLetter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003420s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003457s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000304s ]
+
+[ 2016-06-01T22:25:07+08:00 ] 127.0.0.1 /Switch/showSwitch
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+SQL: SHOW COLUMNS FROM `switchs` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `switchs` WHERE `user_id` = 1 AND `status` IN (0,1) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `switchs` WHERE `user_id` = 1 AND `add_time` > 1456842307 ORDER BY `status` asc,`add_time` desc LIMIT 0,9   [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+NOTIC: [8] Use of undefined constant in - assumed 'in' /home/stu/Code/www/ThinkPHP/Common/functions.php 第 657 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','4')  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('1','8')  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `goods` WHERE `good_id` IN ('2','9')  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 38 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 64 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 76 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 77 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 64 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 76 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 77 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 64 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 76 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 77 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 64 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 76 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 77 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 64 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 65 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 76 行.
+NOTIC: [8] Array to string conversion /home/stu/Code/www/Wap/Runtime/Cache/Home/e435626a0b14872a93ef525114acf3bb.php 第 77 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012803s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000156s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000309s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000344s ]
+
+[ 2016-06-01T22:25:09+08:00 ] 127.0.0.1 /Letter/addLetter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000305s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003231s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003265s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000088s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000159s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000289s ]
+
+[ 2016-06-01T22:25:15+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456842315 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0006s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0006s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0005s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0005s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 38 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016071s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000269s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000553s ]
+
+[ 2016-06-01T22:25:17+08:00 ] 127.0.0.1 /Letter/addLetter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005263s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005324s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000248s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000451s ]
+
+[ 2016-06-01T22:25:21+08:00 ] 127.0.0.1 /Letter/addLetter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003372s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003415s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000212s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000350s ]
+
+[ 2016-06-01T22:28:52+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456842532 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 38 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014921s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014960s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000265s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011235s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011356s ]
+
+[ 2016-06-01T22:29:16+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000790s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001164s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456842556 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0006s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0006s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0006s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0005s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 38 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000179s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000295s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2016-06-01T22:30:09+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000757s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456842609 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0005s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 38 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018049s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018114s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2016-06-01T22:30:16+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456842616 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 38 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008939s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008974s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000096s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000214s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000490s ]
+
+[ 2016-06-01T22:30:28+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456842628 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 38 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011051s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011102s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000434s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2016-06-01T22:30:32+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456842632 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0007s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 38 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000159s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000459s ]
+
+[ 2016-06-01T22:34:24+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456842864 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 38 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010545s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010584s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000103s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000436s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000472s ]
+
+[ 2016-06-01T22:34:49+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456842889 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0005s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0005s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 38 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017027s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017091s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000800s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000880s ]
+
+[ 2016-06-01T22:34:54+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456842894 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0006s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0005s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 38 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017684s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017749s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000505s ]
+
+[ 2016-06-01T22:34:55+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456842895 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 38 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011956s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011999s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000188s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000548s ]
+
+[ 2016-06-01T22:34:55+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456842895 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 38 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016384s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016463s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000206s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2016-06-01T22:39:54+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456843194 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0005s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0004s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 38 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008752s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000309s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000344s ]
+
+[ 2016-06-01T22:41:07+08:00 ] 127.0.0.1 /Order/showOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `order_infos` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p /home/stu/Code/www/ThinkPHP/Library/Org/Util/Page.class.php 第 37 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order_infos` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `order_infos` WHERE `user_id` = 1 AND `add_time` > 1456843267 ORDER BY `status` asc,`add_time` desc  [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=4) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0003s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=3) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=2) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+SQL: select g.good_id,g.num,s.thumb_img,s.good_name from (select good_id,num from order_goods where order_id=1) as g left join goods as s on g.good_id=s.good_id [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 37 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 38 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+NOTIC: [8] Undefined index: type /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 57 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 65 行.
+NOTIC: [8] Undefined variable: row /home/stu/Code/www/Wap/Runtime/Cache/Home/0d84e43e15c87cbbb26c378ec75606d5.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009995s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010048s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000214s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000487s ]
+

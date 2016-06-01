@@ -43,10 +43,16 @@
                     <p class="lianxi price">￥{$order.total_price}</p>
                     <eq name="Think.get.type" value="1">
                         <!-- 卖家订单 -->
-                        <p class="maijia">买家：{$order.user_name}<a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd right" onclick="addLetter({$order.user_id}, '{$row.user_name}', {$Think.session.shop.user|is_array=###});"></a></p>
+                        <p class="maijia">买家：{$order.user_name}
+                            <img src="/Public/Home/Img/taobao.gif" title="联系他/她" onclick="addLetter({$order.user_id}, '{$row.user_name}', {$Think.session.shop.user|is_array=###});" />
+                        <!-- <a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd right" onclick="addLetter({$order.user_id}, '{$row.user_name}', {$Think.session.shop.user|is_array=###});"></a> -->
+                        </p>
                     <else />
                         <!-- 买家订单 -->
-                        <p class="maijia">卖家：{$order.seller_name}<a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd right" onclick="addLetter({$order.seller_id}, '{$row.user_name}', {$Think.session.shop.user|is_array=###});"></a></p>
+                        <p class="maijia">卖家：{$order.seller_name}
+                           <!--  <a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd right" onclick="addLetter({$order.seller_id}, '{$row.user_name}', {$Think.session.shop.user|is_array=###});"></a> -->
+                            <img src="/Public/Home/Img/taobao.gif" title="联系他/她" onclick="addLetter({$order.seller_id}, '{$row.user_name}', {$Think.session.shop.user|is_array=###});" />
+                        </p>
                     </eq>
 
                     <p class="lianxi"><notempty name="order.phone">手机：{$order.phone}</notempty>&nbsp;&nbsp;<notempty name="order.qq">QQ：{$order.qq}</notempty></p>

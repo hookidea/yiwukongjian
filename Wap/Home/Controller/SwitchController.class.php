@@ -71,7 +71,7 @@ class SwitchController extends Controller
             $where = ['good_id' => ['in', $good_ids]];
         } else {
             $this->info = '无法匹配到最佳结果，已显示为您的所有商品';
-            $where = ['user_id' => $user_id, 'is_switch' => 1];
+            $where = ['user_id' => $user_id, 'is_switch' => 1, 'is_delete' => 0, 'is_on_sale' => 1, 'good_number' => ['gt', 0]];
             $good->limit($pagesize*(I('get.p', 1)-1) . ',' . $pagesize);
         }
 
@@ -112,7 +112,7 @@ class SwitchController extends Controller
             $this->ajaxReturn(['status'=>2, 'info'=>'联系方式不能为空！']);
         }
 
-        $list = D('Good')->field('user_id,good_name,is_check,good_number,is_on_sale')->where(['good_id' => ['in', [I('post.user_good_id'), I('post.raply_good_id')]]])->select();
+        $list = D('Good')->field('user_id,good_name,is_check,good_number,is_on_sale,is_switch')->where(['good_id' => ['in', [I('post.user_good_id'), I('post.raply_good_id')]]])->select();
 
         if (($rs = $this->_createCheckGood($list, I('post.num'))) !== true) $this->ajaxReturn($rs);
 
@@ -122,8 +122,8 @@ class SwitchController extends Controller
         $_POST['user_name'] = session('user.user_name');
 
         if ($switch->create()) {
-            $result = $switch->add();
-            if ($result) {
+
+            if ($result = $switch->add()) {
                 $_POST['switch_id'] = $result;
                 R('Message/addSwitchMess', [$_POST]);
                 $this->ajaxReturn(['status' => 1, 'info' => '商品交换请求提交成功，等待对方的同意！', 'href' => '/Switch/showSwitch/type/0/switch_id/' . $result]);
@@ -134,6 +134,15 @@ class SwitchController extends Controller
             $this->ajaxReturn(['status' => 2, 'info' => $switch->getError()]);
         }
 
+    }
+
+    /**
+     * 负责回滚事物并返回结果给客户端
+     */
+    private function _rollback ($switch, $msg='交换失败，请刷新页面后再试！') 
+    {
+        $switch->rollback();
+        $switch->ajaxReturn(['status'=>2, 'info'=> $msg]);
     }
 
     /**
@@ -149,7 +158,7 @@ class SwitchController extends Controller
         $num = $post['num'] + 0;
         $good = D('Good');
 
-        $goodList = $good->field('user_id,good_name,user_name,shop_price,promote_price,good_number,is_promote,good_id,thumb_img')->where(['good_id' => ['in', [$user_good_id, $raply_good_id]]])->select();
+        $goodList = $good->field('user_id,good_name,user_name,shop_price,promote_price,good_number,is_check,is_promote,good_id,thumb_img,is_on_sale,is_switch')->where(['good_id' => ['in', [$user_good_id, $raply_good_id]]])->select();
 
         if (($rs = $this->_createCheckGood($goodList, I('post.num'))) !== true) $this->error($rs['info']);
 
@@ -263,9 +272,13 @@ class SwitchController extends Controller
                 if (!$switch->where(['switch_id' => $switch_id])->save(['status' => 1])) {
                     $this->ajaxReturn(['status'=>2, 'info'=>'同意失败！']);
                 }
-                // 减少库存
-                $good = A('Good');
-                $good->delNumber([$row['user_good_id'], $row['raply_good_id']], $row['num']);
+
+                // 问题：订单是下了，但库存不一定就有，不能保证库存的有效性和准确性
+                if (!A('Good')->delNumber([$row['user_good_id'], $row['raply_good_id']], $row['num'])) {
+                    // 扣除库存执行失败
+                    $switch->ajaxReturn(['status'=>2, 'info'=> '同意失败，请刷新页面后再试！']);
+                }
+
                 break;
             case 2: // 拒绝
                 if ($user_id != $row['raply_id']) $this->ajaxReturn(['status'=>2, 'info'=>'操作非法！']);
@@ -295,7 +308,7 @@ class SwitchController extends Controller
     private function _agreeCheckGood ($switch_id)
     {
         $info = D('Switch')->where(['switch_id' => $switch_id])->find();
-        $goodList = D('Good')->field('user_id,good_name,is_check,good_number,is_on_sale')->where(['good_id' => ['in', [$info['user_good_id'], $info['raply_good_id']]]])->select();
+        $goodList = D('Good')->field('user_id,good_name,is_check,good_number,is_on_sale,is_switch')->where(['good_id' => ['in', [$info['user_good_id'], $info['raply_good_id']]]])->select();
         if (($rs = $this->_createCheckGood($goodList, $info['num'])) !== true) $this->ajaxReturn($rs);
         return true;
     }
@@ -313,6 +326,8 @@ class SwitchController extends Controller
         if ($list[0]['user_id'] == $user_id && $list[1]['user_id'] == $user_id) return ['status' => 2, 'info' => '抱歉，您所购买的商品　' . mb_substr($list[$i]['good_name'], 0, 15, 'UTF-8') . '...　是您自己的商品'];
 
         for ($i=0, $len=count($list); $i<$len; $i++) {
+
+            if (!$list[$i]['is_switch']) return ['status' => 2, 'info' => '抱歉，您所购买的商品　' . mb_substr($list[$i]['good_name'], 0, 15, 'UTF-8') . '...　不支持交换！'];
 
             if ($on && 1 != $list[$i]['is_check']) return ['status' => 2, 'info' => '抱歉，您所购买的商品　' . mb_substr($list[$i]['good_name'], 0, 15, 'UTF-8') . '...　未经审核，暂时不能被购买'];
 

@@ -35,14 +35,14 @@
                                 <span class="zhuangtai link-agress" onclick="changeSwitchStatus({$switch.switch_id}, 1);">同意</span>
                                 <span class="zhuangtai link-agress" onclick="changeSwitchStatus({$switch.switch_id}, 2);">不同意</span>
                             <php>} else {</php>
-                                <span class="zhuangtai" onclick="changeSwitchStatus({$switch.switch_id}, 2);">等待对方同意</span>
+                                <span class="zhuangtai" onclick="changeSwitchStatus({$switch.switch_id}, 2);">交换成立，等待交换完成</span>
                             <php>}</php>
                         </case>
                         <case value="1">
-                            <span class="zhuangtai link-agress" onclick="changeSwitchStatus({$switch.switch_id}, 1);">交易达成，等待完成</span>
+                            <span class="zhuangtai link-agress" onclick="changeSwitchStatus({$switch.switch_id}, 1);">交换成立，等待交换完成</span>
                         </case>
                         <case value="2">
-                            <span class="zhuangtai link-agress" onclick="changeSwitchStatus({$switch.switch_id}, 1);">对方拒绝，交易取消</span>
+                            <span class="zhuangtai link-agress" onclick="changeSwitchStatus({$switch.switch_id}, 1);">交换被拒绝，交换取消</span>
                         </case>
                         <case value="3">
                             <span class="zhuangtai link-agress" onclick="changeSwitchStatus({$switch.switch_id}, 1);">交易完成</span>
@@ -55,7 +55,11 @@
                         		<p class="con_c">{$goodList.$key.0.good_name}</p>
                         		<!-- <em class="con_n">×1</em> -->
                                 <div class="clear"></div>
-                                <p class="who"><a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd" onclick="addLetter({$goodList.$key.0.user_id}, '{$goodList.$key.0.user_name}', {$Think.session.shop.user});"></a>交换者：{$goodList.$key.0.user_name}</p>
+                                <p class="who">
+                                    <img src="/Public/Home/Img/taobao.gif" title="联系他/她" onclick="addLetter({$goodList.$key.0.user_id}, '{$goodList.$key.0.user_name}', {$Think.session.shop.user});" />
+                                    <!-- <a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd" onclick="addLetter({$goodList.$key.0.user_id}, '{$goodList.$key.0.user_name}', {$Think.session.shop.user});"></a> -->
+                                    交换者：{$goodList.$key.0.user_name}
+                                </p>
                           </li>
                     	  <li class="huan"><img src="/Public/Wap/Img/f0ec.png" alt=""><em class="con_n">×1</em></li>
                            <li>
@@ -63,7 +67,11 @@
                         		<p class="con_c">{$goodList.$key.1.good_name}</p>
                         		<!-- <em class="con_n">×1</em> -->
                                 <div class="clear"></div>
-                                <p class="who"><a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd" onclick="addLetter({$goodList.$key.1.user_id}, '{$goodList.$key.1.user_name}', {$Think.session.shop.user});"></a>被交换者：{$goodList.$key.1.user_name}</p>
+                                <p class="who">
+                                    <!-- <a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd" onclick="addLetter({$goodList.$key.1.user_id}, '{$goodList.$key.1.user_name}', {$Think.session.shop.user});"></a> -->
+                                    <img src="/Public/Home/Img/taobao.gif" title="联系他/她" onclick="addLetter({$goodList.$key.1.user_id}, '{$goodList.$key.1.user_name}', {$Think.session.shop.user});" />
+                                    被交换者：{$goodList.$key.1.user_name}
+                                </p>
                           </li>
                     </ul>
                 </li>

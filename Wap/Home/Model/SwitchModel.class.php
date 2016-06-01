@@ -5,7 +5,7 @@
  * @Role: 
  * @Date:   2016-04-01 13:45:22
  * @Last Modified by:   hookidea
- * @Last Modified time: 2016-04-16 12:39:26
+ * @Last Modified time: 2016-06-01 20:28:39
  */
 namespace Home\Model;
 use Think\Model;
@@ -29,7 +29,6 @@ class SwitchModel extends Model{
         array('phone', '1,12', '手机号码格式不正确', 2, 'length'),
         array('status', 'number', '订单状态为空/格式错误', 2),
         array('num', 'number', '交换数量为空/格式错误', 1),
-        array('is_agree', '0,1', '完成状态选择非法！', 2, in),
     );
     // 0 存在字段就验证(默认), 1 必须验证, 2 值不为空的时候验证
     protected $_auto = array(

@@ -580,7 +580,7 @@ function backAppend(msg){
 
     back.show();
 
-    var time = msg.time ? msg.time : 1000;
+    var time = msg.time ? msg.time : 1200;
     if (msg.href == 'backReload') {
       location.href = document.referrer;
     } else if (msg.href == 'back') {

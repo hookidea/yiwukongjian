@@ -75,7 +75,7 @@ class SwitchController extends Controller
                     $where = ['good_id' => ['in', $good_ids]];
                 } else {
                     $this->info = '提示：无法匹配到最佳结果，已显示为您的所有商品';
-                    $where = ['user_id' => $user_id];
+                    $where = ['user_id' => $user_id, 'is_switch' => 1, 'is_delete' => 0, 'is_on_sale' => 1, 'good_number' => ['gt', 0]];
                     $good->limit($pagesize*(I('get.p', 1)-1) . ',' . $pagesize);
                 }
 
@@ -150,19 +150,30 @@ class SwitchController extends Controller
         if (($rs = $this->_createCheckGood($list, I('post.num'))) !== true) $this->ajaxReturn($rs);
 
         $switch = D('Switch');
+
         if ($switch->create()) {
-            $result = $switch->add();
-            if ($result) {
+
+            if ($result = $switch->add()) {
                 $_POST['switch_id'] = $result;
                 R('Message/addSwitchMess', [$_POST]);
                 $this->ajaxReturn(['status' => 1, 'info' => '商品交换请求提交成功，等待对方的同意！', 'href' => '/Switch/showSwitch/switch_id/' . $result]);
             } else {
                 $this->ajaxReturn(['status' => 2, 'info' => '商品交换请求提交失败！']);
             }
+
         } else {
             $this->ajaxReturn(['status' => 2, 'info' => $switch->getError()]);
         }
 
+    }
+
+    /**
+     * 负责回滚事物并返回结果给客户端
+     */
+    private function _rollback ($switch, $msg='交换失败，请刷新页面后再试！') 
+    {
+        $switch->rollback();
+        $switch->ajaxReturn(['status'=>2, 'info'=> $msg]);
     }
 
     /**
@@ -179,7 +190,7 @@ class SwitchController extends Controller
         $num = $post['num'] + 0;
         $good = D('Good');
 
-        $goodList = $good->field('user_id,good_name,user_name,shop_price,promote_price,good_number,is_promote,good_id,thumb_img')->where(['good_id' => ['in', [$user_good_id, $raply_good_id]]])->select();
+        $goodList = $good->field('user_id,good_name,user_name,shop_price,promote_price,good_number,is_check,is_promote,good_id,thumb_img,is_on_sale')->where(['good_id' => ['in', [$user_good_id, $raply_good_id]]])->select();
         // 注意：MySQL的in查询不是说"in(1, 2)"，返回的数据就是(1,2)排序的，MySQL会自动排序返回的
 
         if (($rs = $this->_createCheckGood($goodList, I('post.num'))) !== true) $this->error($rs['info']);
@@ -297,9 +308,13 @@ class SwitchController extends Controller
                 if (!$switch->where(['switch_id' => $switch_id])->save(['status' => 1])) {
                     $this->ajaxReturn(['status'=>2, 'info'=>'同意失败！']);
                 }
-                // 减少库存
-                $good = A('Good');
-                $good->delNumber([$row['user_good_id'], $row['raply_good_id']], $row['num']);
+
+                // 问题：订单是下了，但库存不一定就有，不能保证库存的有效性和准确性
+                if (!A('Good')->delNumber([$row['user_good_id'], $row['raply_good_id']], $row['num'])) {
+                    // 扣除库存执行失败
+                    $switch->ajaxReturn(['status'=>2, 'info'=> '同意失败，请刷新页面后再试！']);
+                }
+
                 break;
             case 2: // 拒绝
                 if ($user_id != $row['raply_id']) $this->ajaxReturn(['status'=>2, 'info'=>'操作非法！']);
@@ -344,15 +359,15 @@ class SwitchController extends Controller
         $on = C('CHECK_ISSUE_GOOD');
         $user_id = session('user.user_id');
 
-        if ($list[0]['user_id'] == $user_id && $list[1]['user_id'] == $user_id) return ['status' => 2, 'info' => '抱歉，您所购买的商品　' . mb_substr($list[$i]['good_name'], 0, 15, 'UTF-8') . '...　是您自己的商品'];
+        if ($list[0]['user_id'] == $user_id && $list[1]['user_id'] == $user_id) return ['status' => 2, 'info' => '抱歉，您所交换的商品　' . mb_substr($list[$i]['good_name'], 0, 15, 'UTF-8') . '...　是您自己的商品'];
 
         for ($i=0, $len=count($list); $i<$len; $i++) {
 
-            if ($on && 1 != $list[$i]['is_check']) return ['status' => 2, 'info' => '抱歉，您所购买的商品　' . mb_substr($list[$i]['good_name'], 0, 15, 'UTF-8') . '...　未经审核，暂时不能被购买'];
+            if ($on && 1 != $list[$i]['is_check']) return ['status' => 2, 'info' => '抱歉，您所交换的商品　' . mb_substr($list[$i]['good_name'], 0, 15, 'UTF-8') . '...　未经审核，暂时不能被交换'];
 
-            if ($list[$i]['good_number'] < $num) return ['status' => 2, 'info' => '抱歉，您所购买的商品　' . mb_substr($list[$i]['good_name'], 0, 15, 'UTF-8') . '...　库存不足'];
+            if ($list[$i]['good_number'] < $num) return ['status' => 2, 'info' => '抱歉，您所交换的商品　' . mb_substr($list[$i]['good_name'], 0, 15, 'UTF-8') . '...　库存不足'];
 
-            if (1 != $list[$i]['is_on_sale']) return ['status' => 2, 'info' => '抱歉，您所购买的商品　' . mb_substr($list[$i]['good_name'], 0, 15, 'UTF-8') . '...　未上架'];
+            if (1 != $list[$i]['is_on_sale']) return ['status' => 2, 'info' => '抱歉，您所交换的商品　' . mb_substr($list[$i]['good_name'], 0, 15, 'UTF-8') . '...　未上架'];
         }
         return true;
     }

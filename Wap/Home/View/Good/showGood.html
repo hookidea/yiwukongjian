@@ -169,7 +169,8 @@
                           <eq name="row.is_switch" value="1">
                              <div class="Join"> <a href="/Switch/match/good_id/{$row.good_id}">立即换购</a></div>
                           <else />
-                              <div class="Join"><a class="shan">该商品不支持换购</a></div>
+                              <!-- <div class="Join"><a class="shan" href="/{$row.good_id}.html?wap=0">到电脑版购买该商品？</a></div> -->
+                              <div class="Join"><a class="shan">该商品不支持换购，请使用电脑版购买</a></div>
                           </eq>
                       <php>}</php>
                   </lt>

@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>易物空间</title>
     <link rel="shortcut icon" href="/Public/Home/Img/favicon.ico" />
-    <meta name="description" content="">
     <meta http-equiv="cleartype" content="on">
-    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/index.css?v=2.1">
-    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/upload.css?v=2.1">
+    <meta name="keywords" content="易物空间">
+    <meta name="description" content="易物空间">
+    <meta name="author" content="hookidea@gmail.com">
+    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/index.css?v=0.2">
+    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/upload.css?v=0.2">
     <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
@@ -72,7 +74,7 @@
 
 <div id="body-wrap">
 
- <link rel="stylesheet" type="text/css" href="/Public/Home/Css/showOrder.css?v=2.1">
+ <link rel="stylesheet" type="text/css" href="/Public/Home/Css/showOrder.css?v=0.2">
 <div class="container">
   <div class="suibian">
     <ul class="middle_nav">
@@ -223,8 +225,8 @@
                       <span class="order-status ftx-03">
 
                       <?php switch($switch["status"]): case "0": ?>等待对方同意<?php break;?>
-                      <?php case "1": ?>对方已同意，等待交易完成<?php break;?>
-                      <?php case "2": ?>对方拒绝，交易取消<?php break;?>
+                      <?php case "1": ?>交换成立，等待交换完成<?php break;?>
+                      <?php case "2": ?>交换被拒绝，交换取消<?php break;?>
                       <?php case "3": ?>交换完成<?php break; endswitch;?>
 
                       </span>
@@ -234,12 +236,12 @@
                     <div class="operate">
                       <div _baina="0" id="pay-button-12251082074"></div>
 
-                        <?php if(($switch["is_agree"]) == "0"): if(($switch["status"]) != "2"): if ($switch['raply_id'] == session('user.user_id')) { ?>
-                                <span target="_blank" class="btn-again" onclick="changeSwitchStatus(<?php echo ($switch["switch_id"]); ?>, 1);">同意</span>
-                                <br/>
-                                <br/>
-                                <span target="_blank" class="btn-again" onclick="changeSwitchStatus(<?php echo ($switch["switch_id"]); ?>, 2);">不同意</span>
-                              <?php } endif; endif; ?>
+                        <?php if(($switch["status"]) == "0"): if ($switch['raply_id'] == session('user.user_id')) { ?>
+                            <span target="_blank" class="btn-again" onclick="changeSwitchStatus(<?php echo ($switch["switch_id"]); ?>, 1);">同意</span>
+                            <br/>
+                            <br/>
+                            <span target="_blank" class="btn-again" onclick="changeSwitchStatus(<?php echo ($switch["switch_id"]); ?>, 2);">不同意</span>
+                          <?php } endif; ?>
 
                         <?php if ($switch['user_id'] == session('user.user_id')) { ?>
                           <?php if(($switch["status"]) == "1"): ?><span target="_blank" class="btn-again" style="cursor: text;"></span>
@@ -387,12 +389,12 @@ function showTimeSwitch(e, timeType) {
     <div class="footer">
         <div class="links">
             <a href="/">首页</a><span>/</span>
-            <a href="/Switch/showSwitch/type/1?wap=1" target="_blank">手机版</a>
+            <a href="/Switch/showSwitch/type/1/switch_id/8?wap=1" target="_blank">手机版</a>
             <span>/</span><a href="javascript:return false;" onclick="addBug(1);">反馈建议</a>
             <span>/</span><a href="/Index/article" target="_blank">服务条款</a>
             <?php if (session('user.login_bg')) { echo '<span>/</span><a href="/admin.php/Index/index" target="_blank">后台管理</a>'; } ?>
         </div>
-        <div class="links-end">Copyright © 2016 YW.GZITTC.COM. All rights reserved.</div>
+        <div class="links-end">Copyright © 2016 YW.GZITTC.com. All Rights Reserved.</div>
     </div>
 
 

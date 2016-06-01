@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>易物空间</title>
     <link rel="shortcut icon" href="/Public/Home/Img/favicon.ico" />
-    <meta name="description" content="">
     <meta http-equiv="cleartype" content="on">
-    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/index.css?v=2.1">
-    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/upload.css?v=2.1">
+    <meta name="keywords" content="易物空间">
+    <meta name="description" content="易物空间">
+    <meta name="author" content="hookidea@gmail.com">
+    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/index.css?v=0.2">
+    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/upload.css?v=0.2">
     <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
@@ -288,12 +290,12 @@
     <div class="footer">
         <div class="links">
             <a href="/">首页</a><span>/</span>
-            <a href="/Good/showGood/good_id/2?wap=1" target="_blank">手机版</a>
+            <a href="/2.html?wap=1" target="_blank">手机版</a>
             <span>/</span><a href="javascript:return false;" onclick="addBug(1);">反馈建议</a>
             <span>/</span><a href="/Index/article" target="_blank">服务条款</a>
             <?php if (session('user.login_bg')) { echo '<span>/</span><a href="/admin.php/Index/index" target="_blank">后台管理</a>'; } ?>
         </div>
-        <div class="links-end">Copyright © 2016 YW.GZITTC.COM. All rights reserved.</div>
+        <div class="links-end">Copyright © 2016 YW.GZITTC.com. All Rights Reserved.</div>
     </div>
 
 

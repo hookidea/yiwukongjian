@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/Public/Home/Css/showOrder.css?v=2.1">
+<link rel="stylesheet" type="text/css" href="/Public/Home/Css/showOrder.css?v=0.2">
 <div class="container">
   <div class="suibian">
     <ul class="middle_nav">
@@ -151,8 +151,8 @@
 
                       <switch name="switch.status" >
                       <case value="0">等待对方同意</case>
-                      <case value="1">对方已同意，等待交易完成</case>
-                      <case value="2">对方拒绝，交易取消</case>
+                      <case value="1">交换成立，等待交换完成</case>
+                      <case value="2">交换被拒绝，交换取消</case>
                       <case value="3">交换完成</case>
                       </switch>
 
@@ -163,15 +163,13 @@
                     <div class="operate">
                       <div _baina="0" id="pay-button-12251082074"></div>
 
-                        <eq name="switch.is_agree" value="0">
-                          <neq name="switch.status" value="2">
-                              <php>if ($switch['raply_id'] == session('user.user_id')) {</php>
-                                <span target="_blank" class="btn-again" onclick="changeSwitchStatus({$switch.switch_id}, 1);">同意</span>
-                                <br/>
-                                <br/>
-                                <span target="_blank" class="btn-again" onclick="changeSwitchStatus({$switch.switch_id}, 2);">不同意</span>
-                              <php>}</php>
-                          </neq>
+                        <eq name="switch.status" value="0">
+                          <php>if ($switch['raply_id'] == session('user.user_id')) {</php>
+                            <span target="_blank" class="btn-again" onclick="changeSwitchStatus({$switch.switch_id}, 1);">同意</span>
+                            <br/>
+                            <br/>
+                            <span target="_blank" class="btn-again" onclick="changeSwitchStatus({$switch.switch_id}, 2);">不同意</span>
+                          <php>}</php>
                         </eq>
 
                         <php>if ($switch['user_id'] == session('user.user_id')) {</php>

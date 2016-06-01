@@ -389,10 +389,7 @@ class GoodController extends Controller
         } else {
             $good->where(['good_id' => $good_id]);
         }
-        if (!$good->setDec('good_number', $num)) {
-            return false;
-        }
-        return true;
+        return $good->setDec('good_number', $num) ? true : false;
     }
 
 }

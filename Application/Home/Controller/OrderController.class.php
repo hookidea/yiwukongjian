@@ -28,7 +28,7 @@ class OrderController extends Controller
 
         $good = D('Good');
 
-        $goodList = A('Good')->getGood($good_ids, 'user_id,good_name,user_name,shop_price,promote_price,good_number,is_promote,good_id,thumb_img,is_on_sale');
+        $goodList = A('Good')->getGood($good_ids, 'user_id,good_name,user_name,shop_price,promote_price,good_number,is_promote,good_id,thumb_img,is_on_sale,is_check');
 
         if (($rs = $this->_createCheckGood($goodList, $nums)) !== true)  $this->error($rs['info']);
 
@@ -82,8 +82,10 @@ class OrderController extends Controller
 
                 $order = $this->_switchType($order, I('get.timeType'));  // 查看指定时间的订单
 
-                $status = I('get.status') ? 1 : 0; // 0：未完成，1：已完成
-                $order->where(['status' => $status]);
+                // 0：未完成，1：全部
+                if (!(I('get.status') === 1 || !isset($_GET['status']))) {
+                    $order->where(['status' => 0]);
+                }
 
                 $orderList = $order->order('status asc,add_time desc')->select();
 
@@ -196,12 +198,13 @@ class OrderController extends Controller
         $order->startTrans(); // 开启事物
 
         foreach ($groupList as $k=>$v) { // 插入多个商户的商品
-            $this->_insertOne($v, $info_data); // 插入单个商户的商品
+            // 如果某一个订单处理出错，则内部会事物回滚并 ajax 返回失败结果给客户端
+            $this->_insertOne($order, $v, $info_data); // 插入单个商户的商品
         }
 
-        $order->commit(); // 提交事物
+        $order->commit(); // 执行到这里说明处理成功，则提交事物
 
-        R('Cart/delCart', [$good_ids]);
+        R('Cart/delCart', [$good_ids]); // 从购物车删除已被购买的商品
         R('Message/addOrderMess', [$this->_data]); // 发送订单消息
 
         $this->ajaxReturn(['status'=>1, 'info'=>'订单提交成功！', 'href'=>'/Order/showOrder']);
@@ -215,7 +218,6 @@ class OrderController extends Controller
     {
         $good = D('Good');
         if (!$good->where(['good_id' => $good_id])->setDec('good_number', $num)) {
-            $good->rollback();
             return false;
         }
         return true;
@@ -224,7 +226,7 @@ class OrderController extends Controller
     /**
      * 负责插入一个订单
      */
-    private function _insertOne ($one, $info_data)
+    private function _insertOne ($order, $one, $info_data)
     {
         $good_ids = array_keys($one);
         $info_data['seller_name'] = $one[$good_ids[0]]['user_name'];
@@ -234,7 +236,9 @@ class OrderController extends Controller
         $info_data['add_time'] = time();
 
         $id = $this->_insertOrder($info_data); // 插入订单基本信息
-        if (!$id) $this->ajaxReturn(['status'=>2, 'info'=>'订单提交失败，请刷新稍后再试！']);
+        if (!$id) { // 插入失败
+            $this->_rollback($order);
+        }
 
         $info_data['order_id'] = $id;
 
@@ -246,14 +250,28 @@ class OrderController extends Controller
             $good_data['good_id'] = $good_ids[$i];
 
             if (!$this->_insertGood($good_data)) { // 插入订单中的商品
-                 $this->ajaxReturn(['status'=>2, 'info'=>'订单提交失败，请刷新稍后再试！']);
+                $this->_rollback($order);
             }
-            if (!$this->_delNumber($good_data['good_id'], $good_data['num'])) { // 减少商品库存
-                $this->ajaxReturn(['status'=>2, 'info'=>'订单提交失败，请刷新稍后再试！']);
+            // 因为商品表不是innodb，所以库存问题不能保证其有效性和准确性
+            if (!$this->_delNumber($good_data['good_id'], $good_data['num'])) { // 减少商品库存语句执行失败
+                $this->_rollback($order);
             }
+            // 1、如果在此处通过查询商品库存，看是否 <0 来判定库存是否足以完成订单，则如果在这两条SQL执行期间(删除库存 -> 查询库存)，另一个用户下单，但库存不足以完成新订单，则这个用户就无辜了，因为其扣除的库存影响了结果，这边查到是负数，则判定为失败，！这是错误的判断！
+            // 2、不检查库存，会造成问题：订单是下了，但库存不一定就有，不能保证库存的有效性和准确性
+            // if (D('Good')->where(['good_id' => $good_data['good_id']])->getField('good_number') < 0) {
+            //     $this->_rollback($order, '订单提交失败，商品库存不足！');
+            // }
         }
         $this->_data[] = $info_data;
+    }
 
+    /**
+     * 负责回滚事物并返回结果给客户端
+     */
+    private function _rollback ($order, $msg='订单提交失败，请刷新稍后再试！') 
+    {
+        $order->rollback();
+        $order->ajaxReturn(['status'=>2, 'info'=> $msg]);
     }
 
     /**
@@ -266,15 +284,9 @@ class OrderController extends Controller
             $id = $order->add($info_data);
             if ($id > 0) {
                 return $id;
-            } else {
-                $order->rollback();  // 插入失败，回滚事物
-                return false;
             }
-        } else {
-            $order->rollback();  // 插入失败，回滚事物
-            $this->ajaxReturn(['status'=>2, 'info'=>$order->getError()]);
-            return false;
         }
+        return false;
     }
 
     /**
@@ -287,15 +299,9 @@ class OrderController extends Controller
             $id = $order_good->add($good_data);
             if ($id > 0) {
                 return $id;
-            } else {
-                $order_good->rollback();  // 插入失败，回滚事物
-                return false;
             }
-        } else {
-            $order_good->rollback();  // 插入失败，回滚事物
-            $this->ajaxReturn(['status'=>2, 'info'=>$order_good->getError()]);
-            return false;
         }
+        return false;
     }
 
     /**
@@ -321,6 +327,7 @@ class OrderController extends Controller
         $on = C('CHECK_ISSUE_GOOD');
         $user_id = session('user.user_id');
         for ($i=0, $len=count($_createCheckGood); $i<$len; $i++) {
+
             if ($_createCheckGood[$i]['user_id'] == $user_id) return ['status' => 2, 'info' => '抱歉，您所购买的商品　' . mb_substr($_createCheckGood[$i]['good_name'], 0, 15, 'UTF-8') . '...　是您自己的商品'];
 
             if ($on && 1 != $_createCheckGood[$i]['is_check']) return ['status' => 2, 'info' => '抱歉，您所购买的商品　' . mb_substr($_createCheckGood[$i]['good_name'], 0, 15, 'UTF-8') . '...　未经审核，暂时不能被购买'];

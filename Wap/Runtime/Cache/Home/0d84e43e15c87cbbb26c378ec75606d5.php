@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="易物空间">
+    <meta name="description" content="易物空间">
+    <meta name="author" content="hookidea@gmail.com">
     <title>易物空间</title>
-    <link rel="stylesheet" type="text/css" href="/Public/Wap/Css/index.css?v=2.1">
+    <link rel="stylesheet" type="text/css" href="/Public/Wap/Css/index.css?v=0.2">
     <link rel="shortcut icon" href="/Public/Home/Img/favicon.ico" />
     <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="/Public/Wap/Js/begin.js"></script>
@@ -52,10 +55,16 @@
                         </div><?php endforeach; endif; ?>
                     <p class="lianxi price">￥<?php echo ($order["total_price"]); ?></p>
                     <?php if(($_GET['type']) == "1"): ?><!-- 卖家订单 -->
-                        <p class="maijia">买家：<?php echo ($order["user_name"]); ?><a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd right" onclick="addLetter(<?php echo ($order["user_id"]); ?>, '<?php echo ($row["user_name"]); ?>', <?php echo (is_array($_SESSION['shop']['user'])); ?>);"></a></p>
+                        <p class="maijia">买家：<?php echo ($order["user_name"]); ?>
+                            <img src="/Public/Home/Img/taobao.gif" title="联系他/她" onclick="addLetter(<?php echo ($order["user_id"]); ?>, '<?php echo ($row["user_name"]); ?>', <?php echo (is_array($_SESSION['shop']['user'])); ?>);" />
+                        <!-- <a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd right" onclick="addLetter(<?php echo ($order["user_id"]); ?>, '<?php echo ($row["user_name"]); ?>', <?php echo (is_array($_SESSION['shop']['user'])); ?>);"></a> -->
+                        </p>
                     <?php else: ?>
                         <!-- 买家订单 -->
-                        <p class="maijia">卖家：<?php echo ($order["seller_name"]); ?><a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd right" onclick="addLetter(<?php echo ($order["seller_id"]); ?>, '<?php echo ($row["user_name"]); ?>', <?php echo (is_array($_SESSION['shop']['user'])); ?>);"></a></p><?php endif; ?>
+                        <p class="maijia">卖家：<?php echo ($order["seller_name"]); ?>
+                           <!--  <a clstag="click|keycount|orderlist|ziyingchatim" title="联系他/她" href="#none" class="btn-im btn-im-jd right" onclick="addLetter(<?php echo ($order["seller_id"]); ?>, '<?php echo ($row["user_name"]); ?>', <?php echo (is_array($_SESSION['shop']['user'])); ?>);"></a> -->
+                            <img src="/Public/Home/Img/taobao.gif" title="联系他/她" onclick="addLetter(<?php echo ($order["seller_id"]); ?>, '<?php echo ($row["user_name"]); ?>', <?php echo (is_array($_SESSION['shop']['user'])); ?>);" />
+                        </p><?php endif; ?>
 
                     <p class="lianxi"><?php if(!empty($order["phone"])): ?>手机：<?php echo ($order["phone"]); endif; ?>&nbsp;&nbsp;<?php if(!empty($order["qq"])): ?>QQ：<?php echo ($order["qq"]); endif; ?></p>
                     <div class="clear"></div>
@@ -83,10 +92,10 @@
 <?php if (!in_array(CONTROLLER_NAME, ['User', 'Category'])) { ?>
 <footer>
       <a href="/">首页</a>
-      <a href="/Order/showOrder/order_id/1?wap=0">电脑版</a>
+      <a href="/Order/showOrder?wap=0">电脑版</a>
       <a onclick="addBug(1);">反馈建议</a>
       <a href="/Index/article" class="last">服务条款</a>
-      <p>Copyright © 2016 YW.GZITTC.COM. All rights reserved.</p>
+      <p>Copyright © 2016 YW.GZITTC.com. All Rights Reserved.</p>
 </footer>
 <?php } ?>
 
